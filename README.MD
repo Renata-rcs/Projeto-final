@@ -32,9 +32,7 @@ Contribuições para melhorias ou correções são bem-vindas. Sinta-se à vonta
 - [Email](renataa.rcs@gmail.com)
 - [Linkedin](https://www.linkedin.com/in/renata-carvalho-02a718273)
 
-## Licença
 
-Este projeto é licenciado sob a [Licença XYZ] - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 
 
