@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendadmento de Consulta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./imagens/favicon.png" type="image/x-icon">
+</head>
+    <body id="agendamento">
+        
+            <form id="consultaForm">
+                <h1 id="h1agen">Agendamento de Consulta</h1>
+                <img id="imgagendamento" src="./imagens/Logo Emagreça.png">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+
+                <label for="nasc">Nacimento:</label>
+                <input type="date" id="nasc" name="nascimento" required>
+
+                <label for="end">Endereço:</label>
+                <input type="text" id="end" name="end" required>
+
+                <label for="alergia">Tem alguma alergia a medicamentos?</label>
+                <input type="radio" id="alergia-sim" name="alergia" value="sim" required>
+                <label for="alergia-sim">Sim</label>
+                <input type="radio" id="alergia-nao" name="alergia" value="nao" required>
+                <label for="alergia-nao">Não</label>
+
+                <label for="tratamento">Escolha o Tratamento:</label>
+                <select id="tratamento" name="tratamento" required>
+                    <option value="esteticaFacial">Estética Facial</option>
+                    <option value="esteticaCorporal">Estética Corporal</option>
+                    <option value="centroCapilar">Centro Capilar</option>
+                    <option value="podologia">Podologia</option>
+                    <option value="depilaçao">Depilação</option>
+                </select>
+
+                <div id="opcoesAlergia" class="opcoes-tratamento" style="display: none;">
+                    <label for="alergia-medicamento">Alergia a qual medicamento?</label>
+                    <input type="text" id="alergia-medicamento" name="alergia-medicamento" required>
+                </div>
+
+                <div id="opcoesFacial" class="opcoes-tratamento" style="display: none;">
+                    <h2>Opções de Tratamento Facial:</h2>
+                    <ul>
+                        <li>Limpeza de Pele</li>
+                        <li>Tratamento de Acne</li>
+                        <li>Microdermoabrasão</li>
+                        <li>Preenchimento Facial</li>
+                        <li>Tratamento de Rugas</li>
+                        <li>Botox</li>
+                    </ul>
+                    <label for="medicoFacial">Escolha o Médico:</label>
+                    <select id="medicoFacial" name="medicoFacial" required>
+                        <option value="medico1">Dr. João</option>
+                        <option value="medico2">Dra. Maria</option>
+                        <option value="medico3">Dra. Ana</option>
+                    </select>
+                </div>
+            <!-- Opções de Estética Corporal -->
+            <div id="opcoesEsteticaCorporal" class="opcoes-tratamento" style="display: none;">
+                <h2>Opções de Estética Corporal:</h2>
+                <ul>
+                    <li>Massagem Modeladora </li>
+                    <li>Drenagem Linfática</li>
+                    <li>Lipoaspiração não Cirúrgica </li>
+                    <li>Tratamento de Celulite</li>
+                    <li>Endermologia</li>
+                </ul>
+                <label for="medicoCorporal">Escolha o Médico:</label>
+                <select id="medicoCorporal" name="medicoCorporal" required>
+                    <option value="medico4">Dra. Carla</option>
+                    <option value="medico5">Dr. André</option>
+                    <option value="medico6">Dra. Sofia</option>
+                </select>
+            </div>
+            
+            <!-- Opções de SPA -->
+            <div id="opcoesSPA" class="opcoes-tratamento" style="display: none;">
+                <h2>Opções de SPA:</h2>
+                <ul>
+                    <li>Massagem Relaxante </li>
+                    <li>Banho de Ofurô</li>
+                    <li>Tratamento de Pele </li>
+                    <li>Aromaterapia</li>
+                    <li>Yoga e Meditação</li>
+                </ul>
+                <label for="medicoSPA">Escolha o Terapeuta:</label>
+                <select id="medicoSPA" name="medicoSPA" required>
+                    <option value="terapeuta1">Terapeuta Carla</option>
+                    <option value="terapeuta2">Terapeuta Sofia</option>
+                    <option value="terapeuta3">Terapeuta Maria</option>
+                    <option value="terapeuta4">Terapeuta André</option>
+                    <option value="terapeuta5">Instrutora Ana</option>
+                </select>
+            </div>
+
+                    <!-- Opções de Podologia -->
+            <div id="opcoesPodologia" class="opcoes-tratamento" style="display: none;">
+                <h2>Opções de Podologia:</h2>
+                <ul>
+                    <li>Corte e Tratamento de Unhas - Podóloga Laura</li>
+                    <li>Tratamento de Calos e Calosidades - Podóloga Sofia</li>
+                    <li>Reflexologia Podal - Podóloga Ana</li>
+                    <li>Tratamento de Fungos nas Unhas - Podóloga Maria</li>
+                    <li>Avaliação Postural - Podóloga Roberto</li>
+                </ul>
+                <label for="podologo">Escolha o Podólogo(a):</label>
+                <select id="podologo" name="podologo" required>
+                    <option value="laura">Podóloga Laura</option>
+                    <option value="sofia">Podóloga Sofia</option>
+                    <option value="ana">Podóloga Ana</option>
+                    <option value="maria">Podóloga Maria</option>
+                    <option value="roberto">Podólogo Roberto</option>
+                </select>
+                            </div>
+                            <!-- Opções de Centro Capilar -->
+                <div id="opcoesCentroCapilar" class="opcoes-tratamento" style="display: none;">
+                    <h2>Opções de Centro Capilar:</h2>
+                    <ul>
+                        <li>Transplante Capilar - Dr. Roberto</li>
+                        <li>Tratamento de Calvície - Dr. Marcos</li>
+                        <li>Terapia a Laser - Dr. Marcos</li>
+                        <li>Microagulhamento Capilar - Dr. Roberto</li>
+                        <li>Tratamento de Caspa  - Dr. Marcos</li>
+                    </ul>
+                    <label for="medicoCapilar">Escolha o Médico:</label>
+                    <select id="medicoCapilar" name="medicoCapilar" required>
+                        <option value="roberto">Dr. Roberto</option>
+                        <option value="marcos">Dr. Marcos</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="horario">Horário da Consulta:</label>
+                    <select id="horario" name="horario">
+                        <option value="9">9:00 AM</option>
+                        <option value="10">10:00 AM</option>
+                        <option value="11">11:00 AM</option>
+                        <option value="12">12:00 PM</option>
+                        <option value="13">1:00 PM</option>
+                        <option value="14">2:00 PM</option>
+                        <option value="15">3:00 PM</option>
+                        <option value="16">4:00 PM</option>
+                    </select>
+                </div>
+        <button type="submit"><a href="" target="_blank">Agendar Consulta</a> </button>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>
