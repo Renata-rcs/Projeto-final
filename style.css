@@ -115,6 +115,8 @@ h3{
     color:gray;
 }
 
+
+/* Main*/
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -193,6 +195,9 @@ ul >li{
     padding: 20px; /* Espaçamento interno opcional */
     box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
 }
+
+
+/* Cadastro*/
 #cadSection > h1{
    margin-top: 30px;
    color: green;
@@ -285,7 +290,7 @@ ul >li{
     height: auto;
 }
 
-/* Estilização dos textos nos cards */
+
 #card > p {
     margin: 5px 0;
 }
@@ -305,6 +310,7 @@ ul >li{
     height: 40px;
     display: block;
     text-decoration: none;
+    cursor: pointer;
 }
 #bot1a{
     text-decoration: none;
@@ -314,6 +320,9 @@ ul >li{
 #img4{
     margin: 40px;
 }
+
+
+/* Feddback*/
 .feedback {
     border: none;
     background-color: transparent;
@@ -373,6 +382,15 @@ footer {
     height: auto;
    
  }
+ 
+ footer {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    font-size: 12px;
+    margin-bottom: 0;
+   
+ }
  .footer{
      display: flex;
      justify-content: space-between;
@@ -383,11 +401,11 @@ footer {
      margin-top:0;
      height: 400px;
      flex-wrap: wrap;
-     font-size: 14px;
      bottom: 0;
+     font: normal;
  }
- 
-.contato, .sobre, .servicos{
+
+.contato, .sobre, .servicos, .horario{
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -398,33 +416,7 @@ footer {
     box-sizing: border-box;
     color: #666;
    
-}
-.servicos > ul{
-    margin-top: 5px;
-}
-.servicos > ul > li{
-    list-style: none;
-    font-size: 14px;
-}
-.contato, .sobre > p {
-    font-size: 14px;
-   
-    margin: 5px 0;
-}
-.servicos > ul > li >a {
-    color: #333;
-    text-decoration: none;
-}
-.horario{
-    margin-top: 70px;
-    margin-bottom: 0;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    flex-basis: calc(25% - 20px); /* Define a largura das seções, descontando o espaço entre elas */
-    box-sizing: border-box;
-    color: #666;
+
 }
 .re{
   
@@ -440,100 +432,11 @@ footer {
     background-color:rgb(199, 198, 198);
 }
 
+
 #hamburguer{
     display: none;
 }
-/* Estilos do formulário */
-#consultaForm {
-    margin: 50px;
-    background-color:purple; /* Cor de fundo do formulário */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  }
-  
-  /* Estilos para os rótulos dos campos de entrada */
-  #consultaForm label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color:white; /* Cor do texto do rótulo */
-  }
-  
-  /* Estilos para os campos de entrada */
-  #consultaForm input[type="text"],
-  #consultaForm input[type="tel"],
-  #consultaForm input[type="email"],
-  #consultaForm input[type="password"],
-  #consultaForm select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc; /* Borda cinza */
-    border-radius: 5px;
-  }
-  
-  /* Estilo para o botão de envio */
-  #h1agen{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    color:white;
-    margin: 40px;
-  }
-  #imgagendamento{
-    display: block;
-    margin: 40px auto;
-    width: 250px;
-  }
-  #consultaForm button[type="submit"] {
-    background-color:white; /* Cor de fundo do botão */
-    color:purple; /* Cor do texto do botão */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #consultaForm button[type="submit"]:hover {
-    background-color:green /* Cor de fundo do botão quando hover */
-  }
-  
-  /* Alinhar o formulário centralmente */
-  #consultaForm {
-    margin: 0 auto;
-    max-width: 400px; /* Largura máxima do formulário */
-  }
-  
-  /* Estilos para a mensagem de sucesso (pode ser exibida após o envio do formulário) */
-  .success-message {
-    color: green;
-    font-weight: bold;
-  }
-  
-  /* Estilos para as opções de tratamento */
-  .opcoes-tratamento {
-    margin-top: 20px;
-  }
-  
-  /* Estilos para o título das opções de tratamento */
-  .opcoes-tratamento h2 {
-    color: #333; /* Cor do título */
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  /* Estilos para a lista de opções de tratamento */
-  .opcoes-tratamento ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  /* Estilos para cada item da lista de opções de tratamento */
-  .opcoes-tratamento li {
-    margin-bottom: 5px;
-    color: #555; /* Cor do texto das opções de tratamento */
-  }
+
   
 @media screen and (max-width: 768px) {
     body{

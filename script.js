@@ -1,3 +1,4 @@
+//Menu
 function clickMenu() {
     var navContainer = document.querySelector('.nav-container');
     if (window.getComputedStyle(navContainer).display === 'block') {
@@ -8,15 +9,16 @@ function clickMenu() {
 }
 
 
-
+//Cadastro
+document.addEventListener('DOMContentLoaded', function () {
 const inome = document.getElementById('inome');
 const iemail = document.getElementById('iemail');
 const isenha = document.getElementById('isenha');
 const iconfirmarSenha = document.getElementById('iconfirmarsenha');
 const icadastrar = document.getElementById('icadastrar');
 
-icadastrar.addEventListener('click', function (event) {
-    event.preventDefault();
+icadastrar.addEventListener('click', (event) => {
+    event.preventDefault()
   
     if (inome.value == '') {
         alert('Por favor, preencha o campo Nome completo.');
@@ -45,10 +47,11 @@ icadastrar.addEventListener('click', function (event) {
         iconfirmarSenha.classList.add('erro');
     }
 });
+});
 
 
 
-
+// Feedback
 const ianame = document.getElementById('ianame');
 const iaemail = document.getElementById('iaemail');
 const iamessage = document.getElementById('iamessage');
@@ -84,10 +87,11 @@ function isValidEmail(email) {
 
 
 
+
 var feedbacks = [];
 
-document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Impede o envio do formulário padrão
+document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário padrão
 
     // Obtém os valores dos campos do formulário
     var name = document.getElementById('ianame').value;
@@ -127,81 +131,4 @@ function exibirFeedbacks() {
     });
 }
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    var tratamentoSelect = document.getElementById('tratamento');
-    var medicoSelect = document.getElementById('medico');
-    var dataInput = document.getElementById('data');
-    var horarioInput = document.getElementById('horario');
-    var agendarButton = document.getElementById('agendar');
-    
-    // Mapeia as opções de médico para cada tratamento
-    var opcoesMedicoPorTratamento = {
-        'esteticaFacial': ['Dr. João', 'Dra. Maria', 'Dra. Ana'],
-        'esteticaCorporal': ['Dra. Carla', 'Dr. André', 'Dra. Sofia'],
-        'centroCapilar': ['Dr. Roberto', 'Dr. Marcos'],
-        'podologia': ['Podóloga Laura', 'Podóloga Sofia', 'Podóloga Ana', 'Podóloga Maria', 'Podólogo Roberto'],
-        'depilacao': [] // Adicione opções de médico para depilação aqui
-    };
-    
-    // Função para atualizar as opções de médico com base no tratamento selecionado
-    function atualizarOpcoesMedico() {
-        var tratamentoSelecionado = tratamentoSelect.value;
-        var opcoesMedico = opcoesMedicoPorTratamento[tratamentoSelecionado];
-        
-        // Limpa as opções de médico atuais
-        medicoSelect.innerHTML = '';
-        
-        // Adiciona as novas opções de médico
-        for (var i = 0; i < opcoesMedico.length; i++) {
-            var option = document.createElement('option');
-            option.value = opcoesMedico[i];
-            option.textContent = opcoesMedico[i];
-            medicoSelect.appendChild(option);
-        }
-    }
-    
-    // Quando o tratamento é alterado, atualize as opções de médico
-    tratamentoSelect.addEventListener('change', function () {
-        atualizarOpcoesMedico();
-    });
-    
-    // Função para verificar se a data da consulta é válida
-    function verificarDataConsulta() {
-        var dataSelecionada = new Date(dataInput.value);
-        var diaSemana = dataSelecionada.getDay(); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
-        
-        if (diaSemana === 0 || diaSemana === 6) {
-            alert('A clínica está fechada aos domingos e sábados. Por favor, escolha um dia útil.');
-            return false;
-        }
-        
-        var horaSelecionada = parseInt(horarioInput.value);
-        if (horaSelecionada < 9 || horaSelecionada >= 17) {
-            alert('A clínica funciona das 9h às 17h. Por favor, escolha um horário dentro desse intervalo.');
-            return false;
-        }
-        
-        // Aqui você pode adicionar verificações de disponibilidade de data/horário
-        // Se a data/horário não estiverem disponíveis, retorne false e mostre uma mensagem de erro.
-        
-        return true; // Data e horário válidos
-    }
-    
-    // Quando o botão de agendamento é clicado, verifique a validade da data
-    agendarButton.addEventListener('click', function (event) {
-        if (!verificarDataConsulta()) {
-            event.preventDefault(); // Impede o envio do formulário se a data não for válida
-        }
-    });
-    
-    // Inicialize as opções de médico com base no tratamento padrão
-    atualizarOpcoesMedico();
-});
-
-
-
-
-
-
-
+// formulario   
