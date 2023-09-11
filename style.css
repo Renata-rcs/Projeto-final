@@ -239,7 +239,11 @@ ul >li{
     height: 450px;
     margin-bottom: 20px; /* Adicione um valor de margem inferior */
     border: 5px solid green;
+    cursor: pointer;
     
+}
+.cadastro:hover{
+    transform: scale(1.2);
 }
 #icad{
    text-align: left;
@@ -376,27 +380,12 @@ ul >li{
     color: white; /* Nova cor do texto no estado hover */
     background-color: purple;
 }
-footer {
-    display: flex;
-    justify-content: center;
-    height: auto;
-   
- }
- 
- footer {
-    display: flex;
-    justify-content: center;
-    height: auto;
-    font-size: 12px;
-    margin-bottom: 0;
-   
- }
  .footer{
      display: flex;
      justify-content: space-between;
      align-items: center;
      background-color:rgb(199, 198, 198);
-     padding: 0;
+     padding: 50px;
      margin-bottom: 0;
      margin-top:0;
      height: 400px;
@@ -406,8 +395,7 @@ footer {
  }
 
 .contato, .sobre, .servicos, .horario{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 0;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -415,8 +403,15 @@ footer {
     flex-basis: calc(25% - 20px); /* Define a largura das seções, descontando o espaço entre elas */
     box-sizing: border-box;
     color: #666;
+    font-size: 12px;
    
 
+}
+#titulofooter{
+    margin: 20px;
+}
+p{
+    margin-bottom: 0;
 }
 .re{
   

@@ -147,6 +147,7 @@ section {
     width: 80%;
     background-color: white;
     flex-direction: column; /* Adicione esta linha para colocar os elementos em coluna */
+    border-radius: 10px;
 }
 
 #consulta {
@@ -163,9 +164,6 @@ section {
     width: 45%;
 }
 
-#agend1 {
-    padding: 70px;
-}
 
 
 /* Estilo para o formulário */
@@ -174,8 +172,11 @@ form {
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    background-color: rgba(148, 131, 134, 0.144);
     border-radius: 5px;
+}
+form:hover{
+    transform: scale(1.2);
 }
 
 /* Estilo para os rótulos */
@@ -226,15 +227,9 @@ input[type="submit"]:hover{
     margin: 40px 0;
 }
 
-
-footer {
-    display: flex;
-    justify-content: center;
-    height: auto;
-   
- }
 #titulofooter{
     margin: 20px;
+    color-scheme: #666;
 }
  
  footer {
@@ -323,6 +318,17 @@ footer {
         background-color: #ffffff; /* Define a cor de fundo do menu */
         display: none; /* Inicialmente, o menu está oculto */
         z-index: 1; /* Certifique-se de que o menu esteja na frente de outros elementos */
+    }
+    div{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .consulta{
+        display: block;
+        align-items: center;
+        flex-direction: column;
     }
 
 
