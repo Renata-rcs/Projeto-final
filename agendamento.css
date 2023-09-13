@@ -1,124 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Kaushan+Script&family=Marck+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    width: 100vw; /* 100% da largura da janela de visualização */
-    height: 100vh; /* 100% da altura da janela de visualização */
-    font-family: Arial, Helvetica, sans-serif; /* Define a família de fontes padrão */
-
-
+body{
+     width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
-header {
-    display: flex; /* Define um layout flexível para os elementos dentro do cabeçalho */
-    justify-content: space-around; /* Espaço igual entre os elementos filhos */
-    width: 100vw; /* 100% da largura da janela de visualização */
-    font-weight: bold; /* Define a espessura da fonte para o cabeçalho */
-    height: 60px; /* Define a altura do cabeçalho */
-    background-color:purple; /* Define a cor de fundo do cabeçalho */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
     position: fixed;
     z-index: 1;
-    margin-bottom: 10px;
 }
-
-/* Estilos para telas maiores (acima de 768px) */
-.nav1 {
-    color:white;
-    padding: 20px;
-    align-items: center;
-    display: flex;
+.nav-1{
+    background-color: purple;
+    width: 100%;
     height: 60px;
-}
-
-h1{
-    margin: 40px 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 2em;
-    color: purple
-}
-h2{ font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    color: green;
-    margin: 20px 0;
-
-}
-h3{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    color: green;
-    margin: 20px 0;
-   
-}
-
-
-.nav2 {
-    padding: 20px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    background-color:purple;
-    height: 60px;
+    justify-content: space-between;
 }
-
-
-.nav-item {
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+.search-container {
     position: relative;
-    margin-right: 40px;
+    width: 200px; /* Largura do campo de entrada e ícone */
+    right: 20px;
 }
-
-.dropdown {
-    background:none;
+    
+.search-input {
+    width: 100%;
+    height: 25px;
     border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+    
+.search-icon {
+    position: absolute;
+    top: 50%; /* Centralize verticalmente o ícone */
+    right: 20px; /* Ajuste a posição do ícone à direita */
+    transform: translateY(-50%); /* Ajuste vertical para o centro */
     cursor: pointer;
-    color: white;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+ }
+#botao{
+    display: none;
+}   
+.dp-menu ul{
+    list-style-type: none;
     padding: 0;
+    
 }
-
-.dropdown:hover {
-    color:gray;
+.dp-menu{ 
+    font-family: 'Roboto', sans-serif;
+    background-color:white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(230, 224, 224);
+    height: 50px;
 }
-
-.list {
+.dp-menu ul li{
+    margin-top: 20px;
+    display: inline;
+    position: relative;
+    }
+.dp-menu ul li a{
+    color: gray;
+    text-decoration: none;
+    display: inline-block;
+     padding: 10px;
+        
+}
+.dp-menu ul li a:hover{
+    color: white;
+    background-color:purple ;
+}
+/*Sub menu*/
+.dp-menu ul ul{
+    display: none;
+    left: 0;
     position: absolute;
     top: 100%;
-    left: 0;
-    width: auto;
-    max-width: 300px;
-    padding: 20px;
     background-color:purple;
-    list-style: none;
-    display: none;
 }
-
-.nav-item:hover .list {
+.dp-menu ul li:hover ul{
     display: block;
 }
-
-.list li {
-    margin-bottom: 10px;
-    list-style: none;
+.dp-menu ul ul{
+    width: 150px;
+        
 }
-
-.list a {
-    list-style: none;
-    color:white;
-    font-size: 12px;
-    font-weight: normal;
-    text-decoration: none;
-    white-space: nowrap;
+.dp-menu ul ul li a{
+     display: block;
 }
-
-.list a:hover {
-    color:gray;
+    
+.dp-menu ul ul{
+     width: 150px;
+        
+}
+.dp-menu ul ul li a{
+    display: block;
+}
+.dp-menu ul ul{
+    width: 150px;
+        
+}
+.dp-menu ul ul li a{
+    display: block;
 }
 
 /*Main*/
@@ -129,8 +132,8 @@ main {
 }
 
 section {
-    width: 80%;
-    margin: 0;
+
+    margin:0;
     background-color: rgba(148, 131, 134, 0.144);
     border-radius: 0;
     padding: 20px;
@@ -139,7 +142,14 @@ section {
     justify-content: center;
     flex-direction: column; /* Adicione esta linha para colocar os elementos em coluna */
 }
-
+#tituloform1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px;
+    font-size: 2em;
+    color: purple;
+}
 .agendamento {
     margin-top: 80px;
     display: flex;
@@ -155,7 +165,16 @@ section {
     background-color: white;
     display: flex;
     justify-content: space-around;
+   
 }
+#consulta h2, h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+    color: purple;
+}
+
 
 #agend1,
 #agend2 {
@@ -169,6 +188,9 @@ section {
 /* Estilo para o formulário */
 form {
     max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -182,6 +204,7 @@ form:hover{
 /* Estilo para os rótulos */
 label {
     display: block;
+    text-align: left;
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -209,11 +232,14 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;
+    text-align: center;
+   
 
 }
 input[type="submit"]:hover{
     background-color: green;
 }
+
 /* Estilo para mensagens de erro */
 .erro {
     border: 2px solid red;
@@ -280,11 +306,21 @@ input[type="submit"]:hover{
     color: grey;
     background-color:rgb(199, 198, 198);
 }
-
-#hamburguer{
-    display: none;
+.aparece{
+    display: flex;
+    flex-direction: column;
+    background-color: orangered;
+    color: white;
+    padding: 30px;
+    border: 1px solid gray;
+    top: 100%;
+    position: absolute;
+    right: 0;
+  
 }
-
+.aparece a{
+  margin-top: 30px;
+}
   
 @media screen and (max-width: 768px) {
     body{
@@ -299,29 +335,26 @@ input[type="submit"]:hover{
         flex-direction: column;
         align-items: center;
     }
- 
-    #hamburguer {
+    .nav2{
+        display: none;
+    }
+    .material-symbols-outlined{
         display: block;
-        background-color: purple;
-        color: white;
-        width: 100vw;
-        text-align: right;
-        margin-right: 30px;
-        cursor: pointer;
-        padding: 10px;
+    } 
+    .agendamento{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+
     }
     
-    .nav-container {
-        position: absolute;
-        top: 100%; /* Posiciona o menu abaixo do cabeçalho "nav1" */
-        right: 0;
-        background-color: #ffffff; /* Define a cor de fundo do menu */
-        display: none; /* Inicialmente, o menu está oculto */
-        z-index: 1; /* Certifique-se de que o menu esteja na frente de outros elementos */
+    section{
+        display: flex;
+        align-items: center;
     }
     div{
-        display:flex;
-        justify-content: center;
+        
         align-items: center;
         flex-direction: column;
     }
@@ -329,8 +362,17 @@ input[type="submit"]:hover{
         display: block;
         align-items: center;
         flex-direction: column;
+        width: 200px;
     }
-
+    #botConsulta{
+        align-items: center;
+        width: 80px;
+        text-align: center;
+        font-size: 8px;
+        padding: 0;
+        height: 30px;
+    }
+        
 
     footer{
         display: block;
@@ -339,9 +381,9 @@ input[type="submit"]:hover{
         height: auto;
     }
     .footer{
-      flex-direction: column;
-      display: block;
-      height: min-content;
-    
+        flex-direction: column;
+        display: block;
+        height: min-content;
+        
     }
-} 
+    } 

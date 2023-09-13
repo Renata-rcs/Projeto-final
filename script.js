@@ -1,11 +1,8 @@
 //Menu
-function clickMenu() {
-    var navContainer = document.querySelector('.nav-container');
-    if (window.getComputedStyle(navContainer).display === 'block') {
-        navContainer.style.display = 'none';
-    } else {
-        navContainer.style.display = 'block';
-    }
+const menu = document.querySelector('')
+
+function aparece(){
+    nav2.classList.toggle('aparece')
 }
 
 
@@ -131,4 +128,4 @@ function exibirFeedbacks() {
     });
 }
 
-// formulario   
+

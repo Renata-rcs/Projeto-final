@@ -10,31 +10,25 @@
     </head>
     <body>
         <header>
-
-            <header>
-                <nav class="nav1">
-               <img src="./imagens/Logo Emagreça.png" width="250px">
-                </nav>
-                <span class="material-symbols-outlined" id="hamburguer" onclick="clickMenu()">menu</span>
-                <div class="nav-container">
-                <nav class="nav2">
-                    <div class="nav-item">
-                        <button class="dropdown">Inicio</button>
-                        <ul class="list">
-                            <li><small><a href="./index.html">Página inicial</a></small></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <button class="dropdown">Clinica</button>
-                        <ul class="list">
-                            <li><small><a href="#">Sobre nós</a></small></li>
-                            <li><small><a href="#">Parceiros</a></small></li>
+            <nav class="nav-1">
+                <img src="../imagens/Logo Emagreça.png" width="200px">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Pesquisar...">
+                    <span class="material-symbols-outlined search-icon">search</span>
+                </div>            
+            </nav>
+            <span id="botao" class="material-symbols-outlined" onclick="aparece()">menu</span>
+            <nav class="dp-menu">
+                <ul>
+                    <li><small><a href="#"><b>Inicio</b></a></small></li>
+                    <li><small><a href="#"><b>Clinica</b></a></small>
+                        <ul>
+                            <li><small><a href="#"><small>Sobre nós</a></small></li>
                             <li><small><a href="#">Colaboradores</a></small></li>
                         </ul>
-                    </div>
-                    <div class="nav-item">
-                        <button class="dropdown">Capilar</button>
-                            <ul class="list">
+                    </li>
+                        <li><small><a href="#"><b>Capilar</b></a></small>
+                            <ul>
                                 <li><small><a href="#">Transplante Capilar</a></small></li>
                                 <li><small><a href="#">Tratamento de Calvície</a></small></li>
                                 <li><small><a href="#">Terapia a Laser</a></small></li>
@@ -42,82 +36,70 @@
                                 <li><small><a href="#">Tratamento de Caspa</a></small></li>
                             </ul>
                         </li>
-                    </div>
-                    <div class="nav-item">
-                        <button class="dropdown">Estetica</button>
-                        <ul class="list">
-                            <button class="dropdown"></button>
-                            <li><small><a href="#"><b>Estética Facial</b></a></small>
-                                <ul>
-                                    <li><small><a href="#">Limpeza de Pele</a></small></li>
-                                    <li><small><a href="#">Tratamento de Acne</a></small></li>
-                                    <li><small><a href="#">Microdermoabrasão</a></small></li>
-                                    <li><small><a href="#">Preenchimento Facial</a></small></li>
-                                    <li><small><a href="#">Tratamento de Rugas</a></small></li>
-                                    <li><small><a href="#">Botox</a></small></li>
-                                </ul>
-                            </li>
-                            <li><small><a href="#"><b>Estética Corporal</b></a></small>
-                                <ul>
-                                    <li><small><a href="#">Massagem Modeladora</a></small></li>
-                                    <li><small><a href="#">Drenagem Linfática</a></small></li>
-                                    <li><small><a href="#">Lipoaspiração não Cirúrgica</a></small></li>
-                                    <li><small><a href="#">Tratamento de Celulite</a></small></li>
-                                    <li><small><a href="#">Endermologia</a></small></li>
-                                </ul>
-                            </li>
-                           
-                            <li><small><a href="#"><b>Depilação a Laser</b></a></small>
-                                <ul>
-                                    <li><small><a href="#">Depilação a Laser de Diodo</a></small></li>
-                                    <li><small><a href="#">Depilação a Laser Alexandrite</a></small></li>
-                                    <li><small><a href="#">Depilação a Laser Nd:YAG</a></small></li>
-                                    <li><small><a href="#">Depilação a Laser IPL</a></small></li>
-                                </ul>
-                            </li>
-                        </ul>                    
-                    </div>
-                    <div class="nav-item">
-                        <button class="dropdown">SPA</button>
-                        <ul class="list">
-                            <li><small><a href="#">Massagem Relaxante</a></small></li>
-                            <li><small><a href="#">Banho de Ofurô</a></small></li>
-                            <li><small><a href="#">Tratamento de Pele</a></small></li>
-                            <li><small><a href="#">Aromaterapia</a></small></li>
-                            <li><small><a href="#">Yoga e Meditação</a></small></li>
+                        <li><small><a href="#"><b>Estética Facial</b></a></small>
+                            <ul>
+                                <li><small><a href="#">Limpeza de Pele</a></small></li>
+                                <li><small><a href="#">Tratamento de Acne</a></small></li>
+                                <li><small><a href="#">Microdermoabrasão</a></small></li>
+                                <li><small><a href="#">Preenchimento Facial</a></small></li>
+                                <li><small><a href="#">Tratamento de Rugas</a></small></li>
+                                <li><small><a href="#">Botox</a></small></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><small><b>Estética Corporal</b></a></small>
+                            <ul>
+                                <li><small><a href="#">Massagem Modeladora</a></small></li>
+                                <li><small><a href="#">Drenagem Linfática</a></small></li>
+                                <li><small><a href="#">Lipoaspiração não Cirúrgica</a></small></li>
+                                <li><small><a href="#">Tratamento de Celulite</a></small></li>
+                                <li><small><a href="#">Endermologia</a></small></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><small><b>Depilação a laser</b></a></small>
+                            <ul>
+                                <li><small><a href="#">Depilação a Laser de Diodo</a></small></li>
+                                <li><small><a href="#">Depilação a Laser Alexandrite</a></small></li>
+                                <li><small><a href="#">Depilação a Laser Nd:YAG</a></small></li>
+                                <li><small><a href="#">Depilação a Laser IPL</a></small></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><small><b>SPA</a></b></small>
+                            <ul>
+                                <li><small><a href="#">Massagem Relaxante</a></small></li>
+                                <li><small><a href="#">Banho de Ofurô</a></small></li>
+                                <li><small><a href="#">Tratamento de Pele</a></small></li>
+                                <li><small><a href="#">Aromaterapia</a></small></li>
+                                <li><small><a href="#">Yoga e Meditação</a></small></li>
+                            </ul>
+                        </li>
+                        <li><small><a href="#"><b>Podologia</b></a></small>
+                            <ul>
+                                <li><small><a href="#">Corte e Tratamento de Unhas</a></small></li>
+                                <li><small><a href="#">Tratamento de Calos e Calosidades</a></small></li>
+                                <li><small><a href="#">Reflexologia Podal</a></small></li>
+                                <li><small><a href="#">Tratamento de Fungos nas Unhas</a></small></li>
+                                <li><small><a href="#">Avaliação Postural</a></small></li>
+                            </ul>
+                        </li>
+                    <li><a href="#"><small><b>Contato</b></a></small>
+                        <ul>
+                            <li><small><a href="#">Telefone</a></small></li>
+                            <li><small><a href="./agendamento.html" target="_blank">Agendamento de consulta</a></small></li>
+                            <li><small><a href="#">Localização</a></small></li>
                         </ul>
-                    </div>
-                    <div class="nav-item">
-                        <button class="dropdown">Podologia</button>
-                        <ul class="list">
-                            <li><small><a href="#">Corte e Tratamento de Unhas</a></small></li>
-                                    <li><small><a href="#">Tratamento de Calos e Calosidades</a></small></li>
-                                    <li><small><a href="#">Reflexologia Podal</a></small></li>
-                                    <li><small><a href="#">Tratamento de Fungos nas Unhas</a></small></li>
-                                    <li><small><a href="#">Avaliação Postural</a></small></li>
-                        </ul>
-                    </div>
+                    </li>
                     
-                    <div class="nav-item">
-                        <button class="dropdown"><b>Contato</b></button>
-                        <ul class="list">
-                            <Li><small><a href="tel:+5561980000000" target="_blank" target="_blank">Telefone</a></small></Li>
-                            <li><small><a href="./agendamento.html" target="_blank">Agendamento</a></small></li>
-                            <li><small><a href="https://goo.gl/maps/spxzX4NMeBfw7o3H8" target="_blank">Localização - Asa Norte</a></small></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            </header>
+                </ul>
+            </nav>
         </header>
         <main>
         <section class="setcion">  
            <section class="agendamento">
-            <h1 id="tituloConsulta">Formulário</h1>
+            <h1 id="tituloform1">Formulário</h1>
 
            <div id="consulta">
             <div id="agend1">
-                <h2 id="tituloform">Primeira Consulta Gratuita</h2>
+                <h2 id="tituloform2">Primeira Consulta Gratuita</h2>
 
                 <p>Nossa clínica oferece a primeira consulta totalmente gratuita. Esta é uma ótima oportunidade para você tirar todas as suas dúvidas sobre nossos serviços. Estamos aqui para ajudar você a alcançar seus objetivos de com saúde e bem-estar.</p>
 

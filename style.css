@@ -1,121 +1,128 @@
-  @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Kaushan+Script&family=Marck+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Kaushan+Script&family=Marck+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    width: 100vw; /* 100% da largura da janela de visualização */
-    height: 100vh; /* 100% da altura da janela de visualização */
-    font-family: Arial, Helvetica, sans-serif; /* Define a família de fontes padrão */
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-header {
-    display: flex; /* Define um layout flexível para os elementos dentro do cabeçalho */
-    justify-content: space-around; /* Espaço igual entre os elementos filhos */
-    width: 100vw; /* 100% da largura da janela de visualização */
-    font-weight: bold; /* Define a espessura da fonte para o cabeçalho */
-    height: 60px; /* Define a altura do cabeçalho */
-    background-color:purple; /* Define a cor de fundo do cabeçalho */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
     position: fixed;
     z-index: 1;
-    margin-bottom: 10px;
 }
-
-/* Estilos para telas maiores (acima de 768px) */
-.nav1 {
-    color:white;
-    padding: 20px;
-    align-items: center;
-    display: flex;
-    height: 60px;
+.nav-1{
+  background-color: purple;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-h1{ font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
-h2{ font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 22px;
-
-}
-h3{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-   
-}
-
-.nav2 {
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color:purple;
-    height: 60px;
-}
-
-
-.nav-item {
+.search-container {
     position: relative;
-    margin-right: 40px;
+    width: 200px; /* Largura do campo de entrada e ícone */
+    right: 20px;
 }
 
-.dropdown {
-    background:none;
+.search-input {
+    width: 100%;
+    height: 25px;
     border: none;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    padding: 0;
+    padding: 5px;
+    border-radius: 5px;
 }
 
-.dropdown:hover {
-    color:gray;
-}
-
-.list {
+.search-icon {
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: auto;
-    max-width: 300px;
-    padding: 20px;
-    background-color:purple;
-    list-style: none;
+    top: 50%; /* Centralize verticalmente o ícone */
+    right: 20px; /* Ajuste a posição do ícone à direita */
+    transform: translateY(-50%); /* Ajuste vertical para o centro */
+    cursor: pointer;
+}
+#botao{
     display: none;
 }
 
-.nav-item:hover .list {
+.dp-menu ul{
+    list-style-type: none;
+    padding: 0;
+
+}
+.dp-menu{
+    font-family: 'Roboto', sans-serif;
+    background-color:white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(230, 224, 224);
+}
+.dp-menu ul li{
+    margin-top: 20px;
+    display: inline;
+    position: relative;
+}
+.dp-menu ul li a{
+    color: gray;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    
+}
+.dp-menu ul li a:hover{
+    color: white;
+    background-color:purple ;
+}
+/*Sub menu*/
+.dp-menu ul ul{
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    background-color:purple;
+}
+.dp-menu ul li:hover ul{
+    display: block;
+}
+.dp-menu ul ul{
+    width: 150px;
+    
+}
+.dp-menu ul ul li a{
     display: block;
 }
 
-.list li {
-    margin-bottom: 10px;
-    list-style: none;
+.dp-menu ul ul{
+    width: 150px;
+    
 }
-
-.list a {
-    list-style: none;
-    color:white;
-    font-size: 12px;
-    font-weight: normal;
-    text-decoration: none;
-    white-space: nowrap;
+.dp-menu ul ul li a{
+    display: block;
 }
-
-.list a:hover {
-    color:gray;
+.dp-menu ul ul{
+    width: 150px;
+    
 }
-
-
+.dp-menu ul ul li a{
+    display: block;
+}
 /* Main*/
 main {
     max-width: 1200px;
@@ -146,12 +153,6 @@ section {
 section + section {
     margin-top: 50px;
 }
-#proh2{
-    color: purple;
-    margin: 20px;
-    font-size: 50px;
-}
-
 
 #center-content {
     margin-top: 500px;
@@ -175,19 +176,177 @@ section + section {
 
 #texts1{
     text-align: left;
-    color: white;
-    background-color: green;
+    color:purple;
+    background-color: transparent;
+    padding: 40px;
 }
-ul >li{
-    list-style: none;
+#texts1 h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
 }
+#texts1 h2{
+    color: gray;
+    font-size: larger;
+    margin: 20px;
+}
+#texts1 h3{
+    color: grey;
+    font-size:larger ;
+    margin: 20px;
+}
+#texts1 ul{
+    text-decoration: none;
+    color: grey;
+    font-size: 12px;
+}
+#texts1 p{
+    color: gray;
+    font-size: 12px;
+}
+/* Cadastro*/
+#cadSection  h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+   margin: 40px;
+    color:purple;
+ }
+ .erro{
+     border: 2px solid red;
+ }
+ .secao {
+     display: flex;
+     justify-content:space-around; /* Alinha as divs lado a lado */
+     height: 600px;
+  
+ }
+ 
+ .imagem {
+    width: 300px;
+     height: 450px;
+     margin-bottom: 20px;
+ }
+ #imgcadastro{
+     height: 450px;
+     width: 300px;
+ }
+ #cad h2{
+     margin-top: 10px;
+     text-align: center;
+ }
+ #form1 {
+     text-align: left;
+     margin: 5px;
+     padding: 0;
+ }
+ 
+ .cadastro {
+     width: 300px;
+     display: flex;
+     flex-direction: column;
+     height: 450px;
+     margin-bottom: 20px; /* Adicione um valor de margem inferior */
+     border: 5px solid green;
+     cursor: pointer;
+     
+ }
+ .cadastro:hover{
+     transform: scale(1.2);
+ }
+ #icad{
+    text-align: left;
+ }
+ 
+ #inome,
+ #iemail,
+ #isenha,
+ #iconfirmarsenha {
+     text-align: left;
+     width: 280px;
+     margin-bottom: 10px;
+     border-radius: 10px;
+     height: 40px;
+ }
+ 
+#icadastrar {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: green;
+     border-radius: 10px;
+     width: 280px;
+     height: 30px;
+ }
+ #icadastrar:hover{
+    background-color: purple;
+ }
+ 
+ /* Pesquisa Cards*/
+ #cardpri{
+    display: flex;
+    justify-content: space-between;
+}
+ #card {
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 700;
+     background-color: #ffffff;
+     border-radius: 10px;
+     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     margin: 30px;
+     overflow: hidden;
+     padding: 0;
+     border: 0;
+     height: 200px;
+ }
+ 
+ #card > img {
+     max-width: 100%;
+     height: auto;
+ }
+ 
+ 
+ #card > p {
+     margin: 5px 0;
+ }
+ 
+ .small {
+     text-align: center;
+     color: #e9e7e9;
+ }
+ 
+ .bot1 {
+     color: white;
+     background-color: green;
+     border: 1px solid gray;
+     border-radius: 10px;
+     padding: 10px 20px;
+     margin: 10px;
+     height: 40px;
+     display: block;
+     text-decoration: none;
+     cursor: pointer;
+ }
+ #bot1a{
+     text-decoration: none;
+     color: white;
+ }
+ 
+ #img4{
+     margin: 40px;
+ }
+
 #texts2{
     display: flex;
     justify-content: space-between; /* Alinha as divs lado a lado */
-    align-items: center; /* Alinha verticalmente ao centro */
-    height: 700px;
-    background-color: purple;
-    color:white;
+    height: 500px;
+    background-color:transparent;
+    color: grey;
+}
+#texts1, #texts2 h2{
+    font-family: 'Roboto', sans-serif;font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 #text1, #text2{
     flex-basis:(45%, 10px) ;
@@ -197,132 +356,89 @@ ul >li{
 }
 
 
-/* Cadastro*/
-#cadSection > h1{
-   margin-top: 30px;
-   color: green;
-}
-.erro{
-    border: 2px solid red;
-}
-.secao {
-    display: flex;
-    justify-content:space-around; /* Alinha as divs lado a lado */
-    align-items: center; /* Alinha verticalmente ao centro */
-    height: 600px;
- 
-}
 
-.imagem {
-   width: 300px;
-    height: 450px;
-    margin-bottom: 20px;
+/*Comentario google*/
+#depoimentos{
+    margin: 30px;
+    color: purple;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
-#imgcadastro{
-    height: 450px;
-    width: 300px;
+#google-logo{
+    width: 80px;
+    margin-top:30px ;
 }
-#cadh2{
-    margin-top: 10px;
-    text-align: center;
+#google-div{
+    margin-bottom: 30px;
 }
-#form1 {
-    text-align: left;
-    margin: 5px;
-    padding: 0;
-}
-
-.cadastro {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    height: 450px;
-    margin-bottom: 20px; /* Adicione um valor de margem inferior */
-    border: 5px solid green;
-    cursor: pointer;
-    
-}
-.cadastro:hover{
-    transform: scale(1.2);
-}
-#icad{
-   text-align: left;
-}
-
-#inome,
-#iemail,
-#isenha,
-#iconfirmarsenha {
-    text-align: left;
-    width: 280px;
+#g{
+    width: 25px;
+    margin-top: 20px;
     margin-bottom: 10px;
-    border-radius: 10px;
-    height: 40px;
+}
+#g-comentario{
+    color: green;
+    font-size: 12px;
+}
+#postado{
+    color: grey;
+    font-size: 8px;
 }
 
-#icadastrar {
+.comment-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-    border-radius: 10px;
-    width: 280px;
-    height: 30px;
-
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os comentários */
 }
 
-#cardpri{
+.comment {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px; /* Largura máxima do comentário */
+    background-color: #f9f9f9;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-header {
     display: flex;
     justify-content: space-between;
-}
-#card {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 30px;
-    overflow: hidden;
-    padding: 0;
-    border: 0;
-    height: 200px;
+    align-items: center;
 }
 
-#card > img {
-    max-width: 100%;
-    height: auto;
+.comment-author {
+    font-weight: bold;
+    font-size: 16px;
 }
 
-
-#card > p {
-    margin: 5px 0;
+.comment-rating {
+    color: #f4d03f; /* Cor das estrelas */
+    font-size: 18px;
 }
 
-.small {
-    text-align: center;
-    color: #e9e7e9;
-}
-
-.bot1 {
-    color: white;
-    background-color: green;
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin: 10px;
-    height: 40px;
-    display: block;
-    text-decoration: none;
-    cursor: pointer;
-}
-#bot1a{
-    text-decoration: none;
-    color: white;
-}
-
-#img4{
-    margin: 40px;
+.comment-text {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+  
 }
 
 
@@ -380,6 +496,7 @@ ul >li{
     color: white; /* Nova cor do texto no estado hover */
     background-color: purple;
 }
+
  .footer{
      display: flex;
      justify-content: space-between;
@@ -414,10 +531,9 @@ p{
     margin-bottom: 0;
 }
 .re{
-  
-    margin-top: 10px;
+    width: 100%;
+    margin-top: 40px;
     margin-bottom: 10px;
-    width: 100vw;
     display: flex;
     justify-content:center;
     flex-direction: column;
@@ -433,7 +549,7 @@ p{
 }
 
   
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 868px) {
     body{
         padding: 0;
         margin: 0;
@@ -447,7 +563,7 @@ p{
         align-items: center;
     }
  
-    #hamburguer {
+    #botao {
         display: block;
         background-color: purple;
         color: white;
@@ -456,16 +572,6 @@ p{
         margin-right: 30px;
         cursor: pointer;
         padding: 10px;
-    }
-
-   
-    .nav-container {
-        position: absolute;
-        top: 100%; /* Posiciona o menu abaixo do cabeçalho "nav1" */
-        right: 0;
-        background-color: #ffffff; /* Define a cor de fundo do menu */
-        display: none; /* Inicialmente, o menu está oculto */
-        z-index: 1; /* Certifique-se de que o menu esteja na frente de outros elementos */
     }
     .principal{
         top: 10px;
@@ -582,12 +688,17 @@ p{
         flex-direction: column;
         align-items: center;
         height: auto;
+        width: auto;
     }
     .footer{
       flex-direction: column;
       display: block;
       height: min-content;
+      width: auto;
     
+    }
+    .re{
+        width: auto;
     }
 }
 
