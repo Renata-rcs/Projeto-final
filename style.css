@@ -531,7 +531,7 @@ p{
     color: white;
     padding: 30px;
     border: 1px solid #6d00a1;
-    top:60px;
+    top:100%;
     position: absolute;
     right: 0;
     z-index: 99;
@@ -582,13 +582,6 @@ p{
     .dp-menu li {
         display: block!important;
     }
-    #seta-direita-carrosel{
-        z-index: -1;
-    }
-    #seta-esquerda-carrosel{
-        z-index: -1;
-    }
-
    
     main{
         display: block;
