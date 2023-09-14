@@ -146,6 +146,9 @@ section {
     margin: 100px 30px; /* Isso define as margens superior e inferior como 200px e as margens esquerda e direita como 30px */
     border: 10px solid transparent; /* Adiciona uma borda transparente de 40px */
 }
+.carousel-control-next, .carousel-control-prev {
+    z-index: 0;
+}
 
 
 #center-content {
@@ -523,15 +526,15 @@ p{
 }
 /* Estilos para o menu quando a classe .menu-ativo é aplicada */
 .menu-ativo {
-    display: block;
+    display: block!important;
     background-color:#6d00a1;
     color: white;
     padding: 30px;
     border: 1px solid #6d00a1;
-    top:0;
+    top:60px;
     position: absolute;
     right: 0;
-  
+    z-index: 99;
 }
 .menu-ativo ul:hover{
     background-color: #6d00a1;
@@ -546,7 +549,7 @@ p{
 }
 
   
-@media screen and (max-width: 710px) {
+@media (max-width: 710px) {
     body{
         padding: 0;
         margin: 0;
@@ -576,12 +579,23 @@ p{
     .dp-menu{
         display: none;
     }
+    .dp-menu li {
+        display: block!important;
+    }
+    #seta-direita-carrosel{
+        z-index: -1;
+    }
+    #seta-esquerda-carrosel{
+        z-index: -1;
+    }
+
+   
     main{
         display: block;
         flex-direction: column;
         align-items: center;
     }
-   
+    
    
     .principal{
         top: 10px;

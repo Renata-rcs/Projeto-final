@@ -306,19 +306,18 @@ input[type="submit"]:hover{
     color: grey;
     background-color:rgb(199, 198, 198);
 }
-.menu-ativo{
-    display: flex;
-    flex-direction: column;
-    background-color: #e6cce6;
+.menu-ativo {
+    display: block!important;
+    background-color:#6d00a1;
     color: white;
     padding: 30px;
-    border: 1px solid gray;
-    top: 100%;
+    border: 1px solid #6d00a1;
+    top:60px;
     position: absolute;
     right: 0;
-  
+    z-index: 99;
+    height: auto;
 }
-
 #hamburguer{
     position: absolute;
     display: none;
@@ -357,6 +356,9 @@ input[type="submit"]:hover{
    
     .dp-menu{
         display: none;
+    }
+    .dp-menu li {
+        display: block!important;
     }
     #pesquisar{
         display: none;
