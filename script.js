@@ -1,9 +1,13 @@
 //Menu
-const menu = document.querySelector('')
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburguer = document.querySelector('#hamburguer');
+    const dpMenu = document.querySelector('.dp-menu');
 
-function aparece(){
-    nav2.classList.toggle('aparece')
-}
+    hamburguer.addEventListener('click', () => {
+        dpMenu.classList.toggle('menu-ativo');
+        console.log('Classe menu-ativo adicionada:', dpMenu.classList.contains('menu-ativo'));
+    });
+});
 
 
 //Cadastro

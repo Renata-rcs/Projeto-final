@@ -11,6 +11,7 @@ body{
     width: 100vw;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 header{
     display: flex;
@@ -22,7 +23,7 @@ header{
     z-index: 1;
 }
 .nav-1{
-  background-color: purple;
+  background-color: #6d00a1;
   width: 100%;
   height: 60px;
   display: flex;
@@ -57,9 +58,6 @@ header{
     transform: translateY(-50%); /* Ajuste vertical para o centro */
     cursor: pointer;
 }
-#botao{
-    display: none;
-}
 
 .dp-menu ul{
     list-style-type: none;
@@ -88,7 +86,7 @@ header{
 }
 .dp-menu ul li a:hover{
     color: white;
-    background-color:purple ;
+    background-color:#6d00a1 ;
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -96,7 +94,7 @@ header{
     left: 0;
     position: absolute;
     top: 100%;
-    background-color:purple;
+    background-color:#6d00a1;
 }
 .dp-menu ul li:hover ul{
     display: block;
@@ -141,7 +139,6 @@ main {
     margin-bottom: 20px;
 }
 section {
-
     min-height: 80vh;
     text-align: center;
     border-radius: 10px;
@@ -150,9 +147,6 @@ section {
     border: 10px solid transparent; /* Adiciona uma borda transparente de 40px */
 }
 
-section + section {
-    margin-top: 50px;
-}
 
 #center-content {
     margin-top: 500px;
@@ -168,49 +162,59 @@ section + section {
     position: relative;
     margin-bottom: 150px;
 }
-#imglogo2 {
+#imglg2 {
     display: block;
     margin: 40px auto;
     width: 250px;
 }
+/*texto*/
+#texts2{
+    background-color: #9032bb;
+}
+#container {
+    display: flex;
+    flex-direction: column; 
+}
 
-#texts1{
-    text-align: left;
-    color:purple;
-    background-color: transparent;
-    padding: 40px;
+#imglogo2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ocupa toda a largura da tela */
+    background-color:#9032bb; /* Cor de fundo da logo (substitua pela sua imagem) */
+    height: 200px; /* Altura da logo (ajuste conforme necessário) */
 }
-#texts1 h1{
+
+#texts-container {
+    display: flex;
+    justify-content: space-between; /* Alinha as divs lado a lado */
+    background-color: #9032bb;
+    color: white;
+}
+
+#text1,
+#text2 {
+    flex: 1; /* Distribui o espaço igualmente entre as duas divs */
+    padding: 20px; /* Espaçamento interno opcional */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+/* Estilos para o texto dentro das divs */
+#text1 h2,
+#text2 h2 {
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px;
+    font-size: 20px;
+    margin: 0; /* Remova a margem padrão */
 }
-#texts1 h2{
-    color: gray;
-    font-size: larger;
-    margin: 20px;
-}
-#texts1 h3{
-    color: grey;
-    font-size:larger ;
-    margin: 20px;
-}
-#texts1 ul{
-    text-decoration: none;
-    color: grey;
-    font-size: 12px;
-}
-#texts1 p{
-    color: gray;
-    font-size: 12px;
-}
+
+
+
 /* Cadastro*/
 #cadSection  h2{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-   margin: 40px;
-    color:purple;
+    margin: 10px;
+    color:black;
  }
  .erro{
      border: 2px solid red;
@@ -219,6 +223,7 @@ section + section {
      display: flex;
      justify-content:space-around; /* Alinha as divs lado a lado */
      height: 600px;
+     margin-top: 40px;
   
  }
  
@@ -247,13 +252,11 @@ section + section {
      flex-direction: column;
      height: 450px;
      margin-bottom: 20px; /* Adicione um valor de margem inferior */
-     border: 5px solid green;
+     border: 5px solid #e6ccdf;
      cursor: pointer;
      
  }
- .cadastro:hover{
-     transform: scale(1.2);
- }
+
  #icad{
     text-align: left;
  }
@@ -273,13 +276,14 @@ section + section {
      display: flex;
      justify-content: center;
      align-items: center;
-     background-color: green;
+     background-color: #9032bb;
+     color: white;
      border-radius: 10px;
      width: 280px;
      height: 30px;
  }
  #icadastrar:hover{
-    background-color: purple;
+    background-color: #6d00a1;
  }
  
  /* Pesquisa Cards*/
@@ -310,15 +314,9 @@ section + section {
  #card > p {
      margin: 5px 0;
  }
- 
- .small {
-     text-align: center;
-     color: #e9e7e9;
- }
- 
  .bot1 {
      color: white;
-     background-color: green;
+     background-color: #9032bb;
      border: 1px solid gray;
      border-radius: 10px;
      padding: 10px 20px;
@@ -327,6 +325,10 @@ section + section {
      display: block;
      text-decoration: none;
      cursor: pointer;
+ }
+ .bot1:hover{
+    background-color: #6d00a1;
+    transform: scale(1.1);
  }
  #bot1a{
      text-decoration: none;
@@ -337,32 +339,9 @@ section + section {
      margin: 40px;
  }
 
-#texts2{
-    display: flex;
-    justify-content: space-between; /* Alinha as divs lado a lado */
-    height: 500px;
-    background-color:transparent;
-    color: grey;
-}
-#texts1, #texts2 h2{
-    font-family: 'Roboto', sans-serif;font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-}
-#text1, #text2{
-    flex-basis:(45%, 10px) ;
-    flex: 1; /* Distribui o espaço igualmente entre as duas divs */
-    padding: 20px; /* Espaçamento interno opcional */
-    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
-}
-
-
-
 /*Comentario google*/
-#depoimentos{
-    margin: 30px;
-    color: purple;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+#stn-depoimentos{
+    height: 800px;
 }
 #google-logo{
     width: 80px;
@@ -395,7 +374,7 @@ section + section {
     flex: 1;
     border: 1px solid #ccc;
     padding: 10px;
-    max-width: 300px; /* Largura máxima do comentário */
+    max-width: 400px; /* Largura máxima do comentário */
     background-color: #f9f9f9;
 }
 
@@ -451,7 +430,7 @@ section + section {
 .feedback h4 {
     font-family: 'Pacífico', cursiva;
     font-weight: 600;
-    color: purple;
+    color: #6d00a1;
     transition: color 0.3s ease;
 }
 #feedp{
@@ -463,10 +442,10 @@ section + section {
 }
 
 .feedback h4:hover {
-    color: green;
+    color: #6d00a1;
 }
 #feedbackContainer{
-    color: purple;
+    color: #9032bb;
     font-size: 14px;
     font-family: 'Pacífico', cursiva;
     font-weight: 600;
@@ -481,7 +460,7 @@ section + section {
 
 #btnfb {
     font-family: 'Pacífico', cursiva;
-    background-color: green;
+    background-color: #9032bb;
     border: 1px solid white;
     border-radius: 10px;
     color:white; /* Cor do texto no estado padrão */
@@ -494,7 +473,7 @@ section + section {
 
 #btnfb:hover {
     color: white; /* Nova cor do texto no estado hover */
-    background-color: purple;
+    background-color: #9032bb;
 }
 
  .footer{
@@ -542,37 +521,68 @@ p{
     color: grey;
     background-color:rgb(199, 198, 198);
 }
-
+/* Estilos para o menu quando a classe .menu-ativo é aplicada */
+.menu-ativo {
+    display: block;
+    background-color:#6d00a1;
+    color: white;
+    padding: 30px;
+    border: 1px solid #6d00a1;
+    top:0;
+    position: absolute;
+    right: 0;
+  
+}
+.menu-ativo ul:hover{
+    background-color: #6d00a1;
+    color: white;
+}
 
 #hamburguer{
+    position: absolute;
     display: none;
+    color: white;
+    right: 50px;
 }
 
   
-@media screen and (max-width: 868px) {
+@media screen and (max-width: 710px) {
     body{
         padding: 0;
         margin: 0;
         border: 0;
         width: 100%;
         height: 100%;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #pesquisar{
+       display: none;
+    }
+    #input-pesquisar{
+        display: none;
+    }
+ 
+    #hamburguer {
+        display: block;
+    }
+    .dp-menu{
+        display: none;
     }
     main{
         display: block;
         flex-direction: column;
         align-items: center;
     }
- 
-    #botao {
-        display: block;
-        background-color: purple;
-        color: white;
-        width: 100vw;
-        text-align: right;
-        margin-right: 30px;
-        cursor: pointer;
-        padding: 10px;
-    }
+   
+   
     .principal{
         top: 10px;
         padding: 30px;
@@ -582,7 +592,7 @@ p{
         display: block;
         flex-direction: column;
     }
-    #imglogo2 {
+    #imglg2 {
         display: block;
         margin: 40px auto;
         width: 100px;
@@ -590,32 +600,42 @@ p{
     #texts2{
         text-align: center;
         align-items: center;
-        height: min-content;
+        display: block;
+        flex-direction: column;
+       
     }
-    #proh2{
-        color: purple;
-        margin: 20px;
-        font-size: 20px;
+    #texts-container{
+        display: block;
+        flex-direction: column;
     }
     .secao {
+            display: flex;
             flex-direction: column; /* Empilhar as divs verticalmente */
             height: auto; /* Permitir que a altura se ajuste ao conteúdo */
             align-items: center; /* Centralizar horizontalmente */
             border: 0;
+            margin-top: 20px;
+            margin-bottom: 0;
+            height: 100%;
         }
     #form1{
         padding: 30px;
         width: 100%;
     }
-       
-    .imagem{
-        display: none;
+    #cadsection{
+        display: block;
+        flex-direction: column;
+    } 
+    #imgcadastro{
+        width: 150px;
+        height: 400px;
     }
     .cadastro {
         flex-basis: auto; /* Permitir que as divs ocupem a largura completa */
-        width: 100%; /* 100% de largura */
+        width:fit-content ;
         margin-bottom: 20px; /* Espaçamento entre as divs */
         border: 0;
+        height: 700px;
         }
     #icad{
         text-align: left;
@@ -636,7 +656,7 @@ p{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: green;
+        background-color: #9032bb;
         border-radius: 10px;
         width:auto;
         height: 30px;
@@ -645,38 +665,40 @@ p{
     #cardpri{
         display: flex;
         justify-content: space-between;
+        height: 100%;
     }
     #card {
             display: flex;
             flex-direction: column;
             align-items: center;
+            height: 100%;
         }
 
     
     #card > img {
-        display: none;
+        display:block;
         
     }
     #card > p {
         margin: 5px 0;
     }
 
-    .small {
-        text-align: center;
-        color: #e9e7e9;
-    }
-
     .bot1 {
         color: white;
-        background-color: green;
+        background-color: #9032bb;
         border: 1px solid gray;
         border-radius: 10px;
         padding: 10px 20px;
         margin: 10px;
-        height: 40px;
+        height: 100%;
         display: block;
         text-decoration: none;
         flex-basis: auto; /* Permite que o botão ocupe a largura necessária */
+    }
+    #stn-depoimentos{
+        display: block;
+        flex-direction: column;
+        height: 100%;
     }
     #bot1a{
         text-decoration: none;

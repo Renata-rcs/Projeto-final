@@ -11,6 +11,7 @@ body{
      width: 100vw;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    color: #666;
 }
 header{
     display: flex;
@@ -22,7 +23,7 @@ header{
     z-index: 1;
 }
 .nav-1{
-    background-color: purple;
+    background-color:#6d00a1;
     width: 100%;
     height: 60px;
     display: flex;
@@ -37,6 +38,9 @@ header{
     'opsz' 24
 }
 .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 200px; /* Largura do campo de entrada e ícone */
     right: 20px;
@@ -52,7 +56,7 @@ header{
     
 .search-icon {
     position: absolute;
-    top: 50%; /* Centralize verticalmente o ícone */
+    top: 40%; /* Centralize verticalmente o ícone */
     right: 20px; /* Ajuste a posição do ícone à direita */
     transform: translateY(-50%); /* Ajuste vertical para o centro */
     cursor: pointer;
@@ -88,7 +92,7 @@ header{
 }
 .dp-menu ul li a:hover{
     color: white;
-    background-color:purple ;
+    background-color:#6d00a1;
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -96,7 +100,7 @@ header{
     left: 0;
     position: absolute;
     top: 100%;
-    background-color:purple;
+    background-color:#6d00a1;
 }
 .dp-menu ul li:hover ul{
     display: block;
@@ -136,7 +140,6 @@ section {
     margin:0;
     background-color: rgba(148, 131, 134, 0.144);
     border-radius: 0;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,9 +149,9 @@ section {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-align: center;
-    margin: 50px;
+    margin-top: 100px;
     font-size: 2em;
-    color: purple;
+    color: #333;
 }
 .agendamento {
     margin-top: 80px;
@@ -161,7 +164,7 @@ section {
 }
 
 #consulta {
-    margin: 40px 50px;
+    margin: 20px;
     background-color: white;
     display: flex;
     justify-content: space-around;
@@ -172,7 +175,7 @@ section {
     font-weight: bold;
     text-align: center;
     margin: 20px;
-    color: purple;
+    color: #333;
 }
 
 
@@ -189,6 +192,7 @@ section {
 form {
     max-width: 1200px;
     display: flex;
+    color: black;
     flex-direction: column;
     text-align: left;
     margin: 0 auto;
@@ -197,10 +201,6 @@ form {
     background-color: rgba(148, 131, 134, 0.144);
     border-radius: 5px;
 }
-form:hover{
-    transform: scale(1.2);
-}
-
 /* Estilo para os rótulos */
 label {
     display: block;
@@ -225,7 +225,7 @@ select {
 /* Estilo para o botão de envio */
 input[type="submit"] {
     align-items: center;
-    background-color:purple;
+    background-color: #6d00a1;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -237,7 +237,7 @@ input[type="submit"] {
 
 }
 input[type="submit"]:hover{
-    background-color: green;
+    transform: scale(1.1);
 }
 
 /* Estilo para mensagens de erro */
@@ -281,7 +281,7 @@ input[type="submit"]:hover{
  }
 
 .contato, .sobre, .servicos, .horario{
-    margin-top: 20px;
+    margin-top: 20px solid grey;
     margin-bottom: 20px;
     text-align: center;
     align-items: center;
@@ -306,10 +306,10 @@ input[type="submit"]:hover{
     color: grey;
     background-color:rgb(199, 198, 198);
 }
-.aparece{
+.menu-ativo{
     display: flex;
     flex-direction: column;
-    background-color: orangered;
+    background-color: #e6cce6;
     color: white;
     padding: 30px;
     border: 1px solid gray;
@@ -318,8 +318,12 @@ input[type="submit"]:hover{
     right: 0;
   
 }
-.aparece a{
-  margin-top: 30px;
+
+#hamburguer{
+    position: absolute;
+    display: none;
+    right: 50px;
+    color: white;
 }
   
 @media screen and (max-width: 768px) {
@@ -335,19 +339,34 @@ input[type="submit"]:hover{
         flex-direction: column;
         align-items: center;
     }
-    .nav2{
+    .agendamento{
+        margin-top: 0;
+        padding: 20px;
+        border-radius: 0;
+    }
+    #consulta{
+        width: 260px;
+        padding: 0;
+        margin: 0;
+        height: 1940px;
+    
+    }
+    h1{ 
+        margin-top: 50px;
+    }
+   
+    .dp-menu{
         display: none;
     }
-    .material-symbols-outlined{
+    #pesquisar{
+        display: none;
+     }
+     #input-pesquisar{
+         display: none;
+     }
+     #hamburguer{
         display: block;
-    } 
-    .agendamento{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 300px;
-
-    }
+     }
     
     section{
         display: flex;
