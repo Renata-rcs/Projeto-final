@@ -44,8 +44,9 @@ hamburguer.addEventListener('click', () => {
         const ecpf = document.getElementById('ecpf');
         const enascimento = document.getElementById('enascimento');
         const eend = document.getElementById('eend');
-        const etratamento = document.getElementById('etratamento');
+        const tratamento = document.getElementById('tratamento')
         const ehorario = document.getElementById('ehorario');
+        ehorario.options[0].value = ''
 
     if (enome.value == '') {
         alert('Por favor, preencha o campo Nome.');
@@ -76,19 +77,20 @@ hamburguer.addEventListener('click', () => {
         eend.classList.add('erro');
     }
     if (tratamento.value == '') {
-        alert('Por favor, preencha o campo Tratamento.');
+        alert('Por favor, preencha o campo Tratamento.')
         tratamento.classList.add('erro');
     }
-    if (horario.value == '') {
-        alert('Por favor, preencha o campo Horario.');
-        horario.classList.add('erro');
+    if (ehorario.value == '') {
+        alert('Por favor, preencha o campo Horario.')
+        ehorario.classList.add('erro');
     }
 
     else {
-        // Se todos os campos estão preenchidos, exibir mensagem de sucesso
+
+        alert('Mensagem enviada com sucesso!');
         
-       
-alert('Mensagem enviada com sucesso!');
+            // Exibe os valores capturados no alert
+            alert(' Nome: ' + enome.value + '\n Telefone: ' + etelefone.value + '\n Email: ' + eemail.value + '\n CPF: ' + ecpf.value + '\n Nascimento: ' + enascimento.value + '\n Endereço: ' + eend.value + '\n Tratamento: ' + tratamento.value + '\n Horário: ' + ehorario.value);
     }
 });
 });
@@ -99,5 +101,5 @@ function isValidEmail(eemail) {
     return emailRegex.test(eemail);
 }
 
-console.log('click')
+
 

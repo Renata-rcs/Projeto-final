@@ -29,6 +29,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 .material-symbols-outlined {
   font-variation-settings:
@@ -68,14 +69,17 @@ header{
     font-family: 'Roboto', sans-serif;
     background-color:white;
     width: 100%;
+    border-top: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-bottom: 1px solid rgb(230, 224, 224);
 }
 .dp-menu ul li{
     margin-top: 20px;
     display: inline;
     position: relative;
+   
 }
 .dp-menu ul li a{
     color: gray;
@@ -121,6 +125,7 @@ header{
 .dp-menu ul ul li a{
     display: block;
 }
+
 /* Main*/
 main {
     max-width: 1200px;
@@ -141,7 +146,7 @@ main {
 section {
     min-height: 80vh;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: white;
     margin: 100px 30px; /* Isso define as margens superior e inferior como 200px e as margens esquerda e direita como 30px */
     border: 10px solid transparent; /* Adiciona uma borda transparente de 40px */
@@ -159,7 +164,7 @@ section {
     align-items: center;
     min-height: 60vh;
     padding: 20px 0;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: white; /* Ou outra cor legível */
     position: relative;
@@ -239,23 +244,27 @@ section {
      height: 450px;
      width: 300px;
  }
- #cad h2{
+ #cadh2{
      margin-top: 10px;
      text-align: center;
+     color: white;
  }
  #form1 {
      text-align: left;
      margin: 5px;
      padding: 0;
+     color: white;
  }
  
  .cadastro {
      width: 300px;
+     background-color:#9032bb;
      display: flex;
      flex-direction: column;
      height: 450px;
      margin-bottom: 20px; /* Adicione um valor de margem inferior */
-     border: 5px solid #e6ccdf;
+     border-radius: 5px;
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
      cursor: pointer;
      
  }
@@ -271,7 +280,7 @@ section {
      text-align: left;
      width: 280px;
      margin-bottom: 10px;
-     border-radius: 10px;
+     border-radius: 5px;
      height: 40px;
  }
  
@@ -279,14 +288,17 @@ section {
      display: flex;
      justify-content: center;
      align-items: center;
-     background-color: #9032bb;
-     color: white;
-     border-radius: 10px;
+     background-color: white;
+     color: #6d00a1;
+     border-radius: 5px;
      width: 280px;
      height: 30px;
  }
  #icadastrar:hover{
     background-color: #6d00a1;
+ }
+ #cadh2{
+    color:#ffffff
  }
  
  /* Pesquisa Cards*/
@@ -298,7 +310,7 @@ section {
      font-family: Arial, Helvetica, sans-serif;
      font-weight: 700;
      background-color: #ffffff;
-     border-radius: 10px;
+     border-radius: 5px;
      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
      text-align: center;
      margin: 30px;
@@ -321,7 +333,7 @@ section {
      color: white;
      background-color: #9032bb;
      border: 1px solid gray;
-     border-radius: 10px;
+     border-radius: 5px;
      padding: 10px 20px;
      margin: 10px;
      height: 40px;
@@ -352,6 +364,7 @@ section {
 }
 #google-div{
     margin-bottom: 30px;
+    border-radius: 5px;
 }
 #g{
     width: 25px;
@@ -376,6 +389,7 @@ section {
 .comment {
     flex: 1;
     border: 1px solid #ccc;
+    border-radius: 5px;
     padding: 10px;
     max-width: 400px; /* Largura máxima do comentário */
     background-color: #f9f9f9;
@@ -527,18 +541,19 @@ p{
 /* Estilos para o menu quando a classe .menu-ativo é aplicada */
 .menu-ativo {
     display: block!important;
-    background-color:#6d00a1;
-    color: white;
+    background-color:white;
+    color: gray;
     padding: 30px;
-    border: 1px solid #6d00a1;
     top:100%;
     position: absolute;
     right: 0;
     z-index: 99;
 }
 .menu-ativo ul:hover{
-    background-color: #6d00a1;
     color: white;
+}
+.menu-ativo ul ul{
+    display: none !important;
 }
 
 #hamburguer{
@@ -581,6 +596,16 @@ p{
     }
     .dp-menu li {
         display: block!important;
+    }
+    .dp-menu ul{
+        right: 0;
+        position: relative;
+        top: 100%;
+        background-color:white;
+    }
+   
+    .dp-menu ul ul{
+        display: none;
     }
    
     main{

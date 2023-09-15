@@ -11,7 +11,7 @@ body{
     width: 100vw;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    color: #666;
+    font-size: 16px;
 }
 header{
     display: flex;
@@ -23,29 +23,27 @@ header{
     z-index: 1;
 }
 .nav-1{
-    background-color:#6d00a1;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background-color: #6d00a1;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
 }
 .material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 .search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     width: 200px; /* Largura do campo de entrada e ícone */
     right: 20px;
 }
-    
+
 .search-input {
     width: 100%;
     height: 25px;
@@ -53,43 +51,46 @@ header{
     padding: 5px;
     border-radius: 5px;
 }
-    
+
 .search-icon {
     position: absolute;
-    top: 40%; /* Centralize verticalmente o ícone */
+    top: 50%; /* Centralize verticalmente o ícone */
     right: 20px; /* Ajuste a posição do ícone à direita */
     transform: translateY(-50%); /* Ajuste vertical para o centro */
     cursor: pointer;
- }  
+}
+
 .dp-menu ul{
     list-style-type: none;
     padding: 0;
-    
+
 }
-.dp-menu{ 
+.dp-menu{
     font-family: 'Roboto', sans-serif;
     background-color:white;
     width: 100%;
+    border-top: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-bottom: 1px solid rgb(230, 224, 224);
-    height: 50px;
 }
 .dp-menu ul li{
     margin-top: 20px;
     display: inline;
     position: relative;
-    }
+   
+}
 .dp-menu ul li a{
     color: gray;
     text-decoration: none;
     display: inline-block;
-     padding: 10px;
-        
+    padding: 10px;
+    
 }
 .dp-menu ul li a:hover{
     color: white;
-    background-color:#6d00a1;
+    background-color:#6d00a1 ;
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -104,139 +105,26 @@ header{
 }
 .dp-menu ul ul{
     width: 150px;
-        
+    
 }
 .dp-menu ul ul li a{
-     display: block;
+    display: block;
 }
-    
+
 .dp-menu ul ul{
-     width: 150px;
-        
+    width: 150px;
+    
 }
 .dp-menu ul ul li a{
     display: block;
 }
 .dp-menu ul ul{
     width: 150px;
-        
+    
 }
 .dp-menu ul ul li a{
     display: block;
 }
-
-/*Main*/
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-section {
-    width: 80%;
-    margin:0;
-    background-color: rgba(148, 131, 134, 0.144);
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
-#tituloform1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 100px;
-    font-size: 2em;
-    color: #333;
-}
-.agendamento {
-    margin-top: 80px;
-    display: flex;
-    align-items: center;
-    width: 80%;
-    background-color: white;
-    flex-direction: column; /* Adicione esta linha para colocar os elementos em coluna */
-    border-radius: 10px;
-}
-
-#consulta {
-    margin: 20px;
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-   
-}
-#consulta h2, h3{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px;
-    color: #333;
-}
-
-
-#agend1,
-#agend2 {
-    margin: 40px;
-    height: auto;
-    width: 45%;
-}
-
-
-
-/* Estilo para o formulário */
-form {
-    max-width: 1200px;
-    display: flex;
-    color: black;
-    flex-direction: column;
-    text-align: left;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: rgba(148, 131, 134, 0.144);
-    border-radius: 5px;
-}
-/* Estilo para os rótulos */
-label {
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-/* Estilo para os campos de entrada de texto */
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-input[type="date"],
-select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* Estilo para o botão de envio */
-input[type="submit"] {
-    align-items: center;
-    background-color: #6d00a1;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 12px;
-    text-align: center;
-   
-
-}
-input[type="submit"]:hover{
-    transform: scale(1.1);
-}
-
 /* Estilo para mensagens de erro */
 .erro {
     border: 2px solid red;
@@ -254,6 +142,7 @@ input[type="submit"]:hover{
     margin: 20px;
     color-scheme: #666;
 }
+
  
  footer {
     display: flex;
@@ -303,24 +192,30 @@ input[type="submit"]:hover{
     color: grey;
     background-color:rgb(199, 198, 198);
 }
+/* Estilos para o menu quando a classe .menu-ativo é aplicada */
 .menu-ativo {
     display: block!important;
     background-color:white;
-    color: white;
+    color: gray;
     padding: 30px;
-    top:60px;
+    top:100%;
     position: absolute;
     right: 0;
     z-index: 99;
-    height: auto;
 }
+.menu-ativo ul:hover{
+    color: white;
+}
+.menu-ativo ul ul{
+    display: none !important;
+}
+
 #hamburguer{
     position: absolute;
     display: none;
-    right: 50px;
     color: white;
+    right: 50px;
 }
-  
 @media (max-width: 768px) {
     body{
         padding: 0;
@@ -332,27 +227,6 @@ input[type="submit"]:hover{
     main{
         flex-direction: column;
         align-items: center;
-    }
-    .agendamento{
-       
-        margin-top: 0;
-        border-radius: 0;
-    }
-    #consulta{
-        height: 700px;
-        width: 200px;
-        padding: 0;
-        margin: 0;
-        height: 1940px;
-    
-    }
-    h1{ 
-        margin-top: 50px;
-        text-align: center;
-    }
-    #consulta h2, h3{
-        text-align: center;
-        margin: 10px 0;
     }
     .dp-menu{
         display: none;
@@ -381,43 +255,6 @@ input[type="submit"]:hover{
         display: block;
      }
     
-    section{
-        display: flex;
-        align-items: center;
-    }
-    form {
-        max-width: 120px;
-        display: flex;
-        color: black;
-        flex-direction: column;
-        text-align: left;
-        margin: 0 auto;
-        padding: 10px;
-        border: 1px solid #ccc;
-        background-color: rgba(148, 131, 134, 0.144);
-        border-radius: 5px;
-    }
-    div{
-        
-        align-items: center;
-        flex-direction: column;
-    }
-    .consulta{
-        display: block;
-        align-items: center;
-        flex-direction: column;
-        width: 200px;
-    }
-    #botConsulta{
-        align-items: center;
-        width: 80px;
-        text-align: center;
-        font-size: 8px;
-        padding: 0;
-        height: 30px;
-    }
-        
-
     footer{
         display: block;
         flex-direction: column;
@@ -430,4 +267,4 @@ input[type="submit"]:hover{
         height: min-content;
         
     }
-    } 
+}   
