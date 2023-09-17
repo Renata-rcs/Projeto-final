@@ -87,10 +87,8 @@ hamburguer.addEventListener('click', () => {
 
     else {
 
-        alert('Mensagem enviada com sucesso!');
-        
-            // Exibe os valores capturados no alert
-            alert(' Nome: ' + enome.value + '\n Telefone: ' + etelefone.value + '\n Email: ' + eemail.value + '\n CPF: ' + ecpf.value + '\n Nascimento: ' + enascimento.value + '\n Endereço: ' + eend.value + '\n Tratamento: ' + tratamento.value + '\n Horário: ' + ehorario.value);
+        alert(' Nome: ' + enome.value + '\n Telefone: ' + etelefone.value + '\n Email: ' + eemail.value + '\n CPF: ' + ecpf.value + '\n Nascimento: ' + enascimento.value + '\n Endereço: ' + eend.value + '\n Tratamento: ' + tratamento.value + '\n Horário: ' + ehorario.value);
+        alert('Agendamento concluido com sucesso ✅')
     }
 });
 });

@@ -41,7 +41,7 @@ header{
 .search-container {
     position: relative;
     width: 200px; /* Largura do campo de entrada e ícone */
-    right: 20px;
+   
 }
 
 .search-input {
@@ -55,7 +55,7 @@ header{
 .search-icon {
     position: absolute;
     top: 50%; /* Centralize verticalmente o ícone */
-    right: 20px; /* Ajuste a posição do ícone à direita */
+    right: 10px; /* Ajuste a posição do ícone à direita */
     transform: translateY(-50%); /* Ajuste vertical para o centro */
     cursor: pointer;
 }
@@ -138,12 +138,17 @@ main {
     background-color: rgba(148, 131, 134, 0.144);
     margin-bottom: 0;
     border-radius: 0;
+    
+    
+ 
+   
 }
 #img1{
     width: 100%;
     margin-bottom: 20px;
 }
 section {
+    height: 100%;
     min-height: 80vh;
     text-align: center;
     border-radius: 5px;
@@ -216,7 +221,14 @@ section {
 }
 
 
-
+#titulo-carrocel{
+    color: #edccdf;
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 30px;
+    text-align: center;
+}
 /* Cadastro*/
 #cadSection  h2{
     font-family: 'Roboto', sans-serif;
@@ -229,21 +241,22 @@ section {
  }
  .secao {
      display: flex;
-     justify-content:space-around; /* Alinha as divs lado a lado */
+     justify-content:space-around;
+     align-items: center; /* Alinha as divs lado a lado */
      height: 600px;
      margin-top: 40px;
   
  }
- 
- .imagem {
+.text3{
     width: 300px;
-     height: 450px;
-     margin-bottom: 20px;
- }
- #imgcadastro{
-     height: 450px;
-     width: 300px;
- }
+    text-align: left;
+    margin: 50px;
+    color: #666;
+    top: 0;
+}
+#sessao-titulo{
+     color: #9032bb;
+}
  #cadh2{
      margin-top: 10px;
      text-align: center;
@@ -258,7 +271,8 @@ section {
  
  .cadastro {
      width: 300px;
-     background-color:#9032bb;
+     padding: 5px;
+     background-color: #edccdf;
      display: flex;
      flex-direction: column;
      height: 450px;
@@ -282,6 +296,7 @@ section {
      margin-bottom: 10px;
      border-radius: 5px;
      height: 40px;
+     border: 1px solid #edccdf;
  }
  
 #icadastrar {
@@ -293,9 +308,12 @@ section {
      border-radius: 5px;
      width: 280px;
      height: 30px;
+     border: none;
  }
  #icadastrar:hover{
     background-color: #6d00a1;
+    color: white;
+   
  }
  #cadh2{
     color:#ffffff
@@ -438,60 +456,6 @@ section {
 }
 
 
-/* Feddback*/
-.feedback {
-    border: none;
-    background-color: transparent;
-}
-
-.feedback h4 {
-    font-family: 'Pacífico', cursiva;
-    font-weight: 600;
-    color: #6d00a1;
-    transition: color 0.3s ease;
-}
-#feedp{
-    font-family: 'Pacífico', cursiva;
-    font-weight: 400;
-}
-#labelfeed{
-    font-family: 'Pacífico', cursiva;
-}
-
-.feedback h4:hover {
-    color: #6d00a1;
-}
-#feedbackContainer{
-    color: #9032bb;
-    font-size: 14px;
-    font-family: 'Pacífico', cursiva;
-    font-weight: 600;
- }
-#ianame,
-#iaemail,
-#iamessage {
-    border-radius: 5px;
-    border: 1px solid grey;
-    background-color: transparent;
-}
-
-#btnfb {
-    font-family: 'Pacífico', cursiva;
-    background-color: #9032bb;
-    border: 1px solid white;
-    border-radius: 10px;
-    color:white; /* Cor do texto no estado padrão */
-    cursor: pointer;
-    width: 200px;
-    height: 30px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-#btnfb:hover {
-    color: white; /* Nova cor do texto no estado hover */
-    background-color: #9032bb;
-}
 
  .footer{
      display: flex;
@@ -613,16 +577,23 @@ p{
         flex-direction: column;
         align-items: center;
     }
+    html {
+        scroll-behavior: smooth;
+    }
     
    
     .principal{
-        top: 10px;
-        padding: 30px;
+        top: 100%;
+       height: 100%;
     }
     section{
         min-height: 0;
         display: block;
         flex-direction: column;
+        margin: 0;
+    }
+    #img1{
+        margin-top: 50px;
     }
     #imglg2 {
         display: block;
@@ -636,9 +607,16 @@ p{
         flex-direction: column;
        
     }
+    #titulo-carrocel{
+        font-weight: bold;
+        color: #6d00a1;
+    }
     #texts-container{
         display: block;
         flex-direction: column;
+    }
+    section + section{
+       margin: 10px;
     }
     .secao {
             display: flex;
@@ -650,6 +628,9 @@ p{
             margin-bottom: 0;
             height: 100%;
         }
+    .text3{
+        display: none;
+    }
     #form1{
         padding: 30px;
         width: 100%;
@@ -658,10 +639,7 @@ p{
         display: block;
         flex-direction: column;
     } 
-    #imgcadastro{
-        width: 150px;
-        height: 400px;
-    }
+    
     .cadastro {
         flex-basis: auto; /* Permitir que as divs ocupem a largura completa */
         width:fit-content ;
@@ -743,6 +721,17 @@ p{
         align-items: center;
         height: auto;
         width: auto;
+    }
+    #feed{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .feedback{
+        align-items: center;
+        margin-top: 20px;
     }
     .footer{
       flex-direction: column;

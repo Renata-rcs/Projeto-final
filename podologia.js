@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Classe menu-ativo adicionada:', dpMenu.classList.contains('menu-ativo'));
     });
 });
+
 //Cadastrar pelo whatsapp
 document.addEventListener('DOMContentLoaded', function () {
     const nome = document.getElementById('nome');
@@ -110,23 +111,4 @@ const conteudo5 = document.getElementById('conteudo5');
             botaoSaibaMais5.textContent = 'Saiba Mais';
         }
     });
-const botaoSaibaMais6 = document.getElementById('botao-saiba-mais6');
-const conteudo6 = document.getElementById('conteudo6');
-
-    botaoSaibaMais5.addEventListener('click', function() {
-        // Toggle (alternância) para mostrar ou ocultar o conteúdo
-        if (conteudo6.style.display === 'none' || conteudo6.style.display === '') {
-            conteudo6.style.display = 'block';
-            botaoSaibaMais6.textContent = 'Mostrar Menos';
-        } else {
-            conteudo6.style.display = 'none';
-            botaoSaibaMais6.textContent = 'Saiba Mais';
-        }
-    });
-
-    
-    
-    
-    
-    
-    
+   

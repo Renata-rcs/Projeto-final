@@ -8,7 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Classe menu-ativo adicionada:', dpMenu.classList.contains('menu-ativo'));
     });
 });
+ // Inicia o carrossel
+ $('#carouselExample').carousel();
 
+ // Configura um intervalo para avançar automaticamente
+ var carouselInterval = 3000; // Tempo em milissegundos (3 segundos)
+
+ function startCarouselInterval() {
+   setInterval(function() {
+     $('#carouselExample').carousel('next');
+   }, carouselInterval);
+ }
+
+ startCarouselInterval();
 
 //Cadastro
 document.addEventListener('DOMContentLoaded', function () {
@@ -47,37 +59,11 @@ icadastrar.addEventListener('click', (event) => {
         isenha.classList.add('erro');
         iconfirmarSenha.classList.add('erro');
     }
+    else{
+       alert('nome: '+ inome.value + '/n Email: ' + iemail.value + '/n Senha: ' + isenha.value )
+       alert('Cadastro realizado com sucesso ✅')
+    }
 });
-});
-
-
-
-// Feedback
-const ianame = document.getElementById('ianame');
-const iaemail = document.getElementById('iaemail');
-const iamessage = document.getElementById('iamessage');
-const feedbackForm = document.getElementById('feedbackForm');
-
-feedbackForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    if (ianame.value == '') {
-        alert('Por favor, preencha o campo Nome.');
-        ianame.classList.add('erro');
-    }
-
-    if (iaemail.value == '') {
-        alert('Por favor, preencha o campo Email.');
-        iaemail.classList.add('erro');
-    } else if (!isValidEmail(iaemail.value)) {
-        alert('Por favor, insira um endereço de email válido.');
-        iaemail.classList.add('erro');
-    }
-
-    if (iamessage.value == '') {
-        alert('Por favor, preencha o campo Mensagem.');
-        iamessage.classList.add('erro');
-    }
 });
 
 function isValidEmail(email) {
@@ -85,51 +71,5 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-
-
-
-
-var feedbacks = [];
-
-document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio do formulário padrão
-
-    // Obtém os valores dos campos do formulário
-    var name = document.getElementById('ianame').value;
-    var email = document.getElementById('iaemail').value;
-    var message = document.getElementById('iamessage').value;
-
-    // Cria um objeto feedback com os valores do formulário
-    var feedback = {
-        name: name,
-        email: email,
-        message: message
-    };
-
-    // Adiciona o feedback ao array de feedbacks
-    feedbacks.push(feedback);
-
-    // Limpa o formulário
-    document.getElementById('ianame').value = '';
-    document.getElementById('iaemail').value = '';
-    document.getElementById('iamessage').value = '';
-
-    // Atualiza a exibição dos feedbacks
-    exibirFeedbacks();
-});
-
-function exibirFeedbacks() {
-    var feedbackContainer = document.getElementById("feedbackContainer");
-    feedbackContainer.innerHTML = '';
-
-    feedbacks.forEach(function(feedback) {
-        var feedbackElement = document.createElement("div");
-        feedbackElement.innerHTML = "<h3>" + feedback.name + "</h3>"
-            + "<p>Email: " + feedback.email + "</p>"
-            + "<p>Mensagem: " + feedback.message + "</p>";
-
-        feedbackContainer.appendChild(feedbackElement);
-    });
-}
 
 
