@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Kaushan+Script&family=Marck+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* font-family: 'Poppins', sans-serif;*/
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +8,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
 header{
@@ -63,7 +61,7 @@ header{
 
 }
 .dp-menu{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color:white;
     width: 100%;
     border-top: 20px;
@@ -148,8 +146,8 @@ section {
     min-height: 80vh;
     border-radius: 5px;
     background-color: white;
-    margin: 100px 30px; /* Isso define as margens superior e inferior como 100px e as margens esquerda e direita como 30px */
-    border: 10px solid transparent; /* Adiciona uma borda transparente de 40px */
+    margin: 100px 30px; 
+    border: 10px solid transparent;
 }
 .entrada{
     width:100%;
@@ -174,18 +172,19 @@ section {
     display: block; /* Garante que a imagem seja exibida como um bloco */
   }
 #h1-principal{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     margin: 10px;
     font-size:4em;
+    color: #6d00a1;
     text-align: center;
     padding: 30px;
 
 }
 
 h2{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     color: #6d00a1;
     text-align: center;
 }
@@ -197,11 +196,12 @@ div{
     align-items: center;
     text-align: center;
     margin: 0 43%;
+    color: #666;
 }
 h3{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    color: #666;
+    color: #ebccdf;
     margin: 50px;
   
 }
@@ -219,10 +219,14 @@ p{
 }
 /* Cadastro*/
 #cadSection  h2{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     margin: 10px;
     color:black;
+ }
+ #logo-cad{
+    margin: 30px;
+    width: 200px;
  }
  .erro{
      border: 2px solid red;
@@ -261,6 +265,7 @@ p{
  .cadastro {
      width: 300px;
      padding: 5px;
+     height: 530px;
      background-color: #edccdf;
      display: flex;
      flex-direction: column;
@@ -344,10 +349,12 @@ p{
     align-items: center;
     text-align: left; /* Centraliza verticalmente o conteúdo */
 }
-#text2-2{
+#text2-2 {
+    color: #333;
     text-align: left;
 }
 #text2-2 h3{
+    font-weight: 300;
     text-align: center;
 }
 #img2, #img3, #img4, #img5, #img6{
@@ -478,14 +485,20 @@ input{
         width: 100%;
         height: 100%;
         display: block;
+        justify-content: center;
         align-items: center;
     }
     main{
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
+    img{
+        margin: 0 10px;
+    }
     section{
         display: block;
+        justify-content: center;
         align-items: center;
         margin-top: 10px;
     }
@@ -533,7 +546,9 @@ input{
        display: none;
      }
      
-    
+    .principal{
+        margin: 0;
+    }
     #preenchimentoFacial, #limpeza-de-pele, #botox, #acne{
         text-align: center;
         font-size: 18px;
@@ -550,19 +565,20 @@ input{
         font-size: 20px;
         margin: 10px 0;
     }
-    .cadastro-whatsapp{
-          display: block;
-          flex-direction: column;
-          height: 100%;
-        
-    }
+    input{
+        width: 180px;
+   }
+   .cadastro-whatsapp{
+        align-items: center;
+        width: 300px;
+        height: 350px;
+        padding: 40px;
+        margin: 30px;
+   }
     #titulo-carrocel{
         font-size: 20px;
     }
-    input{
-        margin: 0;
-        width: 220px;
-    }
+    
      #img2{
       
         display: none;

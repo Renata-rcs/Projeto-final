@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Kaushan+Script&family=Marck+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* font-family: 'Poppins', sans-serif;
+*/
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +9,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #666;
 }
 header{
@@ -68,7 +67,7 @@ header{
 
 }
 .dp-menu{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color:white;
     width: 100%;
     border-top: 20px;
@@ -150,12 +149,19 @@ section {
    
 }
 #tituloform1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     text-align: center;
     margin-top: 100px;
-    font-size: 2em;
-    color: #333;
+    font-size: 3em;
+    color: #ebccde;
+}
+#tituloform2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 100px;
+    color: #ebccde;
 }
 .agendamento {
     margin-top: 80px;
@@ -175,11 +181,11 @@ section {
    
 }
 #consulta h2, h3{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     text-align: center;
     margin: 20px;
-    color: #333;
+    color: #ebccde;
 }
 
 
