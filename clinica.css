@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /* font-family: 'Poppins', sans-serif;
 */
+:root{
+    --corPrincipal: #6d00a1;
+    --corSecundaria:#ebccdf;
+    --ligh:#ffffff;
+    --footer:#c7c6c6;
+    --mid:#64748B;
+    
+}
 *{
     margin: 0;
     padding: 0;
@@ -22,7 +30,7 @@ header{
     z-index: 1;
 }
 .nav-1{
-  background-color: #6d00a1;
+  background-color: var(--corPrincipal);
   width: 100%;
   height: 60px;
   display: flex;
@@ -68,13 +76,13 @@ header{
 .dp-menu{
     font-family: 'Poppins', sans-serif;
     font-size: 400;
-    background-color:white;
+    background-color:var(--ligh);
     width: 100%;
     border-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid rgb(230, 224, 224);
+    border-bottom: 1px solid var(--footer);
 }
 .dp-menu ul li{
     margin-top: 20px;
@@ -83,15 +91,15 @@ header{
    
 }
 .dp-menu ul li a{
-    color: gray;
+    color: var(--mid);
     text-decoration: none;
     display: inline-block;
     padding: 10px;
     
 }
 .dp-menu ul li a:hover{
-    color: white;
-    background-color:#6d00a1 ;
+    color: var(--ligh);
+    background-color:var(--corPrincipal);
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -99,7 +107,7 @@ header{
     left: 0;
     position: absolute;
     top: 100%;
-    background-color:#6d00a1;
+    background-color: var(--corPrincipal);
 }
 .dp-menu ul li:hover ul{
     display: block;
@@ -127,9 +135,7 @@ header{
     display: block;
 }
 /* Estilo para mensagens de erro */
-.erro {
-    border: 2px solid red;
-}
+
 /* Main*/
 main {
     max-width: 1200px;
@@ -139,7 +145,7 @@ main {
 section {
     min-height: 80vh;
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--ligh);
     margin: 100px 30px; /* Isso define as margens superior e inferior como 100px e as margens esquerda e direita como 30px */
     border: 10px solid transparent; /* Adiciona uma borda transparente de 40px */
 }
@@ -156,10 +162,22 @@ section {
     margin: 10px;
     text-align: center;
     padding: 30px;
+    color: var(--corPrincipal);
+   
+}
+.erro{
+    border: 2px solid red;
+}
+#h2-principal{
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+    text-align: center;
+    padding: 30px;
+    color: var(--corPrincipal);
    
 }
 .principal p{
-    color: #333;
+    color: var(--mid);
 }
 #h2-principal{
     font-family: 'Poppins', sans-serif;
@@ -176,18 +194,18 @@ section {
     align-items: center; /* Alinha as divs lado a lado */
     height: 600px;
     margin-top: 40px;
-    border-bottom: 2px solid #6d00a1;
+    border-bottom: 2px solid var(--corPrincipal);
  
 }
 .text3{
    width: 300px;
    text-align: left;
    margin: 50px;
-   color: #666;
+   color: var(--mid);
    top: 0;
 }
 #sessao-titulo{
-    color: #9032bb;
+    color:var(--corPrincipal);
     font-family: 'Poppins', sans-serif;
 }
 #cadh2{
@@ -195,19 +213,19 @@ section {
     margin: 10px;
     margin-top: 10px;
     text-align: center;
-    color: white;
+    color: var(--ligh);
 }
 #form1 {
     text-align: left;
     margin: 5px;
     padding: 0;
-    color: white;
+    color: var(--ligh);
 }
 
 .cadastro {
     width: 300px;
     padding: 5px;
-    background-color: #edccdf;
+    background-color: var(--corSecundaria);
     display: flex;
     flex-direction: column;
     height: 450px;
@@ -231,34 +249,33 @@ section {
     margin-bottom: 10px;
     border-radius: 5px;
     height: 40px;
-    border: 1px solid #edccdf;
 }
 
 #icadastrar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    color: #6d00a1;
+    background-color:var(--ligh);
+    color: var(--corPrincipal);
     border-radius: 5px;
     width: 280px;
     height: 30px;
     border: none;
 }
 #icadastrar:hover{
-   background-color: #6d00a1;
-   color: white;
+   background-color: var(--corPrincipal);
+   color: var(--ligh);
   
 }
 #cadh2{
-   color:#ffffff
+   color:var(--ligh)
 }
 .container-instalacoes {
     margin: 20px ;
     display: flex; /* Torna os elementos filhos em linha */
     justify-content: space-between;
     flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
-    border-bottom: 2px solid #6d00a1;
+    border-bottom: 2px solid var(--corPrincipal);
     
 }
 #text-local h2{
@@ -267,7 +284,7 @@ section {
     margin: 10px;
     text-align: center;
     padding: 30px;
-    color: #ebccdf;
+    color: var(--corSecundaria);
 }
 #text-local, #img-local{
     width: 45%;
@@ -277,7 +294,7 @@ section {
     margin-bottom: 70px;
 }
 #text-local p{
-  color: #666;
+  color: var(--mid);
 }
 #local{
     flex: 1;
@@ -285,7 +302,7 @@ section {
     width: 150px;
     height: 150px;
     margin: 5px;
-    border: 2px solid #ebccdf;
+    border: 2px solid var(--corSecundaria);
    
 }
 #local:hover{
@@ -295,7 +312,7 @@ section {
 #esteticistas{
     width: 400px;
     height: 600px;
-   border: 2px solid #ebccdf;
+   border: 2px solid var(--corSecundaria);
 }
 .container-equipe{
     display: flex;
@@ -313,7 +330,7 @@ section {
     margin: 20px;
     text-align: center;
     padding: 30px;
-    color: #ebccdf;
+    color: var(--corSecundaria);
     
 }
 #colabroradores h2{
@@ -325,7 +342,7 @@ section {
     
 }
 #text-span{
-    color: #ebccdf;
+    color: var(--corSecundaria);
 }
 
 html {
@@ -334,15 +351,19 @@ html {
 
 .cadastro-whatsapp{
     height:140px;
-    background-color: #6d00a1;
+    background-color: var(--corPrincipal);
     text-align: left;
-    color: white;
     margin: 50px 0;
     border-radius: 5px;
     padding: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.cadastro-whatsapp h4{
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+    color: var(--ligh);
+    font-weight: bold;
+    font-size: 20px;
 }
 input{
     border-radius: 5px;
@@ -351,21 +372,21 @@ input{
     width: 220px;
 }
 #cadastrar{
-    width: 80px;
-    color: #6d00a1;
+    width: 90px;
+    color: var(--corPrincipal);
     border-radius: 5px;
     padding: 5px;
  
 }
 #cadastrar:hover{
-    background-color: #6d00a1;
-    color: white;
+    background-color: var(--corPrincipal);
+    color: var(--ligh);
     transform: scale(1.2);
 }
 
 #titulofooter{
     margin: 20px;
-    color-scheme: #666;
+    color-scheme: var(--mid);
 }
 
  
@@ -385,7 +406,7 @@ footer {
      display: flex;
      justify-content: space-between;
      align-items: center;
-     background-color:rgb(199, 198, 198);
+     background-color:var(--footer);
      padding: 0;
      margin-bottom: 0;
      margin-top:0;
@@ -396,7 +417,7 @@ footer {
  }
 
 .contato, .sobre, .servicos, .horario{
-    margin-top: 20px solid grey;
+    margin-top: 20px solid var(--mid);
     margin-bottom: 20px;
     text-align: center;
     align-items: center;
@@ -404,7 +425,7 @@ footer {
     padding: 10px;
     flex-basis: calc(25% - 20px); /* Define a largura das seções, descontando o espaço entre elas */
     box-sizing: border-box;
-    color: #666;
+    color: var(--mid);
    
 
 }
@@ -418,14 +439,14 @@ footer {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    color: grey;
-    background-color:rgb(199, 198, 198);
+    color: var(--mid);
+    background-color:var(--footer);
 }
 /* Estilos para o menu quando a classe .menu-ativo é aplicada */
 .menu-ativo {
     display: block!important;
-    background-color:white;
-    color: gray;
+    background-color:var(--ligh);
+    color: var(--mid);
     padding: 30px;
     top:100%;
     position: absolute;
@@ -433,7 +454,7 @@ footer {
     z-index: 99;
 }
 .menu-ativo ul:hover{
-    color: white;
+    color: var(--ligh);
 }
 .menu-ativo ul ul{
     display: none !important;
@@ -442,7 +463,7 @@ footer {
 #hamburguer{
     position: absolute;
     display: none;
-    color: white;
+    color: var(--ligh);
     right: 50px;
 }
 @media (max-width: 768px) {

@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-/* font-family: 'Poppins', sans-serif;
-*/
+/* font-family: 'Poppins', sans-serif;*/
+:root{
+    --corPrincipal: #6d00a1;
+    --corSecundaria:#ebccdf;
+    --ligh:#ffffff;
+    --footer:#c7c6c6;
+    --mid:#64748B;
+    
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +18,7 @@ body{
     width: 100vw;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    color: #666;
+    color:var(mid);
 }
 header{
     display: flex;
@@ -22,7 +30,7 @@ header{
     z-index: 1;
 }
 .nav-1{
-  background-color: #6d00a1;
+  background-color:var(--corPrincipal);
   width: 100%;
   height: 60px;
   display: flex;
@@ -68,7 +76,7 @@ header{
 }
 .dp-menu{
     font-family: 'Poppins', sans-serif;
-    background-color:white;
+    background-color:var(--ligh);
     width: 100%;
     border-top: 20px;
     display: flex;
@@ -83,15 +91,15 @@ header{
    
 }
 .dp-menu ul li a{
-    color: gray;
+    color: var(--mid);
     text-decoration: none;
     display: inline-block;
     padding: 10px;
     
 }
 .dp-menu ul li a:hover{
-    color: white;
-    background-color:#6d00a1 ;
+    color: var(--ligh);
+    background-color:var(--corPrincipal) ;
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -99,7 +107,7 @@ header{
     left: 0;
     position: absolute;
     top: 100%;
-    background-color:#6d00a1;
+    background-color:var(--corPrincipal);
 }
 .dp-menu ul li:hover ul{
     display: block;
@@ -132,6 +140,7 @@ header{
 main {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
 html {
@@ -145,6 +154,7 @@ section {
     border-radius: 0;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
    
 }
@@ -154,28 +164,28 @@ section {
     text-align: center;
     margin-top: 100px;
     font-size: 3em;
-    color: #ebccde;
+    color:var(--corSecundaria);
 }
 #tituloform2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     text-align: center;
     margin-top: 100px;
-    color: #ebccde;
+    color:var(--corSecundaria);
 }
 .agendamento {
     margin-top: 80px;
     display: flex;
     align-items: center;
     width: 80%;
-    background-color: white;
+    background-color:var(--ligh);
     flex-direction: column; /* Adicione esta linha para colocar os elementos em coluna */
     border-radius: 10px;
 }
 
 #consulta {
     margin: 20px;
-    background-color: white;
+    background-color:var(--ligh);
     display: flex;
     justify-content: space-around;
    
@@ -185,7 +195,16 @@ section {
     font-weight: 400;
     text-align: center;
     margin: 20px;
-    color: #ebccde;
+    color: var(--corSecundaria);
+}
+#botConsulta{
+    align-items: center;
+    width: 100%;
+}
+#botConsulta:hover{
+    background-color: var(--corPrincipal);
+    color: var(--ligh);
+    transform: scale(1.1);
 }
 
 
@@ -202,13 +221,13 @@ section {
 form {
     max-width: 1200px;
     display: flex;
-    color: white;
+    color:var(--ligh);
     flex-direction: column;
     text-align: left;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-    background-color:#6d00a1;
+    background-color:var(--corPrincipal);
     border-radius: 5px;
 }
 /* Estilo para os rótulos */
@@ -235,19 +254,20 @@ select {
 /* Estilo para o botão de envio */
 input[type="submit"] {
     align-items: center;
-    background-color: #6d00a1;
-    color: #fff;
+    background-color: var(--ligh);
+    color:var(--corPrincipal);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;
     text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
    
 
 }
 input[type="submit"]:hover{
-    transform: scale(1.1);
+    transform: scale(1,0);
 }
 
 /* Estilo para mensagens de erro */
@@ -262,10 +282,52 @@ input[type="submit"]:hover{
     display: block;
     margin: 40px 0;
 }
+/*cadastro whatsapp*/
+.cadastro-whatsapp{
+    width: 98%;
+    height:140px;
+    background-color: var(--corPrincipal);
+    text-align: left;
+    color: var(--ligh);
+    margin: 50px 0;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cadastro-whatsapp input{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 220px;
+    
+}
+.cadastro-whatsapp h4{
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+    color: var(--ligh);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#cadastrar{
+    width: 80px;
+    color: var(--corPrincipal);
+    border-radius: 5px;
+    padding: 5px;
+}
+.erro{
+    border: 2px solid red;
+}
+#cadastrar:hover{
+    background-color:var(--corPrincipal);
+    color: var(--ligh);
+    transform: scale(1.2);
+}
 
 #titulofooter{
     margin: 20px;
-    color-scheme: #666;
+    color-scheme: var(--mid);
 }
  
  footer {
@@ -280,7 +342,7 @@ input[type="submit"]:hover{
      display: flex;
      justify-content: space-between;
      align-items: center;
-     background-color:rgb(199, 198, 198);
+     background-color:var(--footer);
      padding: 0;
      margin-bottom: 0;
      margin-top:0;
@@ -291,7 +353,7 @@ input[type="submit"]:hover{
  }
 
 .contato, .sobre, .servicos, .horario{
-    margin-top: 20px solid grey;
+    margin-top: 20px solid var(--mid);
     margin-bottom: 20px;
     text-align: center;
     align-items: center;
@@ -299,7 +361,7 @@ input[type="submit"]:hover{
     padding: 10px;
     flex-basis: calc(25% - 20px); /* Define a largura das seções, descontando o espaço entre elas */
     box-sizing: border-box;
-    color: #666;
+    color: var(--mid);
    
 
 }
@@ -313,13 +375,13 @@ input[type="submit"]:hover{
     flex-direction: column;
     text-align: center;
     align-items: center;
-    color: grey;
-    background-color:rgb(199, 198, 198);
+    color:var(--mid);
+    background-color:var(--footer);
 }
 .menu-ativo {
     display: block!important;
-    background-color:white;
-    color: white;
+    background-color:var(--ligh);
+    color: var(--ligh);
     padding: 30px;
     top:60px;
     position: absolute;
@@ -331,7 +393,7 @@ input[type="submit"]:hover{
     position: absolute;
     display: none;
     right: 50px;
-    color: white;
+    color: var(--ligh);
 }
   
 @media (max-width: 768px) {
@@ -343,25 +405,15 @@ input[type="submit"]:hover{
         height: 100%;
     }
     main{
+        display: flex;
         flex-direction: column;
-        align-items: center;
+      
     }
-    .agendamento{
-       
-        margin-top: 0;
-        border-radius: 0;
-    }
-    #consulta{
-        height: 700px;
-        width: 200px;
-        padding: 0;
-        margin: 0;
-        height: 1940px;
-    
-    }
-    h1{ 
-        margin-top: 50px;
-        text-align: center;
+   
+    #tituloform1{ 
+       font-size: 30px;
+       margin: 50px 0;
+       display: block;
     }
     #consulta h2, h3{
         text-align: center;
@@ -394,12 +446,16 @@ input[type="submit"]:hover{
         display: block;
      }
     
-    section{
-        display: flex;
+     section{
+        min-height: 0;
+        display:flex;
         align-items: center;
+        flex-direction: column;
+        margin: 0;
+        
     }
     form {
-        max-width: 120px;
+        width: 95%;
         display: flex;
         color: black;
         flex-direction: column;
@@ -415,11 +471,27 @@ input[type="submit"]:hover{
         align-items: center;
         flex-direction: column;
     }
-    .consulta{
+   
+    .agendamento{
         display: block;
         align-items: center;
-        flex-direction: column;
-        width: 200px;
+        text-align: center;
+        margin-top: 0;
+        border-radius: 0;
+    }
+    #agend1{
+        margin: 0;
+    }
+    #agend2{
+        width: 100%;
+        margin: 40px 0;
+    }
+    #consulta{
+        padding: 0;
+        margin: 80px 0;
+        height: 1940px;
+        text-align: left;
+    
     }
     #botConsulta{
         align-items: center;
@@ -429,6 +501,12 @@ input[type="submit"]:hover{
         padding: 0;
         height: 30px;
     }
+    .cadastro-whatsapp{
+        align-items: center;
+        width: 300px;
+        height: 350px;
+        padding: 30px;
+   }
         
 
     footer{

@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /* font-family: 'Poppins', sans-serif;
 */
+:root{
+    --corPrincipal: #6d00a1;
+    --corSecundaria:#ebccdf;
+    --ligh:#ffffff;
+    --footer:#c7c6c6;
+    --mid:#64748B;
+    
+}
 *{
     margin: 0;
     padding: 0;
@@ -22,7 +30,7 @@ header{
     z-index: 1;
 }
 .nav-1{
-  background-color: #6d00a1;
+  background-color: var(--corPrincipal);
   width: 100%;
   height: 60px;
   display: flex;
@@ -66,13 +74,13 @@ header{
 }
 .dp-menu{
     font-family: 'Poppins', sans-serif;
-    background-color:white;
+    background-color:var(--ligh);
     width: 100%;
     border-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid rgb(230, 224, 224);
+    border-bottom: 1px solid var(--footer);
 }
 .dp-menu ul li{
     margin-top: 20px;
@@ -81,15 +89,15 @@ header{
    
 }
 .dp-menu ul li a{
-    color: gray;
+    color: var(--mid);
     text-decoration: none;
     display: inline-block;
     padding: 10px;
     
 }
 .dp-menu ul li a:hover{
-    color: white;
-    background-color:#6d00a1 ;
+    color: var(--ligh);
+    background-color:var(--corPrincipal) ;
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -97,7 +105,7 @@ header{
     left: 0;
     position: absolute;
     top: 100%;
-    background-color:#6d00a1;
+    background-color:var(--corPrincipal);
 }
 .dp-menu ul li:hover ul{
     display: block;
@@ -151,7 +159,7 @@ section {
     min-height: 80vh;
     text-align: center;
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--ligh);
     margin: 100px 30px; /* Isso define as margens superior e inferior como 200px e as margens esquerda e direita como 30px */
     border: 10px solid transparent; /* Adiciona uma borda transparente de 40px */
 }
@@ -170,7 +178,7 @@ section {
     padding: 20px 0;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    color: white; /* Ou outra cor legível */
+    color: var(--ligh); /* Ou outra cor legível */
     position: relative;
     margin-bottom: 150px;
 }
@@ -181,7 +189,7 @@ section {
 }
 /*texto*/
 #texts2{
-    background-color: #9032bb;
+    background-color: var(--corPrincipal);
 }
 #container {
     display: flex;
@@ -193,15 +201,15 @@ section {
     align-items: center;
     justify-content: center;
     width: 100%; /* Ocupa toda a largura da tela */
-    background-color:#9032bb; /* Cor de fundo da logo (substitua pela sua imagem) */
+    background-color:var(--corPrincipal); /* Cor de fundo da logo (substitua pela sua imagem) */
     height: 200px; /* Altura da logo (ajuste conforme necessário) */
 }
 
 #texts-container {
     display: flex;
     justify-content: space-between; /* Alinha as divs lado a lado */
-    background-color: #9032bb;
-    color: white;
+    background-color: var(--corPrincipal);
+    color: var(--ligh);
 }
 
 #text1,
@@ -221,7 +229,7 @@ section {
 
 
 #titulo-carrocel{
-    color: #edccdf;
+    color: var(--corSecundaria);
     font-size: 400;
     font-family: 'Poppins', sans-serif;
     margin: 30px;
@@ -231,7 +239,7 @@ section {
 #cadSection  h2{
     font-family: 'Poppins', sans-serif;
     margin: 10px;
-    color:black;
+    color:var(--ligh);
  }
  .erro{
      border: 2px solid red;
@@ -252,7 +260,7 @@ section {
     width: 300px;
     text-align: left;
     margin: 50px;
-    color: #666;
+    color: var(--mid);
     top: 0;
 }
 #sessao-titulo{
@@ -262,19 +270,19 @@ section {
  #cadh2{
      margin-top: 10px;
      text-align: center;
-     color: white;
+     color: var(--ligh);
  }
  #form1 {
      text-align: left;
      margin: 5px;
      padding: 0;
-     color: white;
+     color: var(--ligh);
  }
  
  .cadastro {
      width: 300px;
      padding: 5px;
-     background-color: #edccdf;
+     background-color:var(--corSecundaria);
      display: flex;
      flex-direction: column;
      height: 530px;
@@ -298,27 +306,28 @@ section {
      margin-bottom: 10px;
      border-radius: 5px;
      height: 40px;
-     border: 1px solid #edccdf;
+    
+
  }
  
 #icadastrar {
      display: flex;
      justify-content: center;
      align-items: center;
-     background-color: white;
-     color: #6d00a1;
+     background-color: var(--ligh);
+     color: var(--corPrincipal);
      border-radius: 5px;
      width: 280px;
      height: 30px;
      border: none;
  }
  #icadastrar:hover{
-    background-color: #6d00a1;
-    color: white;
+    background-color: var(--corPrincipal);
+    color: var(--ligh);
    
  }
  #cadh2{
-    color:#ffffff
+    color:var(--ligh)
  }
  
  /* Pesquisa Cards*/
@@ -329,7 +338,7 @@ section {
  #card {
      font-family: Arial, Helvetica, sans-serif;
      font-weight: 700;
-     background-color: #ffffff;
+     background-color: var(--ligh);
      border-radius: 5px;
      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
      text-align: center;
@@ -350,9 +359,9 @@ section {
      margin: 5px 0;
  }
  .bot1 {
-     color: white;
-     background-color: #9032bb;
-     border: 1px solid gray;
+     color: var(--ligh);
+     background-color: var(--corPrincipal);
+     border: 1px solid var(--mid);
      border-radius: 5px;
      padding: 10px 20px;
      margin: 10px;
@@ -362,14 +371,16 @@ section {
      cursor: pointer;
  }
  .bot1:hover{
-    background-color: #6d00a1;
+    background-color: var(--corPrincipal);
     transform: scale(1.1);
  }
  #bot1a{
      text-decoration: none;
-     color: white;
+     color: var(--ligh);
  }
- 
+ .erro{
+    border: 2px solid red;
+}
  #img4{
      margin: 40px;
  }
@@ -408,17 +419,17 @@ section {
 
 .comment {
     flex: 1;
-    border: 1px solid #ccc;
+    border: 1px solid var(--footer);
     border-radius: 5px;
     padding: 10px;
     max-width: 400px; /* Largura máxima do comentário */
-    background-color: #f9f9f9;
+    background-color:  rgba(148, 131, 134, 0.144);
 }
 
 .avatar {
     width: 50px;
     height: 50px;
-    background-color: #ccc;
+    background-color: var(--footer);
     border-radius: 50%;
     margin-right: 10px;
     overflow: hidden;
@@ -452,7 +463,7 @@ section {
 
 .comment-text {
     font-size: 14px;
-    color: #333;
+    color: var(--mid);
     margin: 10px 0;
   
 }
@@ -463,7 +474,7 @@ section {
      display: flex;
      justify-content: space-between;
      align-items: center;
-     background-color:rgb(199, 198, 198);
+     background-color:var(--footer);
      padding: 50px;
      margin-bottom: 0;
      margin-top:0;
@@ -481,7 +492,7 @@ section {
     padding: 10px;
     flex-basis: calc(25% - 20px); /* Define a largura das seções, descontando o espaço entre elas */
     box-sizing: border-box;
-    color: #666;
+    color: var(--mid);
     font-size: 12px;
    
 
@@ -501,14 +512,14 @@ p{
     flex-direction: column;
     text-align: center;
     align-items: center;
-    color: grey;
-    background-color:rgb(199, 198, 198);
+    color: var(--mid);
+    background-color:var(--footer);
 }
 /* Estilos para o menu quando a classe .menu-ativo é aplicada */
 .menu-ativo {
     display: block!important;
-    background-color:white;
-    color: gray;
+    background-color:var(--ligh);
+    color: var(--mid);
     padding: 30px;
     top:100%;
     position: absolute;
@@ -516,7 +527,7 @@ p{
     z-index: 99;
 }
 .menu-ativo ul:hover{
-    color: white;
+    color: var(--footer)
 }
 .menu-ativo ul ul{
     display: none !important;
@@ -525,7 +536,7 @@ p{
 #hamburguer{
     position: absolute;
     display: none;
-    color: white;
+    color: var(--ligh);
     right: 50px;
 }
 

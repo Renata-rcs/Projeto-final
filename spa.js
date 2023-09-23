@@ -56,8 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
-    
-    
 //Cadastrar pelo whatsapp
 document.addEventListener('DOMContentLoaded', function () {
     const nome = document.getElementById('nome');
@@ -95,15 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
         return emailRegex.test(email);
     }
 });
-
-  
-   
-
-
-
-    
-    
-    
-    
-    
-    
+$(document).ready(function () {
+    $(".card").hover(function () {
+        $(this).toggleClass("flipped");
+    });
+});

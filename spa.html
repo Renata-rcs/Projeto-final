@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" href="./imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="spa.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-1">
+            <img src="./imagens/Logo Emagreça.png" width="200px">
+            <div class="search-container">
+                <input id="input-pesquisar" type="text" class="search-input" placeholder="Pesquisar...">
+                <span id="pesquisar" class="material-symbols-outlined search-icon">search</span>
+            </div>            
+        </nav>
+        <span id="hamburguer" class="material-symbols-outlined">menu</span>
+        <nav class="dp-menu">
+            <ul>
+                <li><small><a href="./index.html"><b>Inicio</b></a></small></li>
+                <li><small><a href="./clinca.html"><b>Clinica</b></a></small>
+                    <ul>
+                        <li><small><a href="#"><small>Sobre nós</a></small></li>
+                        <li><small><a href="#">Colaboradores</a></small></li>
+                    </ul>
+                </li>
+                    <li><small><a href="./capilar.html"><b>Capilar</b></a></small>
+                        <ul>
+                            <li><small><a href="#">Transplante Capilar</a></small></li>
+                            <li><small><a href="#">Tratamento de Calvície</a></small></li>
+                            <li><small><a href="#">Terapia a Laser</a></small></li>
+                            <li><small><a href="#">Microagulhamento Capilar</a></small></li>
+                            <li><small><a href="#">Tratamento de Caspa</a></small></li>
+                            <li><small><a href="#">Massagem Capilar</a></small></li>
+                        </ul>
+                    </li>
+                    <li><small><a href="./estetica-facial.html"><b>Estética Facial</b></a></small>
+                        <ul>
+                            <li><small><a class="nav-link active" aria-current="page" href="#limpeza-de-pele">Limpeza de Pele</a></small></li>
+                            <li><small><a class="nav-link active" aria-current="page" href="#acne">Tratamento de Acne</a></small></li>
+                            <li><small><a class="nav-link active" aria-current="page" href="#microdermoabrasao">Microdermoabrasão</a></small></li>
+                            <li><small><a class="nav-link active" aria-current="page" href="#preenchimentoFacial">Preenchimento Facial</a></small></li>
+                            <li><small><a class="nav-link active" aria-current="page" href="#botox">Botox</a></small></li>
+                            <li><small><a href="#">Fios de sustentação</a></small></li>
+                        </ul>
+                    </li>
+                    <li><a href="./estetica-corporal.html"><small><b>Estética Corporal</b></a></small>
+                        <ul>
+                            <li><small><a href="#">Massagem Modeladora</a></small></li>
+                            <li><small><a href="#">Drenagem Linfática</a></small></li>
+                            <li><small><a href="#">Lipoaspiração não Cirúrgica</a></small></li>
+                            <li><small><a href="#">Tratamento de Celulite</a></small></li>
+                            <li><small><a href="#">Endermologia</a></small></li>
+                            <li><small><a href="#">Criolipólise</a></small></li>
+                        </ul>
+                    </li>
+                    <li><a href="./depilacao-laser.html"><small><b>Depilação a laser</b></a></small>
+                        <ul>
+                            <li><small><a href="#">Depilação a Laser de Diodo</a></small></li>
+                            <li><small><a href="#">Depilação a Laser Alexandrite</a></small></li>
+                            <li><small><a href="#">Depilação a Laser Nd:YAG</a></small></li>
+                        </ul>
+                    </li>
+                    <li><a href="./spa.html"><small><b>SPA</a></b></small>
+                        <ul>
+                            <li><small><a href="#">Massagem Relaxante</a></small></li>
+                            <li><small><a href="#">Banho de Ofurô</a></small></li>
+                            <li><small><a href="#">Tratamento de Pele</a></small></li>
+                            <li><small><a href="#">Aromaterapia</a></small></li>
+                            <li><small><a href="#">Yoga e Meditação</a></small></li>
+                            <li><small><a href="#">Aculpututa</a></small></li>
+                        </ul>
+                    </li>
+                    <li><small><a href="./podologia.html"><b>Podologia</b></a></small>
+                        <ul>
+                            <li><small><a href="#">Corte e Tratamento de Unhas</a></small></li>
+                            <li><small><a href="#">Tratamento de Calos e Calosidades</a></small></li>
+                            <li><small><a href="#">Reflexologia Podal</a></small></li>
+                            <li><small><a href="#">Tratamento de Fungos nas Unhas</a></small></li>
+                            <li><small><a href="#">Avaliação Postural</a></small></li>
+                        </ul>
+                    </li>
+                <li><a href="./agendamento.html"><small><b>Contato</b></a></small>
+                    <ul>
+                        <li><small><a href="tel:+5561980000000" target="_blank">Telefone</a></small></li>
+                        <li><small><a href="./agendamento.html">Agendamento de consulta</a></small></li>
+                        <li><small><a href="https://goo.gl/maps/spxzX4NMeBfw7o3H8" target="_blank">Localização</a></small></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="principal">
+            <section>
+                <div class="img-div1">
+                    <img id="img-entrada" src="./imagens/massagemrelaxante.png" alt="SPA">
+                   </div>
+                   <div id="text-entrada">          
+                    <h1 id="h1-principal"><span id="span-text">SPA</span></h1>
+                   </div>
+                   <div class="container-text1">
+                    <div id="texto1" >
+                        <h2 id="textos-principais">Relaxamento e Renovação</h2>
+                        <p>Em um mundo cada vez mais agitado e exigente, encontrar momentos de tranquilidade e cuidado pessoal tornou-se essencial para a nossa saúde e equilíbrio. É nesse cenário que os spas desempenham um papel fundamental, proporcionando um refúgio de relaxamento e rejuvenescimento. Neste texto, convidamos você a fazer uma viagem ao mundo de bem-estar de nosso spa, onde o cuidado com o corpo e a mente se torna uma prioridade.</p>   
+                    </div>
+                    <div id="texto2">
+                        <h2 id="textos-principais">O Ambiente Sereno:</h2>
+                        <p>Ao entrar em nosso spa, você será imediatamente envolvido por uma atmosfera serena e acolhedora. A decoração foi cuidadosamente escolhida para criar um ambiente de tranquilidade, com cores suaves, iluminação ambiente e aromas suaves que despertam os sentidos. Cada detalhe foi projetado para proporcionar uma sensação de escape do mundo exterior e uma imersão na jornada de bem-estar que o aguarda.</p>
+                    </div>
+                    </div>
+                   <div class="secao">
+                   
+                    <div class="text3">
+                        <h2 id="sessao-titulo" style="color: #edccdf; margin-bottom: 40px;">Não espere mais para escolher o melhor tratamento!</h2>
+                            <p>Fale agora com um de nossos especialistas.</p>
+                            <p>Uma especialista entrará em contato com você para discutir o tratamento a ser escolhido e fazer um balanço de suas necessidades.</p>
+                    </div>
+                        <div class="cadastro">
+                            <img id="logo-cad" src="./imagens/Logo Emagreça.png" alt="Logo emagrça">
+                            <h2 id="cadh2" style="color: white;">Cadastre-se</h2>
+                            <form action="#" method="post" id="form1">
+                                <label for="nome" id="icad">Nome completo:</label id>
+                                <input type="text" id="inome" name="nome" width="200px" >
+        
+                                <label for="email" id="icad">Email:</label>
+                                <input type="email" id="iemail" name="email" >
+        
+                                <label for="senha" id="icad">Senha:</label>
+                                <input type="password" id="isenha" name="senha">
+        
+                                <label for="confirmarsenha" id="icad">Confirmar Senha:</label>
+                                <input type="password" id="iconfirmarsenha" name="confirmar_senha" >
+                            
+                                <input type="submit" value="Cadastrar" id="icadastrar">
+                            </form>
+                        </div>
+                  </div> 
+                  <h2>Tratamentos</h2>
+                   <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+                            <img id="img-card" src="./imagens/relaxante.jpg" alt="Massagem Relaxante">
+                            <h3>Massagem Relaxante</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Em meio à agitação do dia a dia, reservar um tempo para cuidar de si mesmo é essencial para manter o equilíbrio e a saúde mental. A massagem relaxante é uma prática terapêutica que oferece um refúgio de tranquilidade e rejuvenescimento para o corpo e a mente. Neste texto, convidamos você a explorar os benefícios e a experiência única que a massagem relaxante proporciona.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-front">
+                            <img id="img-card" src="./imagens/banho ofuro.png" alt="Banho de Ofurô">
+                            <h3>Banho de Ofurô</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Em um mundo acelerado e cheio de compromissos, encontrar momentos de paz e relaxamento se torna um luxo precioso. O banho de ofurô é uma prática terapêutica que oferece uma fuga tranquila da agitação diária, convidando-o a mergulhar em um oásis de serenidade e rejuvenescimento. Neste texto, convidamos você a explorar os encantos do banho de ofurô e os benefícios que ele pode trazer para o corpo e a mente.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-front">
+                            <img id="img-card" src="./imagens/trata.pele.jpg" alt="tratamento de pele" >
+                            <h3>Tratamento de pele</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>A saúde e a beleza da pele são aspectos importantes da nossa vida diária, refletindo não apenas nossa estética, mas também nossa saúde e bem-estar em geral. O tratamento de pele é uma prática essencial que visa cuidar e melhorar a saúde da nossa maior barreira de proteção. Neste texto, vamos explorar a importância do tratamento de pele e como ele pode ajudar a revelar a sua beleza natural.</p>
+                        </div>
+                    </div>
+                  </div>
+                   <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+                            <img id="img-card" src="./imagens/aromaterapia.png" alt="Aromaterapia">
+                            <h3>Aromaterapia</h3>
+                        </div>
+                        <div class="card-back">
+                           <p>A aromaterapia utiliza óleos essenciais naturais extraídos de plantas para promover o bem-estar físico e emocional. Os óleos essenciais podem ser inalados, aplicados na pele ou usados em banhos. Cada óleo essencial possui propriedades terapêuticas específicas, como relaxamento, energia, alívio do estresse, entre outros. A aromaterapia é frequentemente usada para melhorar o humor, reduzir a ansiedade e aliviar dores.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-front">
+                            <img id="img-card" src="./imagens/meditacao.jpg" alt="Yoga e Meditação">
+                            <h3>Yoga e Meditação</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Em um mundo cada vez mais agitado e repleto de demandas, encontrar maneiras de alcançar a serenidade interior e o equilíbrio mental é fundamental para o nosso bem-estar. O yoga e a meditação são práticas ancestrais que oferecem um refúgio de tranquilidade e uma jornada para o autodescobrimento. Neste texto, convidamos você a explorar os benefícios do yoga e da meditação, que podem ser a chave para uma vida mais equilibrada e saudável.</p>
+                        </div>
+                    </div>y
+                    <div class="card" >
+                        <div class="card-front">
+                            <img id="img-card" src="./imagens/acupuntura.jpg" alt="Acupuntura" >
+                            <h3> Acupuntura</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>A acupuntura é uma terapia milenar originária da medicina tradicional chinesa. Envolve a inserção de agulhas finas em pontos específicos do corpo, conhecidos como meridianos, para equilibrar o fluxo de energia vital, chamada de "Qi" ou "Chi". A acupuntura é frequentemente utilizada para aliviar a dor, reduzir o estresse, melhorar a função orgânica e promover a cura.</p>
+                        </div>
+                    </div>
+                  </div>
+            </section>
+
+        <div class="cadastro-whatsapp">
+            <h4>Receba informaçoes e ofertas pelo WhatsApp</h4>
+            <input type="text" id="nome" placeholder="Nome Completo" maxlength="50" >
+            <input type="text" id="email" placeholder="Email" maxlength="50" >
+            <input type="text" id="whatsapp" placeholder="WhatsApp" maxlength="11" >
+            <button id="cadastrar">Cadastrar</button>
+            
+        </div>
+
+        </section>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="contato">
+                    <p id="titulofooter"><b>Contato</b></p>
+                    <p>Emagreça - Asa Norte</p>
+                    <p>Shopping Plaza Norte EQN 110/111, Brasília - DF, 70753-400</p>
+                    <p>Telefone: (61) 2020-0000</p>
+                    <p>WhatsApp: (61) 9 8000-0000</p>
+                </div>
+                <div class="sobre">
+                    <p id="titulofooter"><b>Sobre a Emagreça</b></p>
+                    <p>A Emagreça é uma Clínica de Estética em Brasília - DF que desenvolve e realiza tratamentos estéticos personalizados em um espaço exclusivo e desenvolvido para proporcionar uma experiência sensorial e reconfortante.</p>
+                </div>
+                <div class="servicos">
+                    <p id="titulofooter"><b>Nossos Serviços</b></p>
+                    
+                        <p>Estética Facial e Corporal</p>
+                        <p>Capialar</p>
+                        <p>SPA</p>
+                        <p>Podologia</p>
+                        <p>Depilação a Laser</p>
+        
+                </div>
+                <div class="horario">
+                    <p id="titulofooter"><b>Funcionamento</b></p>
+                    <p>Segunda: 09:00-20:00</p>
+                    <p>Terça: 09:00-20:00</p>
+                    <p>Quarta: 09:00-20:00</p>
+                    <p>Quinta: 09:00-20:00</p>
+                    <p>Sexta: 09:00-20:00</p>
+                    <p>Sábado: 09:00-17:00</p>
+            
+                    
+                </div>
+            <div class="re">
+                <p><small style="color: var(--mid);">&copy; by: Renata Carvalho</small></p>
+                <p><small style="color: var(--mid);">Contatos:</small></p>
+                <br>
+                <p><small>
+                    <a href="tel:+5561982655395" target="_blank"><img src="./imagens/whatsapp-logo-1-1.png" alt="Telefone" width="25" height="25" style="margin-right: 10px;" 1></a>
+                    <a href="https://www.instagram.com/renata_rcs" target="_blank"><img src="imagens/inst.png" alt="Instagram" width="25" height="25" style="margin-right: 10px;"></a> 
+                    <a href="https://github.com/Renata-rcs/" target="_blank"><img src="./imagens/git.png" width="25" height="25"alt="Github" style="margin-right: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/renata-carvalho-02a718273" target="_blank"><img src="./imagens/linkedin.png" width="25" height="25"alt="Linkedin" style="margin-right: 10px;"></a>
+                </small></p>
+            </div>
+            </div>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="spa.js"></script>
+        </body>
+        </html>
