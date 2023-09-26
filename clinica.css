@@ -47,7 +47,6 @@ header{
 }
 .search-container {
     position: relative;
-    width: 200px; /* Largura do campo de entrada e ícone */
     right: 20px;
 }
 
@@ -62,7 +61,7 @@ header{
 .search-icon {
     position: absolute;
     top: 50%; /* Centralize verticalmente o ícone */
-    right: 20px; /* Ajuste a posição do ícone à direita */
+    right: 10px; /* Ajuste a posição do ícone à direita */
     transform: translateY(-50%); /* Ajuste vertical para o centro */
     cursor: pointer;
 }
@@ -92,6 +91,7 @@ header{
 }
 .dp-menu ul li a{
     color: var(--mid);
+    font-weight: 600;
     text-decoration: none;
     display: inline-block;
     padding: 10px;

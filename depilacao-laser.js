@@ -38,6 +38,16 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             alert('Nome: ' + nome.value + '\nEmail: ' + email.value + '\nWhatsApp: ' + whatsapp.value);
             alert('Cadastro realizado com sucesso ✅');
+
+               // Limpar os campos após o cadastro bem-sucedido
+                nome.value = '';
+                email.value = '';
+                whatsapp.value = '';
+
+                // Remover a classe 'erro' dos campos
+                nome.classList.remove('erro');
+                email.classList.remove('erro');
+                whatsapp.classList.remove('erro');
         }
     });
 
@@ -89,8 +99,20 @@ document.addEventListener('DOMContentLoaded', function () {
             iconfirmarSenha.classList.add('erro');
         }
         else{
-           alert('nome: '+ inome.value + '/n Email: ' + iemail.value + '/n Senha: ' + isenha.value )
+           alert('nome: '+ inome.value + '\nEmail: ' + iemail.value + '\nSenha: ' + isenha.value )
            alert('Cadastro realizado com sucesso ✅')
+
+              // Limpar os campos após o cadastro bem-sucedido
+            inome.value = '';
+            iemail.value = '';
+            isenha.value = '';
+            iconfirmarSenha.value = '';
+
+            // Remover a classe 'erro' dos campos
+            inome.classList.remove('erro');
+            iemail.classList.remove('erro');
+            isenha.classList.remove('erro');
+            iconfirmarSenha.classList.remove('erro');
         }
     });
     });

@@ -47,7 +47,7 @@ header{
 }
 .search-container {
     position: relative;
-    width: 200px; /* Largura do campo de entrada e ícone */
+    right: 20px;
    
 }
 
@@ -90,6 +90,7 @@ header{
 }
 .dp-menu ul li a{
     color: var(--mid);
+    font-weight: 600;
     text-decoration: none;
     display: inline-block;
     padding: 10px;
@@ -230,10 +231,36 @@ section {
 
 #titulo-carrocel{
     color: var(--corSecundaria);
-    font-size: 400;
+    font-size: 4em;
     font-family: 'Poppins', sans-serif;
     margin: 30px;
     text-align: center;
+}
+/*Promocão*/
+.fidelidade{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#fidelidade-titulo{
+    font-size: 4em;
+    margin: 40px;
+}
+.card-promocao{
+    background-color: var(--ligh);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    width: 300px;
+    margin: 20px 50px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.card-promocao:hover{
+    transform: scale(1.1);
+}
+#img-promocao{
+    width: 200px;
+    height: 200px;
 }
 /* Cadastro*/
 #cadSection  h2{
@@ -288,7 +315,7 @@ section {
      height: 530px;
      margin-bottom: 20px; /* Adicione um valor de margem inferior */
      border-radius: 5px;
-     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
      cursor: pointer;
      
  }
@@ -620,8 +647,9 @@ p{
        
     }
     #titulo-carrocel{
-        font-weight: bold;
-        color: #6d00a1;
+       font-size: 30px;
+       font-weight: bold;
+        color: var(--corSecundaria);
     }
     #texts-container{
         display: block;
@@ -651,6 +679,22 @@ p{
         display: block;
         flex-direction: column;
     } 
+    .fidelidade{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-promocao{
+        width: 200px;
+        margin: 30px;
+    }
+    #fidelidade-titulo{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #img-promocao{
+        width: 100%;
+    }
     
     .cadastro {
         flex-basis: auto; /* Permitir que as divs ocupem a largura completa */
@@ -678,9 +722,9 @@ p{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #9032bb;
+        background-color:white;
         border-radius: 10px;
-        width:auto;
+        width:100%;
         height: 30px;
          
     }

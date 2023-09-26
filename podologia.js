@@ -38,7 +38,18 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             alert('Nome: ' + nome.value + '\nEmail: ' + email.value + '\nWhatsApp: ' + whatsapp.value);
             alert('Cadastro realizado com sucesso ✅');
-        }
+
+            
+               // Limpar os campos após o cadastro bem-sucedido
+               nome.value = '';
+               email.value = '';
+               whatsapp.value = '';
+
+               // Remover a classe 'erro' dos campos
+               nome.classList.remove('erro');
+               email.classList.remove('erro');
+               whatsapp.classList.remove('erro');
+       }
     });
 
     function isValidEmail(email) {

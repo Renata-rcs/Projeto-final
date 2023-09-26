@@ -65,7 +65,7 @@ header{
 .search-icon {
     position: absolute;
     top: 35%; /* Centralize verticalmente o ícone */
-    right: 20px; /* Ajuste a posição do ícone à direita */
+    right: 10px; /* Ajuste a posição do ícone à direita */
     transform: translateY(-50%); /* Ajuste vertical para o centro */
     cursor: pointer;
  }
@@ -92,6 +92,7 @@ header{
 }
 .dp-menu ul li a{
     color: var(--mid);
+    font-weight: 600;
     text-decoration: none;
     display: inline-block;
     padding: 10px;
@@ -326,7 +327,8 @@ input[type="submit"]:hover{
 }
 
 #titulofooter{
-    margin: 20px;
+    margin: 25px;
+    font-weight: 500;
     color-scheme: var(--mid);
 }
  
@@ -457,13 +459,13 @@ input[type="submit"]:hover{
     form {
         width: 95%;
         display: flex;
-        color: black;
+        color: white;
         flex-direction: column;
         text-align: left;
         margin: 0 auto;
         padding: 10px;
         border: 1px solid #ccc;
-        background-color: rgba(148, 131, 134, 0.144);
+        background-color:var(--corPrincipal);
         border-radius: 5px;
     }
     div{
@@ -495,11 +497,15 @@ input[type="submit"]:hover{
     }
     #botConsulta{
         align-items: center;
-        width: 80px;
+        width: 100%;
         text-align: center;
         font-size: 8px;
         padding: 0;
         height: 30px;
+    }
+    #botConsulta:hover{
+        background-color: var(--corPrincipal);
+        color: var(--ligh);
     }
     .cadastro-whatsapp{
         align-items: center;

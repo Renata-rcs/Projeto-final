@@ -105,6 +105,15 @@ tratamentoSelect.addEventListener('change', () => {
 
         alert(' Nome: ' + enome.value + '\n Telefone: ' + etelefone.value + '\n Email: ' + eemail.value + '\n CPF: ' + ecpf.value + '\n Nascimento: ' + enascimento.value + '\n Endereço: ' + eend.value + '\n Tratamento: ' + tratamento.value + '\n Horário: ' + ehorario.value);
         alert('Agendamento concluido com sucesso ✅')
+
+        enome.value = '';
+        etelefone.value = '';
+        eemail.value = '';
+        ecpf.value = '';
+        enascimento.value = '';
+        eend.value = '';
+        tratamento.value = '';
+        ehorario.value = '';
     }
 });
 });
