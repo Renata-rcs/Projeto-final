@@ -164,6 +164,7 @@ section {
     margin: 100px 30px; /* Isso define as margens superior e inferior como 200px e as margens esquerda e direita como 30px */
     border: 10px solid transparent; /* Adiciona uma borda transparente de 40px */
 }
+
 .carousel-control-next, .carousel-control-prev {
     z-index: 0;
 }
@@ -358,10 +359,14 @@ section {
  
  /* Pesquisa Cards*/
  #cardpri{
+    min-height: fit-content!important;
+    height: 80vh!important;
+    max-height: 450px;
     display: flex;
     justify-content: space-between;
 }
- #card {
+ .card {
+    min-height: auto;
      font-family: Arial, Helvetica, sans-serif;
      font-weight: 700;
      background-color: var(--ligh);
@@ -372,7 +377,7 @@ section {
      overflow: hidden;
      padding: 0;
      border: 0;
-     height: 200px;
+     height: 400px;
  }
  
  #card > img {
@@ -448,7 +453,7 @@ section {
     border: 1px solid var(--footer);
     border-radius: 5px;
     padding: 10px;
-    max-width: 400px; /* Largura máxima do comentário */
+    max-width: 180px; /* Largura máxima do comentário */
     background-color:  rgba(148, 131, 134, 0.144);
 }
 
@@ -473,6 +478,7 @@ section {
 
 .comment-header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
@@ -491,7 +497,8 @@ section {
     font-size: 14px;
     color: var(--mid);
     margin: 10px 0;
-  
+    min-height: 350px;
+    height: fit-content;
 }
 
 
@@ -567,7 +574,7 @@ p{
 }
 
   
-@media (max-width: 710px) {
+@media (max-width: 800px) {
     body{
         padding: 0;
         margin: 0;
@@ -624,6 +631,7 @@ p{
     .principal{
         top: 100%;
        height: 100%;
+       margin: 0                                                                                ;
     }
     section{
         min-height: 0;
@@ -730,22 +738,29 @@ p{
     }
     #cardpri{
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         height: 100%;
     }
-    #card {
+    .card {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            height: 100%;
+            flex-wrap: wrap;
+            height: fit-content;
+            width: 150px;
+            justify-content: center;
+            align-items: center;
+            margin: 2px;
+            & > img {
+                height: 100px;
+                width: 100%;
+            }
         }
 
     
-    #card > img {
-        display:block;
-        
     }
-    #card > p {
+    .card > p {
         margin: 5px 0;
     }
 
