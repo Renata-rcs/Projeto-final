@@ -146,10 +146,6 @@ main {
     background-color: rgba(148, 131, 134, 0.144);
     margin-bottom: 0;
     border-radius: 0;
-    
-    
- 
-   
 }
 #img1{
     width: 100%;
@@ -300,14 +296,14 @@ section {
      text-align: center;
      color: var(--ligh);
  }
- #form1 {
+#form1 {
      text-align: left;
      margin: 5px;
      padding: 0;
      color: var(--ligh);
  }
  
- .cadastro {
+.cadastro {
      width: 300px;
      padding: 5px;
      background-color:var(--corSecundaria);
@@ -321,7 +317,7 @@ section {
      
  }
 
- #icad{
+#icad{
     text-align: left;
  }
  
@@ -365,9 +361,8 @@ section {
     display: flex;
     justify-content: space-between;
 }
- .card {
+.card {
     min-height: auto;
-     font-family: Arial, Helvetica, sans-serif;
      font-weight: 700;
      background-color: var(--ligh);
      border-radius: 5px;
@@ -377,14 +372,14 @@ section {
      overflow: hidden;
      padding: 0;
      border: 0;
-     height: 400px;
+     height: 350px;
+     width: 250px;
+     & > img {
+        height: 200px;
+        width: 250px;
+    }
  }
- 
- #card > img {
-     max-width: 100%;
-     height: auto;
- }
- 
+
  
  #card > p {
      margin: 5px 0;
@@ -572,6 +567,67 @@ p{
     color: var(--ligh);
     right: 50px;
 }
+@media (max-width: 900px){
+    .fidelidade{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-promocao{
+        width: 170px;
+        margin: 10px;
+   
+    }
+    #img-promocao{
+        width: 130px;
+        height: 130px;
+    }
+       
+    .card-promocao > h2{
+        font-size: 20px;
+    }
+    #fideliade-titulo{
+        font-size: 2em;
+    }
+    #cardpri{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 300px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            margin: 2px;
+            & > img {
+                height: 100px;
+                width: 180px;
+            }
+    }
+
+    .card > p {
+        margin: 5px;
+    }
+
+    .bot1 {
+        color: white;
+        background-color: #9032bb;
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 5px ;
+        margin: 5px;
+        height:30px;
+        display: block;
+        text-decoration: none;
+        flex-basis: auto; /* Permite que o botão ocupe a largura necessária */
+    }
+}
 
   
 @media (max-width: 800px) {
@@ -629,9 +685,9 @@ p{
     
    
     .principal{
-        top: 100%;
+       top: 100%;
        height: 100%;
-       margin: 0                                                                                ;
+       margin: 0;                                                                                ;
     }
     section{
         min-height: 0;
@@ -664,7 +720,7 @@ p{
         flex-direction: column;
     }
     section + section{
-       margin: 10px;
+       margin:10px;
     }
     .secao {
             display: flex;
@@ -675,7 +731,7 @@ p{
             margin-top: 20px;
             margin-bottom: 0;
             height: 100%;
-        }
+    }
     .text3{
         display: none;
     }
@@ -687,14 +743,26 @@ p{
         display: block;
         flex-direction: column;
     } 
+    
     .fidelidade{
-        display: block;
+        display: flex;
         align-items: center;
         justify-content: center;
     }
     .card-promocao{
-        width: 200px;
-        margin: 30px;
+        width: 100px;
+        height: 300px;
+        margin: 5px;
+        font-size: 8px;
+        & > img {
+            height: 70px;
+            width: 70px;
+            margin-bottom: 5px;
+        }
+       
+    }
+    .card-promocao h2{
+        font-size: 10px;
     }
     #fidelidade-titulo{
         font-size: 30px;
@@ -707,9 +775,10 @@ p{
     .cadastro {
         flex-basis: auto; /* Permitir que as divs ocupem a largura completa */
         width:fit-content ;
-        margin-bottom: 20px; /* Espaçamento entre as divs */
+        max-width: 300px;
+        margin-bottom: 10px; /* Espaçamento entre as divs */
         border: 0;
-        height: 700px;
+        height: 500px;
         }
     #icad{
         text-align: left;
@@ -722,7 +791,7 @@ p{
         width:100%;
         margin-bottom: 10px;
         border-radius: 10px;
-        height: 40px;
+        height: 30px;
     }     
         
          
@@ -733,7 +802,7 @@ p{
         background-color:white;
         border-radius: 10px;
         width:100%;
-        height: 30px;
+        height: 25px;
          
     }
     #cardpri{
@@ -742,36 +811,36 @@ p{
         justify-content: space-between;
         height: 100%;
     }
-    .card {
+    .card{
             display: flex;
             flex-direction: row;
             align-items: center;
             flex-wrap: wrap;
-            height: fit-content;
             width: 150px;
             justify-content: center;
             align-items: center;
+            height: 250x;
             margin: 2px;
             & > img {
                 height: 100px;
                 width: 100%;
             }
-        }
-
-    
     }
+
     .card > p {
-        margin: 5px 0;
+        margin: 5px 30px;
     }
 
     .bot1 {
         color: white;
         background-color: #9032bb;
+        font-weight:400;
+        font-size: 10px;
         border: 1px solid gray;
         border-radius: 10px;
-        padding: 10px 20px;
-        margin: 10px;
-        height: 100%;
+        padding: 5px ;
+        margin: 5px;
+        width: 100px;
         display: block;
         text-decoration: none;
         flex-basis: auto; /* Permite que o botão ocupe a largura necessária */
