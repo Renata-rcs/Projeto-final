@@ -324,6 +324,27 @@ function isValidEmail(eemail) {
     return emailRegex.test(eemail);
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const nomeUsuario = sessionStorage.getItem('nomeUsuario');
+
+    if (nomeUsuario) {
+        // Atualize o botão de login com o nome do usuário
+        const botaoLogin = document.getElementById('login');
+        botaoLogin.textContent = 'Bem-vindo, ' + nomeUsuario;
+
+        // Adicione um evento de clique ao botão para permitir o logout
+        botaoLogin.addEventListener('click', function() {
+            // Limpe o nome do usuário no sessionStorage
+            sessionStorage.removeItem('nomeUsuario');
+
+            // Redirecione para a página de login
+            window.location.href = 'pagina_de_login.html';
+        });
+    }
+});
+
+
+
 
 
 

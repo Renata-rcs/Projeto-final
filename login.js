@@ -27,18 +27,23 @@ confirmarButton.addEventListener('click', function(event) {
     if (onome.value == '') {
         alert('Por favor, preencha o campo Nome completo.');
         onome.classList.add('erro');
-        return; // Encerra a função se algum campo estiver vazio
+        return;
+    }
+    if (onascimento.value == '') {
+        alert('Por favor, preencha o campo Nascimento.');
+        onascimento.classList.add('erro');
+        return; 
     }
 
    if (oemail.value == '') {
     alert('Por favor, preencha o campo Email.');
     oemail.classList.add('erro');
-    return;
-} else if (!isValidEmail(oemail.value)) {
-    alert('Por favor, insira um endereço de email válido.');
-    oemail.classList.add('erro');
-    return;
-}
+        return;
+    } else if (!isValidEmail(oemail.value)) {
+        alert('Por favor, insira um endereço de email válido.');
+        oemail.classList.add('erro');
+        return;
+    }
 
 
     if (osenha.value == '') {
@@ -59,19 +64,23 @@ confirmarButton.addEventListener('click', function(event) {
         oconfirmarsenha.classList.add('erro');
         return;
     }
-    
-    // Criar um objeto com os dados do cadastro
-    const cadastro = {
-        nome: onome,
-        nascimento: onascimento,
-        email: oemail,
-        senha: osenha
+    const userData = {
+        nome: onome.value,
+        nascimento: onascimento.value,
+        email: oemail.value,
+        senha: osenha.value
     };
 
-    // Salvar os dados do cadastro no Local Storage
-    localStorage.setItem('cadastro', JSON.stringify(cadastro));
+    localStorage.setItem('userData', JSON.stringify(userData));
 
-    alert('nome: '+ onome.value + '\n Nascimento: ' +  onascimento.value + '\nEmail: ' + oemail.value + '\n Senha: ' + osenha.value + '\nCadastro realizado com sucesso ✔️ ');
+    // Suponha que você tenha obtido o nome do usuário após o login bem-sucedido
+const nomeUsuario = 'Nome do Usuário'; // Substitua pelo nome real do usuário
+
+// Armazene o nome do usuário no sessionStorage
+sessionStorage.setItem('nomeUsuario', nomeUsuario);
+
+
+    alert('nome: '+ onome.value + '\nNascimento: ' +  onascimento.value + '\nEmail: ' + oemail.value + '\n Senha: ' + osenha.value + '\nCadastro realizado com sucesso ✔️ ');
 
     onome.value = '';
     onascimento.value = '';
@@ -98,30 +107,34 @@ function isValidEmail(oemail) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(oemail);
 }
-// ...
+
+// Função para verificar o login com os dados do Local Storage
+function fazerLogin() {
+    const emailLogin = document.getElementById('rlogin').value;
+    const senhaLogin = document.getElementById('rsenha').value;
+
+    const userDataJSON = localStorage.getItem('userData');
+
+    if (userDataJSON) {
+        const userData = JSON.parse(userDataJSON);
+
+        if (userData.email === emailLogin && userData.senha === senhaLogin) {
+            alert('Login bem-sucedido! Bem-vindo, ' + userData.nome);
+            window.location.href = 'index.html';
+            
+        } else {
+            alert('Credenciais de login inválidas. Por favor, tente novamente.');
+        }
+    } else {
+        alert('Nenhum usuário cadastrado. Por favor, faça o cadastro primeiro.');
+    }
+}
+
 
 const loginButton = document.getElementById('submit');
 loginButton.addEventListener('click', function(event) {
     event.preventDefault();
-
-    const inputEmail = document.getElementById('rlogin').value;
-    const inputSenha = document.getElementById('rsenha').value;
-
-    const cadastroJSON = localStorage.getItem('cadastro');
-    if (cadastroJSON) {
-     
-        const cadastro = JSON.parse(cadastroJSON);
-
-        if (inputEmail === cadastro.email && inputSenha === cadastro.senha) {
-            alert('Login bem-sucedido!');
-
-            window.location.href = 'index.html';
-        } else {
-            alert('Email ou senha incorretos. Por favor, tente novamente.');
-        }
-    } else {
-        alert('Não há dados de cadastro. Faça o cadastro primeiro.');
-    }
+    fazerLogin();
 });
 
 

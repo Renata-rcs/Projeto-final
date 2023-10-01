@@ -2,7 +2,7 @@
 /* font-family: 'Poppins', sans-serif;
 */
 :root{
-    --corPrincipal: #6d00a1;
+    --corPrincipal:purple;
     --corSecundaria:#ebccdf;
     --ligh:#ffffff;
     --footer:#c7c6c6;
@@ -30,7 +30,7 @@ header{
     z-index: 1;
 }
 .nav-1{
-  background-color: var(--corPrincipal);
+  background-color: var(--ligh);
   width: 100%;
   height: 60px;
   display: flex;
@@ -54,7 +54,7 @@ header{
 .search-input {
     width: 100%;
     height: 25px;
-    border: none;
+    border: 1px solid var(--footer);
     padding: 5px;
     border-radius: 5px;
 }
@@ -74,7 +74,7 @@ header{
 }
 .dp-menu{
     font-family: 'Poppins', sans-serif;
-    background-color:var(--ligh);
+    background-color:var(--corPrincipal);
     width: 100%;
     border-top: 20px;
     display: flex;
@@ -89,7 +89,7 @@ header{
    
 }
 .dp-menu ul li a{
-    color: var(--mid);
+    color: var(--ligh);
     font-weight: 600;
     text-decoration: none;
     display: inline-block;
@@ -98,7 +98,7 @@ header{
 }
 .dp-menu ul li a:hover{
     color: var(--ligh);
-    background-color:var(--corPrincipal) ;
+    background-color:var(--footer) ;
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -200,7 +200,7 @@ section {
 }
 /*texto*/
 #texts2{
-    background-color: var(--corPrincipal);
+    background-color: var(--ligh);
 }
 #container {
     display: flex;
@@ -212,15 +212,15 @@ section {
     align-items: center;
     justify-content: center;
     width: 100%; /* Ocupa toda a largura da tela */
-    background-color:var(--corPrincipal); /* Cor de fundo da logo (substitua pela sua imagem) */
+    background-color:var(--ligh); /* Cor de fundo da logo (substitua pela sua imagem) */
     height: 200px; /* Altura da logo (ajuste conforme necessário) */
 }
 
 #texts-container {
     display: flex;
     justify-content: space-between; /* Alinha as divs lado a lado */
-    background-color: var(--corPrincipal);
-    color: var(--ligh);
+    background-color: var(--ligh);
+    color: var(--mid);
 }
 
 #text1,
@@ -235,16 +235,19 @@ section {
 #text2 h2 {
    font-family: 'Poppins', sans-serif;
     font-size: 20px;
+    font-weight: 700;
+    color: black;
     margin: 0; /* Remova a margem padrão */
 }
 
 
 #titulo-carrocel{
     color: var(--corSecundaria);
-    font-size: 4em;
+    font-size: 3em;
     font-family: 'Poppins', sans-serif;
     margin: 30px;
     text-align: center;
+    font-weight: 700;
 }
 /*Promocão*/
 .fidelidade{
@@ -253,8 +256,9 @@ section {
     justify-content: space-around;
 }
 #fidelidade-titulo{
-    font-size: 4em;
+    font-size: 3em;
     margin: 40px;
+    font-weight: 700;
 }
 .card-promocao{
     background-color: var(--ligh);
@@ -265,10 +269,13 @@ section {
     margin: 20px 50px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
+.titulo-h2card{
+    font-size: 2em;
+}
 .card-promocao:hover{
     transform: scale(1.1);
 }
-#img-promocao{
+.img-promocao{
     width: 200px;
     height: 200px;
 }
@@ -560,8 +567,8 @@ p{
 /* Estilos para o menu quando a classe .menu-ativo é aplicada */
 .menu-ativo {
     display: block!important;
-    background-color:var(--ligh);
-    color: var(--mid);
+    background-color:var(--corPrincipal);
+    color: var(--ligh);
     padding: 30px;
     top:100%;
     position: absolute;
@@ -578,10 +585,15 @@ p{
 #hamburguer{
     position: absolute;
     display: none;
-    color: var(--ligh);
+    color:black;
     right: 50px;
 }
 @media (max-width: 900px){
+    
+    #titulo-carrocel{
+        font-size: 3em;
+        font-weight: 700;
+    }
     .fidelidade{
         display: flex;
         align-items: center;
@@ -592,16 +604,17 @@ p{
         margin: 10px;
    
     }
-    #img-promocao{
+    .img-promocao{
         width: 130px;
         height: 130px;
     }
        
-    .card-promocao > h2{
+    .titulo-h2card{
         font-size: 20px;
     }
-    #fideliade-titulo{
-        font-size: 2em;
+    #fidelidade-titulo{
+        font-size: 3em;
+        font-weight: 700;
     }
     #cardpri{
         display: flex;
@@ -658,7 +671,7 @@ p{
     .nav-1{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
     
     #pesquisar{
@@ -681,7 +694,7 @@ p{
         right: 0;
         position: relative;
         top: 100%;
-        background-color:white;
+        background-color:var(--corPrincipal);
     }
    
     .dp-menu ul ul{
@@ -757,7 +770,9 @@ p{
         display: block;
         flex-direction: column;
     } 
-    
+    .titulo-h2card{
+        font-size: 12px;
+    }
     .fidelidade{
         display: flex;
         align-items: center;
@@ -775,14 +790,12 @@ p{
         }
        
     }
-    .card-promocao h2{
-        font-size: 10px;
-    }
+    
     #fidelidade-titulo{
         font-size: 30px;
         font-weight: bold;
     }
-    #img-promocao{
+    .img-promocao{
         width: 100%;
     }
     
