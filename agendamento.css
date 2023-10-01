@@ -50,7 +50,7 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 18%;
+    top: 16%;
     border: 0;
     width: 200px; /* Largura do campo de entrada e ícone */
     right: 20px;
@@ -137,7 +137,20 @@ header{
 .dp-menu ul ul li a{
     display: block;
 }
+#login > a, span > a{
+    text-decoration: none;
+    color: var(--corPrincipal);
 
+}
+#login{
+    border-color: var(--corPrincipal);
+    border-radius: 5px;
+    padding: 2px 10px;
+    background-color: var(--ligh);
+}
+#login:hover{
+    transform: scale(1,1);
+}
 
 /*Main*/
 main
@@ -303,9 +316,9 @@ input[type="submit"]:hover{
 
 .cadastro-whatsapp input{
     border-radius: 5px;
+    width: 20%;
     padding: 5px;
     margin: 5px;
-    width: 220px;
     
 }
 .cadastro-whatsapp h4{
@@ -338,6 +351,8 @@ input[type="submit"]:hover{
 }
  
  footer {
+    width: 100%;
+    background-color: var(--footer);
     display: flex;
     justify-content: center;
     height: auto;
@@ -348,12 +363,10 @@ input[type="submit"]:hover{
  .footer{
      display: flex;
      justify-content: space-between;
-     align-items: center;
      background-color:var(--footer);
      padding: 0;
      margin-bottom: 0;
      margin-top:0;
-     height: 400px;
      flex-wrap: wrap;
      bottom: 0;
      font: normal;
@@ -387,7 +400,7 @@ input[type="submit"]:hover{
 }
 .menu-ativo {
     display: block!important;
-    background-color:var(--ligh);
+    background-color:var(--corPrincipal);
     color: var(--ligh);
     padding: 30px;
     top:60px;
@@ -400,10 +413,9 @@ input[type="submit"]:hover{
     position: absolute;
     display: none;
     right: 50px;
-    color: var(--ligh);
+    color: black;
 }
-  
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     body{
         padding: 0;
         margin: 0;
@@ -413,19 +425,10 @@ input[type="submit"]:hover{
     }
     main{
         display: flex;
-        flex-direction: column;
+        justify-content: space-around;
       
     }
    
-    #tituloform1{ 
-       font-size: 30px;
-       margin: 50px 0;
-       display: block;
-    }
-    #consulta h2, h3{
-        text-align: center;
-        margin: 10px 0;
-    }
     .dp-menu{
         display: none;
     }
@@ -436,7 +439,7 @@ input[type="submit"]:hover{
         right: 0;
         position: relative;
         top: 100%;
-        background-color:white;
+        background-color:var(--corPrincipal);
     }
    
     .dp-menu ul ul{
@@ -454,52 +457,199 @@ input[type="submit"]:hover{
      }
     
      section{
-        min-height: 0;
+        width: 100%;
         display:flex;
+        justify-content: space-around;
         align-items: center;
-        flex-direction: column;
         margin: 0;
+        top:0;
+        
+    }
+    .agendamento{
+        margin-top:50px;
+    }
+} 
+@media (max-width: 610px) {
+    body{
+        padding: 0;
+        margin: 0;
+        border: 0;
+        width: 100%;
+        height: 100%;
+    }
+    main{
+        display: flex;
+        justify-content: space-around;
+      
+    }
+   
+    .dp-menu{
+        display: none;
+    }
+    .dp-menu li {
+        display: block!important;
+    }
+    .dp-menu ul{
+        right: 0;
+        position: relative;
+        top: 100%;
+        background-color:var(--corPrincipal);
+    }
+   
+    .dp-menu ul ul{
+        display: none!important;
+    }
+   
+    #pesquisar{
+        display: none;
+     }
+     #input-pesquisar{
+         display: none;
+     }
+     #hamburguer{
+        display: block;
+     }
+    
+     section{
+        width: 100%;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    
+        
+    }
+    .agendamento{
+        width: 100%!important;
+    }
+    .cadastro-whatsapp{
+        align-items: center;
+        height: 150px;
+        padding: 2px;
+   }
+    input{
+        width: 100%;
+    }    
+
+    
+    footer{
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        background-color: var(--corPrincipal)!important;
+        width: 100%;
+    }
+    .footer{
+        flex-direction: column;
+        display: block;
+        height: min-content;
+        font-size: 12px;
+        
+    }
+}
+@media (max-width: 500px) {
+    body{
+        padding: 0;
+        margin: 0;
+        border: 0;
+        width: 100%;
+        height: 100%;
+    }
+    main{
+        display: flex;
+        justify-content: space-around;
+      
+    }
+   
+    .dp-menu{
+        display: none;
+    }
+    .dp-menu li {
+        display: block!important;
+    }
+    .dp-menu ul{
+        right: 0;
+        position: relative;
+        top: 100%;
+        background-color:var(--corPrincipal);
+    }
+   
+    .dp-menu ul ul{
+        display: none!important;
+    }
+   
+    #pesquisar{
+        display: none;
+     }
+     #input-pesquisar{
+         display: none;
+     }
+     #hamburguer{
+        display: block;
+     }
+    
+     section{
+        width: 100%;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 50px 0;
         
     }
     form {
-        width: 95%;
+        width: 90%;
         display: flex;
-        color: white;
+        color: black;
         flex-direction: column;
         text-align: left;
         margin: 0 auto;
         padding: 10px;
         border: 1px solid #ccc;
-        background-color:var(--corPrincipal);
+        background-color:var(--ligh);
         border-radius: 5px;
     }
     div{
         
         align-items: center;
-        flex-direction: column;
     }
    
     .agendamento{
-        display: block;
-        align-items: center;
+        width: 100%;
+        display: flex;
         text-align: center;
         margin-top: 0;
         border-radius: 0;
     }
     #agend1{
         margin: 0;
+        width: 40%;
+        font-size: 10px;
+        
     }
     #agend2{
-        width: 100%;
+        width: 90%;
         margin: 40px 0;
     }
     #consulta{
         padding: 0;
-        margin: 80px 0;
-        height: 1940px;
+        margin: 0;
         text-align: left;
+        flex-direction: column;
     
     }
+    
+    #tituloform1{ 
+        font-size: 30px;
+        margin-top: 100px;
+        margin-bottom: 40px;
+        display: block;
+     }
+
+     #consulta h2, h3{
+         text-align: center;
+         font-size: 20px;
+         margin: 20px 0;
+     }
     #botConsulta{
         align-items: center;
         width: 100%;
@@ -513,13 +663,25 @@ input[type="submit"]:hover{
         color: var(--ligh);
     }
     .cadastro-whatsapp{
-        align-items: center;
-        width: 300px;
-        height: 350px;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 100%;
         padding: 30px;
    }
-        
-
+   .cadastro-whatsapp input{
+        border-radius: 5px;
+        width: 100%;
+        padding: 5px;
+        margin: 5px;
+    
+    }
+    #cadastrar{
+        width: 100%;
+        color: var(--corPrincipal);
+        border-radius: 5px;
+        padding: 5px;
+    }
     footer{
         display: block;
         flex-direction: column;

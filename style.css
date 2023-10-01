@@ -207,13 +207,14 @@ section {
     flex-direction: column; 
 }
 
-#imglogo2 {
+#imglg2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Ocupa toda a largura da tela */
+    margin-bottom: 100px;
+    width: 30%; /* Ocupa toda a largura da tela */
     background-color:var(--ligh); /* Cor de fundo da logo (substitua pela sua imagem) */
-    height: 200px; /* Altura da logo (ajuste conforme necessário) */
+   
 }
 
 #texts-container {
@@ -251,6 +252,7 @@ section {
 }
 /*Promocão*/
 .fidelidade{
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -265,8 +267,8 @@ section {
     padding: 20px;
     text-align: center;
     border-radius: 5px;
-    width: 300px;
-    margin: 20px 50px;
+    width: 250px;
+    margin: 20px 10x;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 .titulo-h2card{
@@ -524,7 +526,6 @@ section {
      justify-content: space-between;
      align-items: center;
      background-color:var(--footer);
-     padding: 50px;
      margin-bottom: 0;
      margin-top:0;
      height: 400px;
@@ -589,7 +590,7 @@ p{
     color:black;
     right: 50px;
 }
-@media (max-width: 900px){
+@media (max-width: 1000px){
     
     #titulo-carrocel{
         font-size: 3em;
@@ -644,8 +645,8 @@ p{
     }
 
     .bot1 {
-        color: white;
-        background-color: #9032bb;
+        color: var(--corPrincipal);
+        background-color:var(--ligh);
         border: 1px solid gray;
         border-radius: 5px;
         padding: 5px ;
@@ -654,6 +655,9 @@ p{
         display: block;
         text-decoration: none;
         flex-basis: auto; /* Permite que o botão ocupe a largura necessária */
+    }
+    .footer{
+        padding: 0;
     }
 }
 
@@ -729,30 +733,30 @@ p{
     #imglg2 {
         display: block;
         margin: 40px auto;
-        width: 100px;
+        width: 30%;
     }
     #texts2{
+        display: flex;
+        justify-content: space-around;
         text-align: center;
         align-items: center;
-        display: block;
-        flex-direction: column;
+    
        
+    }
+    #texts_container{
+        flex: 1;
     }
     #titulo-carrocel{
        font-size: 30px;
        font-weight: bold;
         color: var(--corSecundaria);
     }
-    #texts-container{
-        display: block;
-        flex-direction: column;
-    }
+  
     section + section{
        margin:10px;
     }
     .secao {
             display: flex;
-            flex-direction: column; /* Empilhar as divs verticalmente */
             height: auto; /* Permitir que a altura se ajuste ao conteúdo */
             align-items: center; /* Centralizar horizontalmente */
             border: 0;
@@ -761,7 +765,7 @@ p{
             height: 100%;
     }
     .text3{
-        display: none;
+      width: 200px;
     }
     #form1{
         padding: 30px;
@@ -772,7 +776,7 @@ p{
         flex-direction: column;
     } 
     .titulo-h2card{
-        font-size: 12px;
+        font-size: 20px;
     }
     .fidelidade{
         display: flex;
@@ -780,13 +784,13 @@ p{
         justify-content: center;
     }
     .card-promocao{
-        width: 100px;
+        width: 200px;
         height: 300px;
         margin: 5px;
-        font-size: 8px;
+        font-size: 14px;
         & > img {
-            height: 70px;
-            width: 70px;
+            height: 100px;
+            width: 100px;
             margin-bottom: 5px;
         }
        
@@ -912,4 +916,372 @@ p{
         width: auto;
     }
 }
+  
+@media (max-width: 650px) {
+    body{
+        padding: 0;
+        margin: 0;
+        border: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    #pesquisar{
+       display: none;
+    }
+    #input-pesquisar{
+        display: none;
+    }
+ 
+    #hamburguer {
+        display: block;
+    }
+    .dp-menu{
+        display: none;
+    }
+    .dp-menu li {
+        display: block!important;
+    }
+    .dp-menu ul{
+        right: 0;
+        position: relative;
+        top: 100%;
+        background-color:var(--corPrincipal);
+    }
+   
+    .dp-menu ul ul{
+        display: none;
+    }
+   
+    main{
+        display: block;
+        align-items: center;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    
+   
+    .principal{
+       top: 100%;
+       height: 100%;
+       margin: 0;                                                                                ;
+    }
+    section{
+        min-height: 0;
+        display: block;
+        flex-direction: column;
+        margin: 0;
+    }
+    #img1{
+        margin-top: 50px;
+    }
+    #imglg2 {
+        display: block;
+        margin: 40px auto;
+        width: 30%;
+    }
+    #texts2{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+    
+       
+    }
+    #texts_container{
+        flex: 1;
+    }
+    #titulo-carrocel{
+       font-size: 30px;
+       font-weight: bold;
+        color: var(--corSecundaria);
+    }
+    .caroucel-inner{
+        overflow: visible;
+    }
+    #myCarousel{
+        display: inline;
+    }
+    .row{
+        display: flex;
+        flex-wrap: nowrap;
+        --bs-gutter-y:0;
+        margin-top: calc(-1 * var(bsgutter-y));
+        margin-left: calc(- .5 * var(--bs-gutter-x));
+    }
+    .col-sm-3{
+        width: 40%;
+        height: 100%;
+        & > img{
+            width: 100%;
+            height: 200px;
+        }
+    }
+  
+    section + section{
+       margin:10px;
+    }
+    .secao {
+            display: flex;
+            height: auto; /* Permitir que a altura se ajuste ao conteúdo */
+            align-items: center; /* Centralizar horizontalmente */
+            border: 0;
+            margin-top: 20px;
+            margin-bottom: 0;
+            height: 100%;
+    }
+    .text3{
+      width: 30%;
+      margin: 0;
+    }
+    #logo-cad{
+        margin: 20px;
+        width: 80%;
+    }
+    #cadSection h2{
+        font-size: 20px;
+    }
+    .cadastro {
+        flex-basis: auto; /* Permitir que as divs ocupem a largura completa */
+        width:fit-content ;
+        max-width: 50%;
+        margin-bottom: 10px; /* Espaçamento entre as divs */
+        border: 0;
+        height: 500px;
+        }
+    #icad{
+        text-align: left;
+    }
+    #inome,
+    #iemail,
+    #isenha,
+    #iconfirmarsenha {
+        text-align: left;
+        width:100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        height: 30px;
+    }     
+        
+         
+    #icadastrar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:white;
+        border-radius: 10px;
+        width:100%;
+        height: 25px;
+         
+    }
+    #form1{
+        padding: 30px;
+        width: 100%;
+    }
+    #cadsection{
+        display: block;
+        flex-direction: column;
+    } 
+    .titulo-h2card{
+        font-size: 15px;
+    }
+    .fidelidade{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-promocao{
+        width: 30%;
+        height: 60%;
+        margin: 5px;
+        font-size: 10px;
+        & > img {
+            height: 30%;
+            width: 80%;
+            margin-bottom: 5px;
+        }
+       
+    }
+    
+    #fidelidade-titulo{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .img-promocao{
+        width: 100%;
+    }
+    
+   
+    #cardpri{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .card{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 150px;
+            justify-content: center;
+            align-items: center;
+            height: 250x;
+            margin: 2px;
+            & > img {
+                height: 100px;
+                width: 100%;
+            }
+    }
+
+    .card > p {
+        margin: 5px 30px;
+    }
+
+    .bot1 {
+        color: white;
+        background-color: #9032bb;
+        font-weight:400;
+        font-size: 10px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 5px ;
+        margin: 5px;
+        width: 100px;
+        display: block;
+        text-decoration: none;
+        flex-basis: auto; /* Permite que o botão ocupe a largura necessária */
+    }
+        /*Comentario google*/
+    #stn-depoimentos{
+        display: block;
+        flex-direction: column;
+        height: 100%;
+    }
+    #bot1a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    #google-logo{
+        width: 20%;
+        margin-top:30px ;
+    }
+    #google-div{
+        margin-bottom: 30px;
+        border-radius: 5px;
+    }
+    #g{
+        width: 15px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    #g-comentario{
+        color: green;
+        font-size: 12px;
+    }
+    #postado{
+        color: grey;
+        font-size: 8px;
+    }
+
+    .comment-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px; /* Espaçamento entre os comentários */
+    }
+
+    .comment {
+        flex: 1;
+        border: 1px solid var(--footer);
+        border-radius: 5px;
+        padding: 10px;
+        max-width: 40%; /* Largura máxima do comentário */
+        background-color:  rgba(148, 131, 134, 0.144);
+    }
+
+    .avatar {
+        width: 25px;
+        height: 25px;
+        background-color: var(--footer);
+        border-radius: 50%;
+        margin-right: 10px;
+        overflow: hidden;
+    }
+
+    .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .comment-content {
+        flex: 1;
+    }
+
+    .comment-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .comment-author {
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .comment-rating {
+        color: #f4d03f; /* Cor das estrelas */
+        font-size: 15px;
+    }
+
+    .comment-text {
+        font-size: 8px;
+        color: var(--mid);
+        margin: 10px 0;
+        min-height: 200px;
+        height: fit-content;
+    }
+
+
+    footer{
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: auto;
+    }
+    #feed{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .feedback{
+        align-items: center;
+        margin-top: 20px;
+    }
+    .footer{
+      flex-direction: column;
+      display: block;
+      height: min-content;
+      width: auto;
+    
+    }
+    .re{
+        width: auto;
+    }
+}
+
 
