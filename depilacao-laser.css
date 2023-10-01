@@ -136,7 +136,7 @@ header{
 
 /* Main*/
 main {
-    max-width: 1200px;
+    max-width: 90%px;
     margin: 0 auto;
     padding: 0;
 }
@@ -209,101 +209,7 @@ h2{
     color:var(--corSecundaria);
     margin: 50px;
 }
-/* Cadastro*/
-#cadSection  h2{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    margin: 10px;
-    color:black;
- }
- #logo-cad{
-    margin: 30px;
-    width: 200px;
- }
- .erro{
-     border: 2px solid red;
- }
- .secao {
-     display: flex;
-     justify-content:space-around;
-     align-items: center; /* Alinha as divs lado a lado */
-     height: 700px;
-     margin-bottom: 30px;
-     border-bottom: 2px solid var(--corPrincipal);
-  
- }
-.text3{
-    width: 300px;
-    text-align: left;
-    margin: 50px;
-    color: #666;
-    top: 0;
-}
-#sessao-titulo{
-     color: var(--corPrincipal);
-}
- #cadh2{
-     margin-top: 10px;
-     text-align: center;
-     color: var(--ligh);
- }
- #form1 {
-     text-align: left;
-     margin: 5px;
-     padding: 0;
-     color: var(--ligh);
- }
- 
- .cadastro {
-     width: 300px;
-     padding: 5px;
-     height: 600px;
-     background-color:var(--corSecundaria);
-     display: flex;
-     flex-direction: column;
-     margin-bottom: 20px; /* Adicione um valor de margem inferior */
-     border-radius: 5px;
-     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-     cursor: pointer;
-     
- }
 
- #icad{
-    text-align: left;
- }
- 
- #inome,
- #iemail,
- #isenha,
- #iconfirmarsenha {
-     text-align: left;
-     width: 280px;
-     margin-bottom: 10px;
-     border-radius: 5px;
-     height: 40px;
-    
- }
- 
-#icadastrar {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     background-color: var(--ligh);
-     color: var(--corPrincipal);
-     border-radius: 5px;
-     width: 280px;
-     height: 30px;
-     border: none;
- }
- #icadastrar:hover{
-    background-color: var(--corPrincipal);
-    color: var(--ligh);
-   
- }
- #cadh2{
-    color:var(--ligh)
- }
- 
 
 /*Card flip*/
 .card-container {
@@ -446,8 +352,9 @@ input{
 #span-text{
     color: var(--corSecundaria);
 }
-#titulofooter{
+.titulofooter{
    margin: 20px;
+   font-weight: 700;
 }
 p{
    margin-bottom: 0;
@@ -572,9 +479,6 @@ p{
         list-style: none;
         color: #666;
     }
-    .secao{
-        display: none;
-      }
     
     .principal{
        top: 100%;

@@ -137,7 +137,7 @@ header{
 
 /* Main*/
 main {
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 0;
 }
@@ -344,8 +344,9 @@ input{
 #span-text{
     color: #ebccdf;
 }
-#titulofooter{
+.titulofooter{
    margin: 20px;
+   font-weight: 700;
 }
 p{
    margin-bottom: 0;

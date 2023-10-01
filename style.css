@@ -133,10 +133,23 @@ header{
 .dp-menu ul ul li a{
     display: block;
 }
+#login > a, span > a{
+    text-decoration: none;
+    color: var(--corPrincipal);
 
+}
+#login{
+    border-color: var(--corPrincipal);
+    border-radius: 5px;
+    padding: 2px 10px;
+    background-color: var(--ligh);
+}
+#login:hover{
+    transform: scale(1,1);
+}
 /* Main*/
 main {
-    max-width: 1200px;
+    max-width: 90%px;
     margin: 0 auto;
     padding: 0;
 }
@@ -385,8 +398,9 @@ section {
      margin: 5px 0;
  }
  .bot1 {
+
      color: var(--ligh);
-     background-color: var(--corPrincipal);
+     background-color: var(--ligh);
      border: 1px solid var(--mid);
      border-radius: 5px;
      padding: 10px 20px;
@@ -397,12 +411,11 @@ section {
      cursor: pointer;
  }
  .bot1:hover{
-    background-color: var(--corPrincipal);
-    transform: scale(1.1);
+    transform: scale(1.2);
  }
  #bot1a{
      text-decoration: none;
-     color: var(--ligh);
+     color: var(--corPrincipal);
  }
  .erro{
     border: 2px solid red;
@@ -525,7 +538,8 @@ section {
    
 
 }
-#titulofooter{
+.titulofooter{
+    font-weight: 700;
     margin: 20px;
 }
 p{

@@ -7,6 +7,41 @@ hamburguer.addEventListener('click', () => {
     dpMenu.classList.toggle('menu-ativo');
     console.log('Classe menu-ativo adicionada:', dpMenu.classList.contains('menu-ativo'));
 });
+//cep
+const logradouro = document.getElementById('logradouro')
+const complemento = document.getElementById('complemento')
+const bairro = document.getElementById('bairro')
+const localidade = document.getElementById('cidade')
+const uf = document.getElementById('uf')
+const cep = document.getElementById('input-cep')
+
+
+cep.addEventListener('blur' , (evento)=>{//disfoque
+    evento.preventDefault();
+
+    let cep = document.getElementById('input-cep').value
+
+    cep = cep.replace("-", "") //replace é uma substituição primeiro parametro o que quero subistituir e depois pelo o que substituir
+
+    if(cep.length != 8){
+         alert('CEP invalido!')
+    }
+    else{
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)//interpolação ${}
+        .then(response => response.json())
+        .then(date => {
+            console.log(date)
+            logradouro.value = date.logradouro
+            bairro.value = date.bairro
+            complemento.value = date.complemento
+            localidade.value = date.localidade
+            uf.value = date.uf
+        }) 
+        .catch(err =>{ //tratamento de erro .catch 
+            alert(err + "CEP não encontardo")
+    })
+    }
+})
 
 const tratamentoSelect = document.getElementById('tratamento');
 const opcoesEsteticaFacial = document.getElementById('opcoesEsteticaFacial');
@@ -57,9 +92,15 @@ tratamentoSelect.addEventListener('change', () => {
         const etelefone = document.getElementById('etelefone');
         const eemail = document.getElementById('eemail');
         const ecpf = document.getElementById('ecpf');
-        const spa = document.getElementById('spa')
+        const spa = document.getElementById('spa');
         const enascimento = document.getElementById('enascimento');
-        const eend = document.getElementById('eend');
+        const cep = document.getElementById('input-cep');
+        const logradouro = document.getElementById('logradouro')
+        const complemento = document.getElementById('complemento')
+        const bairro = document.getElementById('bairro')
+        const numero = document.getElementById('numero')
+        const uf = document.getElementById('uf')
+        const cidade = document.getElementById('cidade')
         const tratamento = document.getElementById('tratamento')
         const ehorario = document.getElementById('ehorario');
         ehorario.options[0].value = ''
@@ -88,9 +129,40 @@ tratamentoSelect.addEventListener('change', () => {
         alert('Por favor, preencha o campo Nascimento.');
         enascimento.classList.add('erro');
     }
-    if (eend.value == '') {
-        alert('Por favor, preencha o campo Endereço.');
-        eend.classList.add('erro');
+   
+    if (cep.value == '') {
+        alert('Por favor, preencha o campo CEP.');
+        cep.classList.add('erro');
+    }
+    
+    if (logradouro.value == '') {
+        alert('Por favor, preencha o campo Logradouro.');
+        logradouro.classList.add('erro');
+    }
+    
+    if (complemento.value == '') {
+        alert('Por favor, preencha o campo Complemento.');
+        complemento.classList.add('erro');
+    }
+    
+    if (bairro.value == '') {
+        alert('Por favor, preencha o campo Bairro.');
+        bairro.classList.add('erro');
+    }
+    
+    if (numero.value == '') {
+        alert('Por favor, preencha o campo Número.');
+        numero.classList.add('erro');
+    }
+    
+    if (uf.value == '') {
+        alert('Por favor, preencha o campo UF.');
+        uf.classList.add('erro');
+    }
+    
+    if (cidade.value == '') {
+        alert('Por favor, preencha o campo Cidade.');
+        cidade.classList.add('erro');
     }
     if (tratamento.value == '') {
         alert('Por favor, preencha o campo Tratamento.')
@@ -103,16 +175,23 @@ tratamentoSelect.addEventListener('change', () => {
 
     else {
 
-        alert(' Nome: ' + enome.value + '\n Telefone: ' + etelefone.value + '\n Email: ' + eemail.value + '\n CPF: ' + ecpf.value + '\n Nascimento: ' + enascimento.value + '\n Endereço: ' + eend.value + '\n Tratamento: ' + tratamento.value + '\n Horário: ' + ehorario.value);
+        alert(' Nome: ' + enome.value + '\n Telefone: ' + etelefone.value + '\n Email: ' + eemail.value + '\n CPF: ' + ecpf.value + '\n Nascimento: ' + enascimento.value + '\n Cep: ' + cep.value + '\n Logradouro: ' + logradouro + '\n Bairro: ' + bairro + '\n Complemento: ' + complemento + '\n Número: ' + numero + '\n Cidade: ' + cidade + '\n UF: ' + uf + '\n Tratamento: ' + tratamento.value + '\n Horário: ' + ehorario.value);
         alert('Agendamento concluido com sucesso ✅')
+
 
         enome.value = '';
         etelefone.value = '';
         eemail.value = '';
         ecpf.value = '';
         enascimento.value = '';
-        eend.value = '';
-        tratamento.value = '';
+        cep.value = '';
+        logradouro.value = '',
+        complemento.value = '';
+        numero.value = '';
+        bairro.value = '';
+        cidade.value = '';
+        uf.value = '';
+        tratamento.value = [0];
         ehorario.value = '';
     }
 });
@@ -123,6 +202,55 @@ function isValidEmail(eemail) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(eemail);
 }
+
+//Cadastrar pelo whatsapp
+document.addEventListener('DOMContentLoaded', function () {
+    const nome = document.getElementById('nome');
+    const email = document.getElementById('email');
+    const whatsapp = document.getElementById('whatsapp');
+    const cadastrar = document.getElementById('cadastrar');
+
+    cadastrar.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (nome.value == '') {
+            alert('Por favor, preencha o campo Nome completo.');
+            nome.classList.add('erro');
+        }
+
+        if (email.value == '') {
+            alert('Por favor, preencha o campo Email.');
+            email.classList.add('erro');
+        } else if (!isValidEmail(email.value)) {
+            alert('Por favor, insira um endereço de email válido.');
+            email.classList.add('erro');
+        }
+
+        if (whatsapp.value == '') {
+            alert('Por favor, preencha o campo WhatsApp.');
+            whatsapp.classList.add('erro');
+        } else {
+            alert('Nome: ' + nome.value + '\nEmail: ' + email.value + '\nWhatsApp: ' + whatsapp.value);
+            alert('Cadastro realizado com sucesso ✅');
+
+            
+               // Limpar os campos após o cadastro bem-sucedido
+               nome.value = '';
+               email.value = '';
+               whatsapp.value = '';
+
+               // Remover a classe 'erro' dos campos
+               nome.classList.remove('erro');
+               email.classList.remove('erro');
+               whatsapp.classList.remove('erro');
+       }
+    });
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+});
 
 
 

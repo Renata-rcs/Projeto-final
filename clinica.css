@@ -138,7 +138,7 @@ header{
 
 /* Main*/
 main {
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 0;
 }
@@ -384,9 +384,9 @@ input{
     transform: scale(1.2);
 }
 
-#titulofooter{
-    margin: 20px;
-    color-scheme: var(--mid);
+.titulofooter{
+    font-weight: 700;
+    color: var(--mid);
 }
 
  
