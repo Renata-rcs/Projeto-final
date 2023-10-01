@@ -50,8 +50,8 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 20%;
-    border: 1pix solid var(--footer);
+    top: 18%;
+    border: 0;
     width: 200px; /* Largura do campo de entrada e ícone */
     right: 20px;
 }
@@ -253,6 +253,7 @@ select {
     margin-bottom: 10px;
     border-radius: 5px;
     font-size: 16px;
+
     
 }
 
@@ -262,7 +263,7 @@ input[type="submit"] {
     background-color: var(--ligh);
     color:var(--corPrincipal);
     padding: 10px 20px;
-    border: 1px solid black;
+    border: 1px solid var(--footer);
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;
