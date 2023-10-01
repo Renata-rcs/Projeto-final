@@ -72,13 +72,7 @@ confirmarButton.addEventListener('click', function(event) {
     };
 
     localStorage.setItem('userData', JSON.stringify(userData));
-
-    // Suponha que você tenha obtido o nome do usuário após o login bem-sucedido
-const nomeUsuario = 'Nome do Usuário'; // Substitua pelo nome real do usuário
-
-// Armazene o nome do usuário no sessionStorage
-sessionStorage.setItem('nomeUsuario', nomeUsuario);
-
+    
 
     alert('nome: '+ onome.value + '\nNascimento: ' +  onascimento.value + '\nEmail: ' + oemail.value + '\n Senha: ' + osenha.value + '\nCadastro realizado com sucesso ✔️ ');
 

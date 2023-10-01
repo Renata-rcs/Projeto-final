@@ -283,7 +283,7 @@ section {
 #cadSection  h2{
     font-family: 'Poppins', sans-serif;
     margin: 10px;
-    color:var(--ligh);
+    color:var(--corPrincipal);
  }
  .erro{
      border: 2px solid red;
@@ -314,21 +314,22 @@ section {
  #cadh2{
      margin-top: 10px;
      text-align: center;
-     color: var(--ligh);
+     color: var(--corPrincipal);
  }
 #form1 {
      text-align: left;
      margin: 5px;
      padding: 0;
-     color: var(--ligh);
+     color: black;
  }
  
 .cadastro {
      width: 300px;
      padding: 5px;
-     background-color:var(--corSecundaria);
+     background-color:var(--ligh);
      display: flex;
      flex-direction: column;
+     border: 1px solid var(--corPrincipal);
      height: 530px;
      margin-bottom: 20px; /* Adicione um valor de margem inferior */
      border-radius: 5px;
@@ -362,7 +363,7 @@ section {
      border-radius: 5px;
      width: 280px;
      height: 30px;
-     border: none;
+     border: 1px solid var(--corPrincipal);
  }
  #icadastrar:hover{
     background-color: var(--corPrincipal);
@@ -370,7 +371,7 @@ section {
    
  }
  #cadh2{
-    color:var(--ligh)
+    color:var(--corPrincipal)
  }
  
  /* Pesquisa Cards*/
