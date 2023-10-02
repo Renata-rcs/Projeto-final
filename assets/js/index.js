@@ -9,8 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
  // Inicia o carrossel
- $('#carouselExample').carousel();
-
  // Configura um intervalo para avançar automaticamente
  var carouselInterval = 3000; // Tempo em milissegundos (3 segundos)
 
@@ -132,11 +130,11 @@ document.addEventListener('DOMContentLoaded', function () {
         return emailRegex.test(email);
     }
 });
-$(document).ready(function () {
-    $(".card").hover(function () {
-        $(this).toggleClass("flipped");
-    });
-});
+// $(document).ready(function () {
+//     $(".card").hover(function () {
+//         $(this).toggleClass("flipped");
+//     });
+// });
 
 
 // Btn Saiba mais

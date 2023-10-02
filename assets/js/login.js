@@ -70,8 +70,15 @@ confirmarButton.addEventListener('click', function(event) {
         email: oemail.value,
         senha: osenha.value
     };
-
-    localStorage.setItem('userData', JSON.stringify(userData));
+    let salvaLogins = []
+    if(localStorage.getItem('userData')){
+        salvaLogins = [...JSON.parse(localStorage.getItem("userData"))]
+        salvaLogins[salvaLogins.length] = userData
+        localStorage.setItem('userData', JSON.stringify(salvaLogins));
+    } else {
+        salvaLogins[salvaLogins.length] = userData
+        localStorage.setItem("userData", JSON.stringify(salvaLogins))
+    }
     
 
     alert('nome: '+ onome.value + '\nNascimento: ' +  onascimento.value + '\nEmail: ' + oemail.value + '\n Senha: ' + osenha.value + '\nCadastro realizado com sucesso ✔️ ');
@@ -106,16 +113,20 @@ function isValidEmail(oemail) {
 function fazerLogin() {
     const emailLogin = document.getElementById('rlogin').value;
     const senhaLogin = document.getElementById('rsenha').value;
+    let userDataJSON = []
 
-    const userDataJSON = localStorage.getItem('userData');
+    if (localStorage.getItem('userData')) {
+        userDataJSON = [...JSON.parse(localStorage.getItem("userData"))];
 
-    if (userDataJSON) {
-        const userData = JSON.parse(userDataJSON);
-
-        if (userData.email === emailLogin && userData.senha === senhaLogin) {
-            alert('Login bem-sucedido! Bem-vindo, ' + userData.nome);
-            window.location.href = 'index.html';
-        
+        if (emailLogin != "" && senhaLogin != "") {
+            const index = userDataJSON.findIndex( coiso => {
+                return coiso.email == emailLogin
+            })
+            
+            if (userDataJSON[index].senha == senhaLogin && index != -1) {
+                alert('Login bem-sucedido! Bem-vindo, ' + userData.nome);
+                window.location.href = 'index.html';
+            }
             
         } else {
             alert('Credenciais de login inválidas. Por favor, tente novamente.');
@@ -127,7 +138,7 @@ function fazerLogin() {
 
 
 const loginButton = document.getElementById('submit');
-loginButton.addEventListener('click', function(event) {
+    loginButton.addEventListener('click', function(event) {
     event.preventDefault();
     fazerLogin();
 
