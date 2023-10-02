@@ -103,7 +103,7 @@ a{
 #sec-modal{
     position: absolute;
     width: 500px;
-    height: 900px ;
+    height:1200px ;
     background-color:var(--light);
     display: flex;
     flex-direction: column;
@@ -189,7 +189,7 @@ a{
 }
 @media (max-width: 600px) {
     .login-container{
-        height: 70%;
+        height: 500px;
         width: 60%;
         border: 2px solid var(--corPrincipal);
         display: flex;
@@ -200,6 +200,7 @@ a{
     #sec-modal{
         position: absolute;
         width: 100%;
+        height: 100%;
         background-color:var(--light);
         display: flex;
         flex-direction: column;

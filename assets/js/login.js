@@ -115,6 +115,7 @@ function fazerLogin() {
         if (userData.email === emailLogin && userData.senha === senhaLogin) {
             alert('Login bem-sucedido! Bem-vindo, ' + userData.nome);
             window.location.href = 'index.html';
+        
             
         } else {
             alert('Credenciais de login inválidas. Por favor, tente novamente.');
@@ -129,6 +130,8 @@ const loginButton = document.getElementById('submit');
 loginButton.addEventListener('click', function(event) {
     event.preventDefault();
     fazerLogin();
+
+    
 });
 
 
