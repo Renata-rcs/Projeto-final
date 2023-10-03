@@ -4,6 +4,7 @@ const modal = document.getElementById('sec-modal');
 const cadastroButton = document.getElementById('cadastro-modal');
 const form = document.getElementById('form1');
 
+
 cadastroButton.addEventListener('click', function(event) {
     event.preventDefault();
     open();
@@ -140,6 +141,7 @@ function fazerLogin() {
 const loginButton = document.getElementById('submit');
     loginButton.addEventListener('click', function(event) {
     event.preventDefault();
+    console.log('clicou')
     fazerLogin();
 
     

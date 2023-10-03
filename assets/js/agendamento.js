@@ -1,12 +1,3 @@
-//Menu
-const hamburguer = document.querySelector('#hamburguer');
-const dpMenu = document.querySelector('.dp-menu');
-
-
-hamburguer.addEventListener('click', () => {
-    dpMenu.classList.toggle('menu-ativo');
-    console.log('Classe menu-ativo adicionada:', dpMenu.classList.contains('menu-ativo'));
-});
 //cep
 const logradouro = document.getElementById('logradouro')
 const complemento = document.getElementById('complemento')
@@ -95,15 +86,16 @@ tratamentoSelect.addEventListener('change', () => {
         const spa = document.getElementById('spa');
         const enascimento = document.getElementById('enascimento');
         const cep = document.getElementById('input-cep');
-        const logradouro = document.getElementById('logradouro')
-        const complemento = document.getElementById('complemento')
-        const bairro = document.getElementById('bairro')
-        const numero = document.getElementById('numero')
-        const uf = document.getElementById('uf')
-        const cidade = document.getElementById('cidade')
-        const tratamento = document.getElementById('tratamento')
+        const logradouro = document.getElementById('logradouro');
+        const complemento = document.getElementById('complemento');
+        const bairro = document.getElementById('bairro');
+        const numero = document.getElementById('numero');
+        const uf = document.getElementById('uf');
+        const cidade = document.getElementById('cidade');
+        const tratamento = document.getElementById('tratamento');
+        tratamento.options[0].value = '';
         const ehorario = document.getElementById('ehorario');
-        ehorario.options[0].value = ''
+        ehorario.options[0].value = '';
 
     if (enome.value == '') {
         alert('Por favor, preencha o campo Nome.');

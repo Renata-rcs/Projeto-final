@@ -399,6 +399,12 @@ input{
     margin-bottom: 0;
    
  }
+ .icone-footer{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+ }
 .footer{
     display: flex;
     justify-content: space-between;

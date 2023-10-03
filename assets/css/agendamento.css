@@ -188,6 +188,7 @@ section {
     font-weight: 400;
     text-align: center;
     margin-top: 100px;
+    padding: 0;
     color:var(--corSecundaria);
 }
 .agendamento {
@@ -343,14 +344,19 @@ input[type="submit"]:hover{
     color: var(--ligh);
     transform: scale(1.2);
 }
-
+.icone-footer{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
 #titulofooter{
     margin: 25px;
     font-weight: 500;
     color-scheme: var(--mid);
 }
  
- footer {
+footer {
     width: 100%;
     background-color: var(--footer);
     display: flex;
@@ -415,6 +421,7 @@ input[type="submit"]:hover{
     right: 50px;
     color: black;
 }
+
 @media (max-width: 900px) {
     body{
         padding: 0;
@@ -464,6 +471,12 @@ input[type="submit"]:hover{
         margin: 0;
         top:0;
         
+    }
+    .icone-footer{
+        width: 20px;
+        height: 20px;
+        margin-bottom: 10px;
+        margin-right: 20px;
     }
     .agendamento{
         margin-top:50px;
@@ -586,7 +599,8 @@ input[type="submit"]:hover{
      }
      #hamburguer{
         display: block;
-     }
+    }
+
     
      section{
         width: 100%;
@@ -692,6 +706,11 @@ input[type="submit"]:hover{
         flex-direction: column;
         display: block;
         height: min-content;
-        
     }
-    } 
+    .icone-footer{
+        width: 15px;
+        height: 15px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+} 

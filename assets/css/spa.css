@@ -37,6 +37,9 @@ header{
   justify-content: space-between;
   
 }
+#logo-nav{
+    width: 200px;
+}
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
