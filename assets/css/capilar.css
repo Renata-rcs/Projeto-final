@@ -475,8 +475,9 @@ p{
  #hamburguer{
     position: absolute;
     display: none;
-    color: var(--ligh);
+    color: black;
     right: 50px;
+    cursor: pointer;
  }
  
 @media (max-width: 710px) {

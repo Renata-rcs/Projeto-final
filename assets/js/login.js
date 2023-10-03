@@ -118,14 +118,15 @@ function fazerLogin() {
 
     if (localStorage.getItem('userData')) {
         userDataJSON = [...JSON.parse(localStorage.getItem("userData"))];
-
         if (emailLogin != "" && senhaLogin != "") {
             const index = userDataJSON.findIndex( coiso => {
                 return coiso.email == emailLogin
             })
             
             if (userDataJSON[index].senha == senhaLogin && index != -1) {
-                alert('Login bem-sucedido! Bem-vindo, ' + userData.nome);
+                console.log(userDataJSON.nome)
+                alert('Login bem-sucedido! Bem-vindo, ' + userDataJSON[index].nome);
+                localStorage.setItem("contaLogada", JSON.stringify(userDataJSON[index]))
                 window.location.href = 'index.html';
             }
             

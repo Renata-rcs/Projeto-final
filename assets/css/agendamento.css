@@ -420,6 +420,7 @@ footer {
     display: none;
     right: 50px;
     color: black;
+    cursor: pointer;
 }
 
 @media (max-width: 900px) {

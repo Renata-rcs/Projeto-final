@@ -363,6 +363,7 @@ footer {
     display: none;
     color: black;
     right: 50px;
+    cursor: pointer;
 }
 @media (max-width: 1000px) {
     body{
