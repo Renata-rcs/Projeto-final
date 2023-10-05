@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dpMenu = document.querySelector('.dp-menu');
 
     hamburguer.addEventListener('click', () => {
+        console.log('clicou')
         dpMenu.classList.toggle('menu-ativo');
         console.log('Classe menu-ativo adicionada:', dpMenu.classList.contains('menu-ativo'));
     });

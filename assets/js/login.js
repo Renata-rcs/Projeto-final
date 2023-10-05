@@ -142,7 +142,6 @@ function fazerLogin() {
 const loginButton = document.getElementById('submit');
     loginButton.addEventListener('click', function(event) {
     event.preventDefault();
-    console.log('clicou')
     fazerLogin();
 
     
