@@ -11,87 +11,33 @@
 </head>
 <body>
     <header>
-        <nav class="nav-1">
-            <img src="./imagens/Logo Emagreça.png" width="200px">
-            <div class="search-container">
-                <input id="input-pesquisar" type="text" class="search-input" placeholder="Pesquisar...">
-                <span id="pesquisar" class="material-symbols-outlined search-icon">search</span>
-            </div>             
+        <nav id="nav-logo">
+            <a href="index.html"><img id="logo" src="./imagens/Logo Emagreça.png" alt="Logo Emagreça"></a>
         </nav>
         <span id="hamburguer" class="material-symbols-outlined">menu</span>
         <nav class="dp-menu">
             <ul>
-                <li><small><a href="./index.html">Inicio</a></small></li>
-                <li><small><a href="./clinca.html">Clinica</a></small>
+                <li><a href="./clinca.html">Clinica</a>
+                </li>
+              </li>
+              <li><a  href="index.html#tratamentos">Tratamentos</a>
                     <ul>
-                        <li><small><a href="#"><small>Sobre nós</a></small></li>
-                        <li><small><a href="#">Colaboradores</a></small></li>
+                        <li><a href="capilar.html">Capilar</a></li>
+                        <li><a href="./estetica-facial.html">Facial</a></li>
+                        <li><a href="./estetica-corporal.html">Corporal</a></li>
+                        <li><a href="./depilacao-laser.html">Depilação a laser</a></li>
+                        <li><a href="./spa.html">SPA</a></li>
+                        <li><a href="./podologia.html">Podologia</a></li>
                     </ul>
                 </li>
-                    <li><small><a href="./capilar.html">Capilar</a></small>
-                        <ul>
-                            <li><small><a href="#">Transplante Capilar</a></small></li>
-                            <li><small><a href="#">Tratamento de Calvície</a></small></li>
-                            <li><small><a href="#">Terapia a Laser</a></small></li>
-                            <li><small><a href="#">Microagulhamento Capilar</a></small></li>
-                            <li><small><a href="#">Tratamento de Caspa</a></small></li>
-                            <li><small><a href="#">Massagem Capilar</a></small></li>
-                        </ul>
-                    </li>
-                    <li><small><a href="./estetica-facial.html">Estética Facial</a></small>
-                        <ul>
-                            <li><small><a class="nav-link active" aria-current="page" href="#limpeza-de-pele">Limpeza de Pele</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#acne">Tratamento de Acne</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#microdermoabrasao">Microdermoabrasão</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#preenchimentoFacial">Preenchimento Facial</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#botox">Botox</a></small></li>
-                            <li><small><a href="#">Fios de sustentação</a></small></li>
-                        </ul>
-                    </li>
-                    <li><a href="./estetica-corporal.html"><small>Estética Corporal</a></small>
-                        <ul>
-                            <li><small><a href="#">Massagem Modeladora</a></small></li>
-                            <li><small><a href="#">Drenagem Linfática</a></small></li>
-                            <li><small><a href="#">Lipoaspiração não Cirúrgica</a></small></li>
-                            <li><small><a href="#">Tratamento de Celulite</a></small></li>
-                            <li><small><a href="#">Endermologia</a></small></li>
-                            <li><small><a href="#">Criolipólise</a></small></li>
-                        </ul>
-                    </li>
-                    <li><a href="./depilacao-laser.html"><small>Depilação a laser</a></small>
-                        <ul>
-                            <li><small><a href="#">Depilação a Laser de Diodo</a></small></li>
-                            <li><small><a href="#">Depilação a Laser Alexandrite</a></small></li>
-                            <li><small><a href="#">Depilação a Laser Nd:YAG</a></small></li>
-                        </ul>
-                    </li>
-                    <li><a href="./spa.html"><small>SPA</a></small>
-                        <ul>
-                            <li><small><a href="#">Massagem Relaxante</a></small></li>
-                            <li><small><a href="#">Banho de Ofurô</a></small></li>
-                            <li><small><a href="#">Tratamento de Pele</a></small></li>
-                            <li><small><a href="#">Aromaterapia</a></small></li>
-                            <li><small><a href="#">Yoga e Meditação</a></small></li>
-                            <li><small><a href="#">Aculpututa</a></small></li>
-                        </ul>
-                    </li>
-                    <li><small><a href="./podologia.html">Podologia</a></small>
-                        <ul>
-                            <li><small><a href="#">Corte e Tratamento de Unhas</a></small></li>
-                            <li><small><a href="#">Tratamento de Calos e Calosidades</a></small></li>
-                            <li><small><a href="#">Reflexologia Podal</a></small></li>
-                            <li><small><a href="#">Tratamento de Fungos nas Unhas</a></small></li>
-                            <li><small><a href="#">Avaliação Postural</a></small></li>
-                        </ul>
-                    </li>
-                <li><a href="./agendamento.html"><small>Contato</a></small>
-                    <ul>
-                        <li><small><a href="tel:+5561980000000" target="_blank">Telefone</a></small></li>
-                        <li><small><a href="./agendamento.html">Agendamento de consulta</a></small></li>
-                        <li><small><a href="https://goo.gl/maps/spxzX4NMeBfw7o3H8" target="_blank">Localização</a></small></li>
-                    </ul>
+                <li><a href="./agendamento.html">Contato</a>
+                  <ul>
+                    <li><a href="tel:+5561980000000" target="_blank">Telefone</a></li>
+                    <li><a href="./agendamento.html">Agendamento</a></li>
+                    <li><a href="https://goo.gl/maps/spxzX4NMeBfw7o3H8" target="_blank">Localização</a></li>
+                  </ul>
                 </li>
-                
+                <button type="submit" id="login" value="Login"><a href="./login.html">Login</a></button>            
             </ul>
         </nav>
     </header>
@@ -159,8 +105,6 @@
                             <p>A lipo não cirúrgica, também conhecida como lipoaspiração não invasiva, é uma técnica inovadora que oferece uma alternativa segura e eficaz à lipoaspiração tradicional, sem a necessidade de incisões cirúrgicas. Esta modalidade de tratamento tem ganhado popularidade nos últimos anos devido aos seus benefícios e à sua abordagem minimamente invasiva.</p>
                         </div>
                     </div>
-                  </div>
-                   <div class="card-container">
                     <div class="card">
                         <div class="card-front">
                             <img id="img-card" src="./imagens/celulite-tratamento.jpg" alt="Tratamento contra as celulites" >
@@ -252,7 +196,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="./script.js"></script>
+        <script src="./assets/js/menu.js"></script>
         <script src="./assets/js/login.js"></script>
         </body>
         </html>

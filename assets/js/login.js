@@ -147,9 +147,16 @@ const loginButton = document.getElementById('submit');
     
 });
 
-
-
-
+ // Adicionar um ouvinte de evento de clique aos itens da lista
+const itensLista = document.querySelectorAll('li');
+itensLista.forEach(function(item) {
+    item.addEventListener('click', function() {
+        const urlDestino = item.getAttribute('data-url');
+        if (urlDestino) {
+            window.location.href = urlDestino;
+        }
+    });
+});
 
 
 

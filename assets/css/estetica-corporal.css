@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-/* font-family: 'Poppins', sans-serif;*/
+/* font-family: 'Poppins', sans-serif;
+*/
 :root{
-    --corPrincipal: #6d00a1;
-    --corSecundaria:#ebccdf;
-    --ligh:#ffffff;
+    --corPrincipal:#5e057e;
+    --corSecundaria:#c299d0;
+    --light:#ffffff;
+    --verde:#99e099;
     --footer:#c7c6c6;
     --mid:#64748B;
+    --darck:#000000;
     
 }
 *{
@@ -13,93 +16,62 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     width: 100vw;
-    height: 100vh;
+    height: 100vh; 
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
 }
 header{
     display: flex;
-    flex-direction: column;
+    background-color: var(--corPrincipal);
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100vw;
     position: fixed;
     z-index: 1;
 }
-.nav-1{
-  background-color: var(--corPrincipal);
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
+nav{
+    width:80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+#logo{
+    width: 200px;
 }
-.search-container {
-    position: relative;
-    width: 200px; /* Largura do campo de entrada e ícone */
-    right: 20px;
-}
-
-.search-input {
-    width: 100%;
-    height: 25px;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.search-icon {
-    position: absolute;
-    top: 50%; /* Centralize verticalmente o ícone */
-    right: 5px; /* Ajuste a posição do ícone à direita */
-    transform: translateY(-50%); /* Ajuste vertical para o centro */
-    cursor: pointer;
-}
-
 .dp-menu ul{
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
-
 }
 .dp-menu{
-    font-family: 'Roboto', sans-serif;
-    background-color:var(--ligh);
     width: 100%;
     border-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid var(--footer);
     margin: 0;
 }
 .dp-menu ul li{
-    margin-top: 20px;
+    margin-top: 5px;
+    font-size: 15px;
     display: inline;
     position: relative;
+    padding: 5px;
+    color: var(--light);
    
 }
 .dp-menu ul li a{
-    color: var(--mid);
-    font-weight: 600;
+    color: var(--light);
     text-decoration: none;
     display: inline-block;
     padding: 10px;
-    
 }
 .dp-menu ul li a:hover{
-    color: var(--ligh);
-    background-color:var(--corPrincipal);
+    color: var(--light);
+    background-color:var(--footer);
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -118,6 +90,8 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
+    margin: 0 10px;
+    padding: 10px;
 }
 
 .dp-menu ul ul{
@@ -126,6 +100,7 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
+    margin: 0;
 }
 .dp-menu ul ul{
     width: 150px;
@@ -134,7 +109,33 @@ header{
 .dp-menu ul ul li a{
     display: block;
 }
+#login{
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: var(--corPrincipal);
+    color: var(--light);
+    cursor:pointer;
+    margin: 20px;
+    border: none;
+  
 
+}
+#login a{
+    text-decoration: none;
+    padding: 20px;
+    color: var(--light);
+}
+#login:hover{
+    background-color: var(--light);
+    transition: transform 0.5s ease; 
+}
+#login > a:hover{
+    color: var(--corPrincipal);
+}
+/* Estilo para mensagens de erro */
+.erro {
+    border: 2px solid red;
+}
 /* Main*/
 main {
     max-width: 90%px;
@@ -156,8 +157,8 @@ section {
     min-height: 80vh;
     text-align: center;
     border-radius: 5px;
-    background-color: var(--ligh);
-    margin: 100px 30px; /* Isso define as margens superior e inferior como 200px e as margens esquerda e direita como 30px */
+    background-color: var(--light);
+    margin: 50px 30px; /* Isso define as margens superior e inferior como 200px e as margens esquerda e direita como 30px */
     border: 10px solid transparent; /* Adiciona uma borda transparente de 40px */
 }
 
@@ -202,40 +203,42 @@ h1{
     color: var(--corSecundaria);
 }
 
-
-html {
-    scroll-behavior: smooth;
-} .erro{
-    border: 2px solid red;
-}
 h2{
     color: var(--corPrincipal);
     margin: 30px;
 }
 
+
 /*Card flip*/
+#tratamento{
+    font-size: 3em;
+    color: var(--corSecundaria);
+}
 .card-container {
-    display: flex; /* Adicione esta linha para criar um flex container */
-    margin: 50px;
-    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
 .card {
-    width: 400px;
-    height: 300px;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    margin-right: 10px; /* Adicione um espaço entre os cards */
+    width: 350px;
+    height: 290px;
+    margin: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.card:last-child {
-    margin-right: 0; /* Remove a margem direita do último card para evitar espaço extra */
+.card:hover .card-front {
+    transform: rotateY(180deg); /* Rotaciona a frente do cartão quando o mouse passa sobre ele */
 }
 
-.card.flipped {
-    transform: rotateY(180deg);
+.card:hover .card-back {
+    transform: rotateY(0deg); /* Rotaciona as costas do cartão quando o mouse passa sobre ele */
 }
-
+.card-back{
+    color: var(--corPrincipal);
+}
 .card-front,
 .card-back {
     width: 100%;
@@ -250,34 +253,33 @@ h2{
     font-weight: bold;
     box-sizing: border-box;
     border-radius: 5px;
-}
-
-.card-front {
-    background-color:var(--corPrincipal);
-    color: var(--ligh);
+    background-color: var(--light);
+    color: var(--corPrincipal);
+    transition: transform 0.5s ease; 
+    & > p{
+        font-size: 12px;
+        padding: 15px;
+        color: var(--corPrincipal);
+    }
 }
 
 .card-back {
-    background-color: var(--corPrincipal);
-    color: var(--ligh);
-    padding: 10px;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Mantém as costas do cartão viradas para trás */
 }
 
+
+.card h3{
+    font-size: 20px;
+}
 #img-card {
-    width: 270px;
-    height: 230px;
+    width: 350px;
+    height: 250px;
     margin-bottom: 20px;
 }
 
-.card-back p {
-    font-size: 14px;
-    line-height: 1.4;
-    padding: 5px;
-}
 /*cadastro whatsapp*/
 .cadastro-whatsapp{
-    height:140px;
+    height:100%;
     background-color: var(--corPrincipal);
     text-align: left;
     margin: 50px 0;
@@ -288,7 +290,7 @@ h2{
 .cadastro-whatsapp h4{
     font-family: 'Poppins', sans-serif;
     margin: 10px;
-    color: var(--ligh);
+    color: var(--light);
     font-weight: bold;
     font-size: 20px;
 }
@@ -301,7 +303,7 @@ input{
     
 }
 #cadastrar{
-    width: 90px;
+    width: 120px;
     color: var(--corPrincipal);
     border-radius: 5px;
     padding: 5px;
@@ -312,7 +314,7 @@ input{
 }
 #cadastrar:hover{
     background-color: var(--corPrincipal);
-    color: var(--ligh);
+    color: var(--light);
     transform: scale(1.2);
 }
 
@@ -322,6 +324,8 @@ input{
     height: auto;
     font-size: 12px;
     margin-bottom: 0;
+    width: 100%;
+    background-color: var(--footer);
    
  }
 .footer{
@@ -376,7 +380,7 @@ p{
 /* Estilos para o menu quando a classe .menu-ativo é aplicada */
 .menu-ativo {
     display: block!important;
-    background-color:var(--ligh);
+    background-color:var(--corPrincipal);
     color: var(--mid);
     padding: 30px;
     top:100%;
@@ -385,7 +389,7 @@ p{
     z-index: 99;
  }
  .menu-ativo ul:hover{
-    color: var(--ligh);
+    color: var(--light);
  }
  .menu-ativo ul ul{
     display: none !important;
@@ -394,21 +398,15 @@ p{
  #hamburguer{
     position: absolute;
     display: none;
-    color: black;
+    color: var(--light);
     right: 50px;
     cursor: pointer;
  }
  
 @media (max-width: 760px) {
-    body{
-        padding: 0;
-        margin: 0;
-        border: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        align-items: center;
-        justify-content: center;
+    nav{
+        justify-content: space-between;
+       
     }
     .nav-1{
         display: flex;
@@ -436,7 +434,7 @@ p{
         right: 0;
         position: relative;
         top: 100%;
-        background-color:white;
+        background-color: var(--corPrincipal);
     }
    
     .dp-menu ul ul{
@@ -449,14 +447,14 @@ p{
         align-items: center;
  
     }
-    html {
-        scroll-behavior: smooth;
+    #login{
+        margin: 0;
+        padding: 0;
     }
-    
     .principal{
        top: 100%;
        height: 100%;
-       width: 80%;
+       width: 100%;
     }
     #img-entrada{
        height: 80%;
@@ -477,24 +475,22 @@ p{
         min-height: 0;
         display:flex;
         align-items: center;
-        flex-direction: column;
+        flex-wrap: wrap;
         margin: 0;
-        width: 80%;
+        width: 100%;
     
         
     }
     .card{
-        width: 200px;
+        width: 100%;
         margin: 20px;
     }
     .card-container{
         display: block;
-        flex-direction: column;
+       flex-wrap: wrap;
         justify-content: center;
         margin-bottom: 0;
-    }
-    .card-container + .card-container{
-        margin: 0;
+        width: 100%;
     }
     #img-card{
       width: 100%;
@@ -503,10 +499,6 @@ p{
     .card-front, .card-bac{
         width:100%;
         height: 100%;
-    }
-    .container{
-         display: block;
-         flex-direction: column;
     }
     input{
          width: 150px;

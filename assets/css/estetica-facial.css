@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-/* font-family: 'Poppins', sans-serif;*/
+/* font-family: 'Poppins', sans-serif;
+*/
 :root{
-    --corPrincipal: #6d00a1;
-    --corSecundaria:#ebccdf;
-    --ligh:#ffffff;
+    --corPrincipal:#5e057e;
+    --corSecundaria:#c299d0;
+    --light:#ffffff;
+    --verde:#99e099;
     --footer:#c7c6c6;
     --mid:#64748B;
+    --darck:#000000;
     
 }
 *{
@@ -13,93 +16,62 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     width: 100vw;
-    height: 100vh;
+    height: 100vh; 
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
 }
 header{
     display: flex;
-    flex-direction: column;
+    background-color: var(--corPrincipal);
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100vw;
     position: fixed;
     z-index: 1;
 }
-.nav-1{
-    background-color:var(--corPrincipal);
-    width: 100%;
+nav{
+    width:80%;
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
-  }
-  .material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-  }
-  .search-container {
-      position: relative;
-      right: 20px;
-   
-  }
-  
-  .search-input {
-      right: 40px;
-      height: 25px;
-      border: none;
-      padding: 5px;
-      border-radius: 5px;
-  }
-  
-  .search-icon {
-      position: absolute;
-      top: 45%; /* Centralize verticalmente o ícone */
-      right: 10px; /* Ajuste a posição do ícone à direita */
-      transform: translateY(-50%); /* Ajuste vertical para o centro */
-      cursor: pointer;
-  }
-
+    justify-content: space-around;
+}
+#logo{
+    width: 200px;
+}
 .dp-menu ul{
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0!important;
-
+    margin: 0;
 }
 .dp-menu{
-    font-family: 'Poppins', sans-serif;
-    background-color:var(--ligh);
     width: 100%;
     border-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid var(--footer);
-    margin-bottom: 0;
+    margin: 0;
 }
 .dp-menu ul li{
-    margin-top: 20px;
+    margin-top: 5px;
+    font-size: 15px;
     display: inline;
     position: relative;
+    padding: 5px;
+    color: var(--light);
    
 }
 .dp-menu ul li a{
-    color: var(--mid);
-    font-weight: 600;
+    color: var(--light);
     text-decoration: none;
     display: inline-block;
     padding: 10px;
-    
 }
 .dp-menu ul li a:hover{
-    color: var(--ligh);
-    background-color:var(--corPrincipal);
+    color: var(--light);
+    background-color:var(--footer);
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -118,6 +90,8 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
+    margin: 0 10px;
+    padding: 10px;
 }
 
 .dp-menu ul ul{
@@ -126,6 +100,7 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
+    margin: 0;
 }
 .dp-menu ul ul{
     width: 150px;
@@ -134,6 +109,30 @@ header{
 .dp-menu ul ul li a{
     display: block;
 }
+#login{
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: var(--corPrincipal);
+    color: var(--light);
+    cursor:pointer;
+    margin: 20px;
+    border: none;
+  
+
+}
+#login a{
+    text-decoration: none;
+    padding: 20px;
+    color: var(--light);
+}
+#login:hover{
+    background-color: var(--light);
+    transition: transform 0.5s ease; 
+}
+#login > a:hover{
+    color: var(--corPrincipal);
+}
+
 /* Estilo para mensagens de erro */
 .erro {
     border: 2px solid red;
@@ -141,7 +140,7 @@ header{
 
 /* Main*/
 main {
-    max-width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
 }
@@ -156,18 +155,18 @@ html {
     scroll-behavior: smooth;
   }
 section {
-    min-height: 80vh;
+   
     border-radius: 5px;
-    background-color: var(--ligh);
-    margin: 100px 30px; 
+    background-color: var(--light);
+    margin: 50px 30px; 
     border: 10px solid transparent;
 }
 .entrada{
     width:100%;
-    margin: 30px 0;
+    margin: 30px 50px;
     background-color: var(--corPrincipal);
     height: 400px;
-    color: var(--ligh);
+    color: var(--light);
     border-radius: 5px;
     display: flex;
     
@@ -180,7 +179,7 @@ section {
 }
   
 #img-entrada {
-    width: 50%;
+    width: 600px;
     margin: 0 auto; /* Centraliza horizontalmente a imagem dentro de img-entrada */
     display: block; /* Garante que a imagem seja exibida como um bloco */
   }
@@ -220,37 +219,44 @@ p{
     color: var(--mid);
 }
 #text1{
-    text-align: left;
+    text-align: justify;
     color: var(--mid);
     text-indent: 1em;
+    padding: 40px;
+    margin: 20px;
 
 }
 
 /*Card flip*/
-.card-container {
-    display: flex; /* Adicione esta linha para criar um flex container */
-    margin-bottom: 50px;
+#tratamento{
+    font-size: 3em;
+    color: var(--corSecundaria);
 }
-.card-container h3{
-    font-size: 25px;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
 .card {
-    width: 400px;
-    height: 300px;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    margin-right: 10px; /* Adicione um espaço entre os cards */
+    width: 350px;
+    height: 290px;
+    margin: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.card:last-child {
-    margin-right: 0; /* Remove a margem direita do último card para evitar espaço extra */
+.card:hover .card-front {
+    transform: rotateY(180deg); /* Rotaciona a frente do cartão quando o mouse passa sobre ele */
 }
 
-.card.flipped {
-    transform: rotateY(180deg);
+.card:hover .card-back {
+    transform: rotateY(0deg); /* Rotaciona as costas do cartão quando o mouse passa sobre ele */
 }
-
+.card-back{
+    color: var(--corPrincipal);
+}
 .card-front,
 .card-back {
     width: 100%;
@@ -265,36 +271,34 @@ p{
     font-weight: bold;
     box-sizing: border-box;
     border-radius: 5px;
-}
-
-.card-front {
-    background-color:var(--corPrincipal);
-    color: var(--ligh);
+    background-color: var(--light);
+    color: var(--corPrincipal);
+    transition: transform 0.5s ease; 
+    & > p{
+        font-size: 12px;
+        padding: 15px;
+        color: var(--corPrincipal);
+    }
 }
 
 .card-back {
-    background-color: var(--corPrincipal);
-    color: var(--ligh);
-    padding: 10px;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Mantém as costas do cartão viradas para trás */
 }
 
+
+.card h3{
+    font-size: 20px;
+}
 #img-card {
-    width: 260px;
-    height: 230px;
+    width: 350px;
+    height: 250px;
     margin-bottom: 20px;
 }
 
-.card-back p {
-    font-size: 14px;
-    line-height: 1.4;
-    padding: 5px;
-    color: white;
-}
 /*cadastro whatsapp*/
 
 .cadastro-whatsapp{
-    height:140px;
+    height:100%;
     background-color: var(--corPrincipal);
     text-align: left;
     margin: 50px 0;
@@ -305,7 +309,7 @@ p{
 .cadastro-whatsapp h4{
     font-family: 'Poppins', sans-serif;
     margin: 10px;
-    color: var(--ligh);
+    color: var(--light);
     font-weight: bold;
     font-size: 20px;
 }
@@ -316,14 +320,12 @@ input{
     width: 220px;
 }
 #cadastrar{
-    width: 90px;
+    width: 120px;
     color: var(--corPrincipal);
     border-radius: 5px;
     padding: 5px;
 }
-.erro{
-    border: 2px solid red;
-}
+
 #cadastrar:hover{
     background-color: var(--corPrincipal);
     color: var(--ligh);
@@ -343,6 +345,8 @@ input{
     height: auto;
     font-size: 12px;
     margin-bottom: 0;
+    width: 100%;
+    color: var(--footer);
    
  }
  .footer{
@@ -391,7 +395,7 @@ input{
 /* Estilos para o menu quando a classe .menu-ativo é aplicada */
 .menu-ativo {
     display: block!important;
-    background-color:var(--ligh);
+    background-color:var(--corPrincipal);
     color:var(--mid);
     padding: 30px;
     top:100%;
@@ -400,7 +404,7 @@ input{
     z-index: 99;
 }
 .menu-ativo ul:hover{
-    color: var(--ligh);
+    color: var(--light);
 }
 .menu-ativo ul ul{
     display: none !important;
@@ -409,35 +413,24 @@ input{
 #hamburguer{
     position: absolute;
     display: none;
-    color: black;
+    color: var(--light);
     right: 50px;
     cursor: pointer;
 }
-@media (max-width: 768px) {
-    body{
-        padding: 0;
-        margin: 0;
-        border: 0;
-        width: 100%;
-        height: 100%;
+@media (max-width: 1000px) {
+    nav{
+        justify-content: space-between;
+       
+    }
+    #pesquisar{
+       display: none;
+    }
+    #input-pesquisar{
+        display: none;
+    }
+ 
+    #hamburguer {
         display: block;
-        justify-content: center;
-        align-items: center;
-    }
-    main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    img{
-        margin: 0 10px;
-    }
-    section{
-        display: block;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-        width: 80%;
     }
     .dp-menu{
         display: none;
@@ -449,23 +442,51 @@ input{
         right: 0;
         position: relative;
         top: 100%;
-        background-color:white;
-      
+        background-color:var(--corPrincipal);
     }
    
     .dp-menu ul ul{
-        display: none!important;
-    }
-   
-    #pesquisar{
         display: none;
+    }
+   #login{
+        margin: 0;
+        padding: 0;
+   }
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+ 
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    
+   
+    .principal{
+        top: 100%;
+        height: 100%;
+        width:100%;
+        margin: 0;
      }
-     #input-pesquisar{
-         display: none;
+     #h1-principal{
+         font-size: 30px;
+         margin: 0;
      }
-     #hamburguer{
-        display: block;
+     section{
+         min-height: 0;
+         display:flex;
+         align-items: center;
+         flex-direction: column;
+         margin: 0;
+         width: 100%;
+         
      }
+     #img-entrada{
+        width: 100%;
+        margin-bottom: 30px;
+    }
 
     .card-container{
         display: block;
@@ -473,10 +494,9 @@ input{
         align-items: center;
         justify-content: center;
         margin-bottom: 0;
+        width: 100%;
     }
-    .card-container + .card-container{
-        margin: 0;
-    }
+
     #img-card{
       width: 100%;
       height: 80%;
@@ -526,7 +546,7 @@ input{
    .cadastro-whatsapp{
         justify-content: center;
         align-items: center;
-        height: 350px;
+        height: 100%;
         padding: 40px;
         margin: 0;
    }
@@ -538,23 +558,6 @@ input{
         font-size: 20px;
     }
     
-     #img2{
-      
-        display: none;
-    }
-    
-    #img3{
-        display: none;
-    }
-    #img4{
-        display: none;
-    }
-    #img5{
-     display: none;
-    }
-    #img6{
-       display: none;
-    }
     footer{
         display: block;
         flex-direction: column;

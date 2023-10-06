@@ -2,11 +2,13 @@
 /* font-family: 'Poppins', sans-serif;
 */
 :root{
-    --corPrincipal: purple;
-    --corSecundaria:#ebccdf;
-    --ligh:#ffffff;
+    --corPrincipal:#5e057e;
+    --corSecundaria:#c299d0;
+    --light:#ffffff;
+    --verde:#99e099;
     --footer:#c7c6c6;
     --mid:#64748B;
+    --darck:#000000;
     
 }
 *{
@@ -22,89 +24,53 @@ body{
 }
 header{
     display: flex;
-    flex-direction: column;
+    background-color: var(--corPrincipal);
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100vw;
     position: fixed;
     z-index: 1;
 }
-#logo-nav{
+nav{
+    width:80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#logo{
     width: 200px;
 }
-.nav-1{
-  background-color: var(--ligh);
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-}
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-.search-container {
-    position: relative;
-    right: 20px;
-  
-}
-
-.search-input {
-    width: 100%;
-    height: 25px;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-    border:1px solid var(--mid)
-}
-
-.search-icon {
-    position: absolute;
-    top: 50%; /* Centralize verticalmente o ícone */
-    right: 10px; /* Ajuste a posição do ícone à direita */
-    transform: translateY(-50%); /* Ajuste vertical para o centro */
-    cursor: pointer;
-}
-
 .dp-menu ul{
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
-
 }
 .dp-menu{
-    font-family: 'Poppins', sans-serif;
-    font-size: 400;
-    background-color:var(--corPrincipal);
     width: 100%;
     border-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid var(--footer);
+    margin: 0;
 }
 .dp-menu ul li{
-    margin-top: 20px;
+    margin-top: 5px;
+    font-size: 15px;
     display: inline;
     position: relative;
+    padding: 20px;
+    color: var(--light);
    
 }
 .dp-menu ul li a{
-    color: var(--ligh);
-    font-weight: 600;
+    color: var(--light);
     text-decoration: none;
     display: inline-block;
-    padding: 10px;
-    
 }
 .dp-menu ul li a:hover{
-    color: var(--ligh);
-    background-color:var(--corPrincipal);
+    color: var(--light);
+    background-color:var(--footer);
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -112,7 +78,7 @@ header{
     left: 0;
     position: absolute;
     top: 100%;
-    background-color: var(--corPrincipal);
+    background-color:var(--corPrincipal);
 }
 .dp-menu ul li:hover ul{
     display: block;
@@ -123,6 +89,8 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
+    margin: 0 10px;
+    padding: 10px;
 }
 
 .dp-menu ul ul{
@@ -131,6 +99,7 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
+    margin: 0;
 }
 .dp-menu ul ul{
     width: 150px;
@@ -138,23 +107,37 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
-}
-#login > a, span > a{
-    text-decoration: none;
-    color: var(--corPrincipal);
-
 }
 #login{
-    border-color: var(--corPrincipal);
+    border-color: 2px var(--light);
     border-radius: 5px;
-    padding: 2px 10px;
-    background-color: var(--ligh);
+    padding: 8px 12px;
+    background-color: var(--corPrincipal);
+    color: var(--light);
+    cursor:pointer;
+    margin: 20px;
+    border: var(--light);
+}
+#login a{
+    text-decoration: none;
+    padding: 20px;
+    color: var(--light);
 }
 #login:hover{
     transform: scale(1,1);
 }
-
-
+#login:hover{
+    background-color: var(--light);
+    transform: scale(1,1);
+}
+#login > a:hover{
+    color: var(--corPrincipal);
+}
+.car{
+    width: 80%;
+    display: flex;
+    flex: 1;
+}
 /* Main*/
 main {
     max-width: 100%;
@@ -172,14 +155,15 @@ section {
 .principal{
     margin-top: 0;
     margin: 0 30px;
-    background-color: rgba(148, 131, 134, 0.144);
+    background-color:var(--ligh);
     margin-bottom: 0;
     border-radius: 0;
 }
 #h1-principal{
     font-family: 'Poppins', sans-serif;
     font-size: 3em;
-    margin: 10px;
+    font-weight: 500;
+    margin: 40px 0;
     text-align: center;
     padding: 30px;
     color: var(--corPrincipal);
@@ -193,6 +177,7 @@ section {
     font-family: 'Poppins', sans-serif;
     font-size: 2em;
     margin: 30px 0;
+    font-weight: 500;
     text-align: center;
     padding: 5px;
     color: var(--corPrincipal);
@@ -202,7 +187,7 @@ section {
     width: 100%;
     margin: 50px 0 ;
     display: flex; /* Torna os elementos filhos em linha */
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
     border-bottom: 2px solid var(--corPrincipal);
     
@@ -223,7 +208,7 @@ section {
 }
 #img-local{
     max-width: 45%;
-    width: 500px;
+    width: 300px;
     margin-bottom: 40px;
 
 }
@@ -240,17 +225,23 @@ section {
     border: 2px solid var(--corSecundaria);
    
 }
+
 #esteticistas{
-    width: 400px;
-    height: 600px;
+    height: 400px;
    border: 2px solid var(--corSecundaria);
 }
 .container-equipe{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     margin: 20px;
 }
+#colabroradores{
+    margin: 0 15%;
+    width: 70%;
+}
 #text-equipe p{
+    width: 50%;
     margin: 20px;
     color: #333;
 }
@@ -265,6 +256,11 @@ section {
     color: var(--corSecundaria);
     
 }
+#texto-equipe{
+    width: 80%;
+    padding: 20px;
+    margin: 0 20px;
+}
 #colabroradores h2{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -273,12 +269,10 @@ section {
     padding: 30px;
     
 }
+
 #text-span{
     color: var(--corSecundaria);
 }
-
-
-
 footer {
     display: flex;
     justify-content: center;
@@ -350,6 +344,7 @@ footer {
     position: absolute;
     right: 0;
     z-index: 99;
+    width: 100%;
 }
 .menu-ativo ul:hover{
     color: var(--ligh);
@@ -361,11 +356,11 @@ footer {
 #hamburguer{
     position: absolute;
     display: none;
-    color: black;
+    color: var(--light);
     right: 50px;
     cursor: pointer;
 }
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     body{
         padding: 0;
         margin: 0;
@@ -379,6 +374,14 @@ footer {
         flex-direction: column;
         align-items: center;
         width: 100%;
+    }
+    nav{
+        justify-content: space-between;
+       
+    }
+    #logo{
+        margin: 0 10px;
+        width: 150;
     }
     section{
         display: block;
@@ -397,6 +400,10 @@ footer {
         top: 100%;
         background-color:var(--corPrincipal)
     }
+    #login{
+        padding: 0;
+        margin: 0;
+    }
    
     .dp-menu ul ul{
         display: none!important;
@@ -411,9 +418,24 @@ footer {
      #hamburguer{
         display: block;
      }
-   
+     .container-instalacoes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #text-local{
+        width: 70%;
+        margin-bottom: 30px;
+    }
+    #img-local{
+        max-width: 90%;
+        width: 90%;
+        margin-bottom: 40px;
+    
+    }
     .container-equipe{
         display: flex;
+        flex-direction: column;
         align-items: center;
         
     }
@@ -424,11 +446,8 @@ footer {
     #texto-equipe{
         width: 100%;
         height: 100%;
-        padding: 20px;
-    }
-    #esteticistas{
-        width: 100%;
-        height: 500px;
+        padding: 0;
+        margin: 0;
     }
     #sessao-titulo{
         text-align: center;
@@ -491,11 +510,7 @@ footer {
         padding: 10px;
         font-size: 14px;
     }
-    #esteticistas{
-      display: flex;
-      width:90%;
-      top: 0;
-    }
+   
     #sessao-titulo{
         text-align: center;
     }
@@ -524,10 +539,18 @@ footer {
             align-items: center;
             margin: 0;
         }
+        #logo{
+            margin: 0 10px;
+            width: 150px;
+        }
+        #h1-principal{
+            font-size: 30px;
+            margin-top: 40px;
+        }
         #h2-principal{
             font-size: 20px;
         }
-        #text-local h2{
+        #h3-text-ambiente{
             text-align: center;
             font-size: 20px;
             margin:20px 0;
@@ -537,19 +560,6 @@ footer {
             text-align: left;
             width: 100%;
             font-size: 12px;
-        }
-        .container-instalacoes{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #h2-text-ambiente{
-            font-size: 20px;
-            margin: 20px 0;
-            padding: 0;
-        }
-        #img-local{
-            display:none;
         }
         
         .container-equipe{
@@ -565,19 +575,20 @@ footer {
         }
         .text-p{
             width: 90%;
+          
         }
-        #h2-text-equipe{
+        #h3-text-equipe{
             font-size: 20px;
             padding: 0;
             margin: 0;
         }
         #texto-equipe{
-            width: 100%;
+            width: 90%;
             padding: 10px;
             font-size: 12px;
         }
         #esteticistas{
-            display: none;
+            display:block
         }
 
         #sessao-titulo{
@@ -590,3 +601,10 @@ footer {
         }
         
  }      
+ @media (max-width: 300px) {
+    
+    #logo{
+        margin: 0 10px;
+        width: 100px;
+    }
+}

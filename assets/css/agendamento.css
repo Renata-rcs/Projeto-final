@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /* font-family: 'Poppins', sans-serif;*/
 :root{
-    --corPrincipal: purple;
-    --corSecundaria:#ebccdf;
-    --ligh:#ffffff;
+    --corPrincipal:#5e057e;
+    --corSecundaria:#c299d0;
+    --light:#ffffff;
+    --verde:#99e099;
     --footer:#c7c6c6;
     --mid:#64748B;
+    --darck:#000000;
     
 }
 
@@ -22,87 +24,53 @@ body{
 }
 header{
     display: flex;
-    flex-direction: column;
+    background-color: var(--corPrincipal);
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100vw;
     position: fixed;
     z-index: 1;
 }
-.nav-1{
-  background-color:var(--ligh);
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-}
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-.search-container {
+nav{
+    width:80%;
+    height: 60px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: relative;
-    top: 16%;
-    border: 0;
-    width: 200px; /* Largura do campo de entrada e ícone */
-    right: 20px;
+    justify-content: space-around;
 }
-    
-.search-input {
-    width: 100%;
-    height: 25px;
-    padding: 5px;
-    top: 40%;
-    border-radius: 5px;
+#logo{
+    width: 200px;
 }
-    
-.search-icon {
-    position: absolute;
-    top: 40%; /* Centralize verticalmente o ícone */
-    right: 10px; /* Ajuste a posição do ícone à direita */
-    transform: translateY(-50%); /* Ajuste vertical para o centro */
-    cursor: pointer;
- }
- .dp-menu ul{
-    list-style-type: none;
+.dp-menu ul{
+    list-style: none;
     padding: 0;
-
+    margin: 0;
 }
 .dp-menu{
-    font-family: 'Poppins', sans-serif;
-    background-color:var(--corPrincipal)!important;
     width: 100%;
     border-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid rgb(230, 224, 224);
+    margin: 0;
 }
 .dp-menu ul li{
-    margin-top: 20px;
+    margin-top: 5px;
+    font-size: 15px;
     display: inline;
     position: relative;
+    padding: 20px;
+    color: var(--light);
    
 }
 .dp-menu ul li a{
-    color: var(--ligh);
-    font-weight: 600;
+    color: var(--light);
     text-decoration: none;
     display: inline-block;
-    padding: 10px;
-    
 }
 .dp-menu ul li a:hover{
-    color: var(--ligh);
-    background-color:var(--footer) ;
+    color: var(--light);
+    background-color:var(--footer);
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -121,6 +89,8 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
+    margin: 0 10px;
+    padding: 10px;
 }
 
 .dp-menu ul ul{
@@ -129,6 +99,7 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
+    margin: 0;
 }
 .dp-menu ul ul{
     width: 150px;
@@ -136,21 +107,25 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
-}
-#login > a, span > a{
-    text-decoration: none;
-    color: var(--corPrincipal);
-
 }
 #login{
-    border-color: var(--corPrincipal);
+    border-color: 2px var(--light);
     border-radius: 5px;
-    padding: 2px 10px;
-    background-color: var(--ligh);
+    padding: 8px 12px;
+    background-color: var(--corPrincipal);
+    color: var(--light);
+    cursor:pointer;
+    margin: 20px;
+    border: var(--light);
+}
+#login a{
+    text-decoration: none;
+    color: var(--light);
 }
 #login:hover{
     transform: scale(1,1);
 }
+
 
 /*Main*/
 main
@@ -167,7 +142,7 @@ html {
 section {
     width: 90%;
     margin:0;
-    background-color: rgba(148, 131, 134, 0.144);
+    background-color: var(--light);
     border-radius: 0;
     display: flex;
     align-items: center;
@@ -196,7 +171,7 @@ section {
     display: flex;
     align-items: center;
     width: 80%;
-    background-color:var(--ligh);
+    background-color:var(--light);
     flex-direction: column; /* Adicione esta linha para colocar os elementos em coluna */
     border-radius: 10px;
 }
@@ -221,11 +196,9 @@ section {
 }
 #botConsulta:hover{
     background-color: var(--corPrincipal);
-    color: var(--ligh);
-    transform: scale(1.1);
+    color: var(--light);
+
 }
-
-
 #agend1,
 #agend2 {
     margin: 40px;
@@ -245,7 +218,7 @@ form {
     margin: 0 auto;
     padding: 20px;
     border: 1px solid var(--corPrincipal);
-    background-color:var(--ligh);
+    background-color: rgba(148, 131, 134, 0.144);
     border-radius: 5px;
 }
 /* Estilo para os rótulos */
@@ -274,7 +247,6 @@ select {
 /* Estilo para o botão de envio */
 input[type="submit"] {
     align-items: center;
-    background-color: var(--ligh);
     color:var(--corPrincipal);
     padding: 10px 20px;
     border: 1px solid var(--footer);
@@ -286,10 +258,6 @@ input[type="submit"] {
    
 
 }
-input[type="submit"]:hover{
-    transform: scale(1,0);
-}
-
 /* Estilo para mensagens de erro */
 .erro {
     border: 2px solid red;
@@ -320,12 +288,13 @@ input[type="submit"]:hover{
     width: 20%;
     padding: 5px;
     margin: 5px;
+    color: var(--light);
     
 }
 .cadastro-whatsapp h4{
     font-family: 'Poppins', sans-serif;
     margin: 10px;
-    color: var(--ligh);
+    color: var(--light);
     font-weight: bold;
     font-size: 20px;
 }
@@ -419,7 +388,7 @@ footer {
     position: absolute;
     display: none;
     right: 50px;
-    color: black;
+    color: var(--light);
     cursor: pointer;
 }
 
@@ -673,10 +642,7 @@ footer {
         padding: 0;
         height: 30px;
     }
-    #botConsulta:hover{
-        background-color: var(--corPrincipal);
-        color: var(--ligh);
-    }
+   
     .cadastro-whatsapp{
         display: flex;
         flex-direction: column;

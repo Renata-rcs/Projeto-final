@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-/* font-family: 'Poppins', sans-serif;*/
+/* font-family: 'Poppins', sans-serif;
+*/
 :root{
-    --corPrincipal: #6d00a1;
-    --corSecundaria:#ebccdf;
-    --ligh:#ffffff;
+    --corPrincipal:#5e057e;
+    --corSecundaria:#c299d0;
+    --light:#ffffff;
+    --verde:#99e099;
     --footer:#c7c6c6;
     --mid:#64748B;
+    --darck:#000000;
     
 }
 *{
@@ -13,93 +16,62 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     width: 100vw;
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    height: 100vh; 
+    font-family: 'Poppins', sans-serif;
 }
 header{
     display: flex;
-    flex-direction: column;
+    background-color: var(--corPrincipal);
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100vw;
     position: fixed;
     z-index: 1;
 }
-.nav-1{
-  background-color: var(--corPrincipal);
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
+nav{
+    width:80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+#logo{
+    width: 200px;
 }
-.search-container {
-    position: relative;
-    width: 200px; /* Largura do campo de entrada e ícone */
-    right: 20px;
-}
-
-.search-input {
-    width: 100%;
-    height: 25px;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.search-icon {
-    position: absolute;
-    top: 50%; /* Centralize verticalmente o ícone */
-    right: 5px; /* Ajuste a posição do ícone à direita */
-    transform: translateY(-50%); /* Ajuste vertical para o centro */
-    cursor: pointer;
-}
-
 .dp-menu ul{
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
-
 }
 .dp-menu{
-    font-family: 'Roboto', sans-serif;
-    background-color:var(--ligh);
     width: 100%;
     border-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid var(--footer);
     margin: 0;
 }
 .dp-menu ul li{
-    margin-top: 20px;
+    margin-top: 5px;
+    font-size: 15px;
     display: inline;
     position: relative;
+    padding: 5px;
+    color: var(--light);
    
 }
 .dp-menu ul li a{
-    color: var(--mid);
-    font-weight: 600;
+    color: var(--light);
     text-decoration: none;
     display: inline-block;
     padding: 10px;
-    
 }
 .dp-menu ul li a:hover{
-    color: var(--ligh);
-    background-color:var(--corPrincipal) ;
+    color: var(--light);
+    background-color:var(--footer);
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -118,6 +90,8 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
+    margin: 0 10px;
+    padding: 10px;
 }
 
 .dp-menu ul ul{
@@ -126,6 +100,7 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
+    margin: 0;
 }
 .dp-menu ul ul{
     width: 150px;
@@ -134,17 +109,43 @@ header{
 .dp-menu ul ul li a{
     display: block;
 }
+#login{
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: var(--corPrincipal);
+    color: var(--light);
+    cursor:pointer;
+    margin: 20px;
+    border: none;
+  
 
+}
+#login a{
+    text-decoration: none;
+    padding: 20px;
+    color: var(--light);
+}
+#login:hover{
+    background-color: var(--light);
+    transition: transform 0.5s ease; 
+}
+#login > a:hover{
+    color: var(--corPrincipal);
+}
+/* Estilo para mensagens de erro */
+.erro {
+    border: 2px solid red;
+}
 /* Main*/
 main {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0;
+    background-color: rgba(148, 131, 134, 0.144);
 }
 .principal{
-    margin-top: 0;
-    margin: 0 30px;
-    background-color: rgba(148, 131, 134, 0.144);
+    margin:0 30px;
+    background-color:var(--light);
     margin-bottom: 0;
     border-radius: 0;
     
@@ -153,17 +154,16 @@ main {
 
 section {
     height: 100%;
-    min-height: 80vh;
     text-align: center;
     border-radius: 5px;
-    background-color: var(--ligh);
-    margin: 100px 30px; /* Isso define as margens superior e inferior como 200px e as margens esquerda e direita como 30px */
-    border: 10px solid transparent; /* Adiciona uma borda transparente de 40px */
+    background-color: var(--light);
+
+    
 }
 
 #h1-principal{
     font-family: 'Poppins', sans-serif;
-    font-weight:400;
+    font-weight:500;
     font-size: 4em;
     color:var(--corSecundaria);
     margin: 50px;
@@ -171,14 +171,14 @@ section {
 }
 h2{
     color: var(--corPrincipal);
-    font-weight: 400;
-    margin: 20px;
+    font-weight: 500;
+    margin: 1em;
     text-align: center;
 }
 #text-entrada{
-    text-align: left;
+    text-align: justify;
     text-indent: 1em;
-    margin-bottom: 50px;
+    margin: 50px;
     border-bottom: 2px solid var(--corPrincipal);
 }
 #text-entrada p{
@@ -188,128 +188,34 @@ h2{
 #img-principal{
     width: 100%;
     height: 500px;
-    margin-bottom: 50px;
 }
-
-html {
-    scroll-behavior: smooth;
-}
-/* Cadastro*/
-#cadSection  h2{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    margin: 10px;
-    color:var(--ligh);
- }
- #logo-cad{
-    margin: 30px;
-    width: 200px;
- }
- .erro{
-     border: 2px solid red;
- }
- .secao {
-     display: flex;
-     justify-content:space-around;
-     align-items: center; /* Alinha as divs lado a lado */
-     height: 600px;
-     margin-bottom: 10px;
-     border-bottom: 2px solid var(--corPrincipal);
-  
- }
-.text3{
-    width: 300px;
-    text-align: left;
-    margin: 50px;
-    color: var(--mid);
-    top: 0;
-}
-#sessao-titulo{
-     color: var(--corPrincipal);
-}
- #cadh2{
-     margin-top: 10px;
-     text-align: center;
-     color: var(--ligh);
- }
- #form1 {
-     text-align: left;
-     margin: 5px;
-     padding: 0;
-     color: var(--ligh);
- }
- 
- .cadastro {
-     width: 300px;
-     padding: 5px;
-     height: 550px;
-     background-color: var(--corSecundaria);
-     display: flex;
-     flex-direction: column;
-     margin-bottom: 20px; /* Adicione um valor de margem inferior */
-     border-radius: 5px;
-     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-     cursor: pointer;
-     
- }
-
- #icad{
-    text-align: left;
- }
- 
- #inome,
- #iemail,
- #isenha,
- #iconfirmarsenha {
-     text-align: left;
-     width: 280px;
-     margin-bottom: 10px;
-     border-radius: 5px;
-     height: 40px;
- }
- 
-#icadastrar {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     background-color: var(--ligh);
-     color: var(--corPrincipal);
-     border-radius: 5px;
-     width: 280px;
-     height: 30px;
-     border: none;
- }
- #icadastrar:hover{
-    background-color:var(--corPrincipal);
-    color: var(--ligh);
-   
- }
- #cadh2{
-    color:var(--ligh)
- }
- 
 
 /*Card flip*/
+#tratamento{
+    font-size: 3em;
+    color: var(--corSecundaria);
+}
 .card-container {
-    display: flex; /* Adicione esta linha para criar um flex container */
-    margin: 50px;
-    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
 .card {
-    width: 400px;
-    height: 300px;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    margin-right: 10px; /* Adicione um espaço entre os cards */
+    width: 350px;
+    height: 290px;
+    margin: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.card:last-child {
-    margin-right: 0; /* Remove a margem direita do último card para evitar espaço extra */
+.card:hover .card-front {
+    transform: rotateY(180deg); /* Rotaciona a frente do cartão quando o mouse passa sobre ele */
 }
 
-.card.flipped {
-    transform: rotateY(180deg);
+.card:hover .card-back {
+    transform: rotateY(0deg); /* Rotaciona as costas do cartão quando o mouse passa sobre ele */
 }
 
 .card-front,
@@ -326,34 +232,31 @@ html {
     font-weight: bold;
     box-sizing: border-box;
     border-radius: 5px;
-}
-
-.card-front {
-    background-color: var(--corPrincipal);
-    color: var(--ligh);
+    background-color: var(--light);
+    color: var(--corPrincipal);
+    transition: transform 0.5s ease; 
+    & > p{
+        font-size: 12px;
+        padding: 15px;
+    }
 }
 
 .card-back {
-    background-color: var(--corPrincipal);
-    color: var(--ligh);
-    padding: 10px;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Mantém as costas do cartão viradas para trás */
 }
 
+
+.card h3{
+    font-size: 20px;
+}
 #img-card {
-    width: 270px;
-    height: 225px;
+    width: 350px;
+    height: 250px;
     margin-bottom: 20px;
 }
 
-.card-back p {
-    font-size: 14px;
-    line-height: 1.4;
-    padding: 5px;
-}
-
 .cadastro-whatsapp{
-    height:140px;
+    height:100%;
     background-color: var(--corPrincipal);
     text-align: left;
     margin: 50px 0;
@@ -364,7 +267,7 @@ html {
 .cadastro-whatsapp h4{
     font-family: 'Poppins', sans-serif;
     margin: 10px;
-    color: var(--ligh);
+    color: var(--light);
     font-weight: bold;
     font-size: 20px;
 }
@@ -377,7 +280,7 @@ input{
     
 }
 #cadastrar{
-    width: 80px;
+    width: 100px;
     color: var(--corPrincipal);
     border-radius: 5px;
     padding: 5px;
@@ -387,11 +290,13 @@ input{
 }
 #cadastrar:hover{
     background-color: var(--corPrincipal);
-    color: var(--ligh);
+    color: var(--light);
     transform: scale(1.2);
 }
 
- footer {
+footer {
+    width: 100%;
+    background-color: var(--footer);
     display: flex;
     justify-content: center;
     height: auto;
@@ -457,16 +362,17 @@ p{
 /* Estilos para o menu quando a classe .menu-ativo é aplicada */
 .menu-ativo {
     display: block!important;
-    background-color:var(--ligh);
+    background-color:var(--corPrincipal);
     color: var(--mid);
     padding: 30px;
     top:100%;
     position: absolute;
     right: 0;
     z-index: 99;
+    margin: 0;
  }
  .menu-ativo ul:hover{
-    color: var(--ligh);
+    color: var(--light);
  }
  .menu-ativo ul ul{
     display: none !important;
@@ -475,35 +381,16 @@ p{
  #hamburguer{
     position: absolute;
     display: none;
-    color: black;
+    color: var(--light);
     right: 50px;
     cursor: pointer;
  }
  
-@media (max-width: 710px) {
-    body{
-        padding: 0;
-        margin: 0;
-        border: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        align-items: center;
-        justify-content: center;
+@media (max-width: 1000px) {
+    nav{
+        justify-content: space-between;
+       
     }
-    .nav-1{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    #pesquisar{
-       display: none;
-    }
-    #input-pesquisar{
-        display: none;
-    }
- 
     #hamburguer {
         display: block;
     }
@@ -517,13 +404,16 @@ p{
         right: 0;
         position: relative;
         top: 100%;
-        background-color:white;
+        background-color:var(--corPrincipal)
     }
    
     .dp-menu ul ul{
         display: none;
     }
-   
+    #login a{
+        margin: 0;
+        padding: 0;
+    }
     main{
         display: flex;
         flex-direction: column;
@@ -538,7 +428,7 @@ p{
     .principal{
         top: 100%;
         height: 100%;
-        width: 300px;
+        width:100%
      }
      #h1-principal{
          font-size: 30px;
@@ -550,20 +440,53 @@ p{
          align-items: center;
          flex-direction: column;
          margin: 0;
-         width: 80%;
+         width: 100%;
          
      }
      #img-entrada{
-        width: 200px;
-        margin: 30px;
+        width: 100%;
+        margin-bottom: 30px;
     }
+    #tratamento{
+        font-size: 30px;
+    }
+    .containe-text1{
+         display: block;
+         flex-direction: column;
+    }
+    .container{
+         display: block;
+         flex-direction: column;
+    }
+    
+    .card{
+        width: 200px;
+        margin: 20px;
+    }
+    .card-container{
+
+        margin: 0 30px;
+        width: 100%;
+    }
+    #img-card{
+      width: 100%;
+      height: 80%;
+    }
+    .card-front, .card-bac{
+        width:100%;
+        height: 100%;
+    }
+}
+
+
+@media (max-width: 710px) {
+    
     #text-entrada{
         display: block;
         justify-content: center;
         text-align: left;
         border-bottom: 2px solid #6d00a1;
         margin-bottom: 20px;
-        width: 200px;
     }
     #text-entrada h2{
         text-align: center;
@@ -577,41 +500,12 @@ p{
         font-size: 14px;
         word-wrap: break-word;
     }
-    
-    .containe-text1{
-         display: block;
-         flex-direction: column;
-    }
-    .container{
-         display: block;
-         flex-direction: column;
-    }
-    .secao{
-        display: none;
-      }
-      .card{
-        width: 200px;
-        margin: 20px;
-    }
-    .card-container{
-        display: block;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0;
-    }
-    #img-card{
-      width: 100%;
-      height: 80%;
-    }
-    .card-front, .card-bac{
-        width:100%;
-        height: 100%;
-    }
+ 
     h1{
          font-size: 40px;
     } 
     input{
-         width: 150px;
+         width: 80%;
     }
     .cadastro-whatsapp{
          align-items: center;
