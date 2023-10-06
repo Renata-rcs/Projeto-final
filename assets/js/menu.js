@@ -9,3 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Classe menu-ativo adicionada:', dpMenu.classList.contains('menu-ativo'));
     });
 });
+
+
+const btnLogin = document.querySelector("#login")
+const btnSair = document.querySelector("#sair")
+if (localStorage.getItem("contaLogada")) {
+    btnLogin.style.display = "none";
+    btnSair.style.display = "inline"
+}
+
+
+
+btnSair.addEventListener("click", (evento)=> {
+    evento.stopImmediatePropagation()
+    localStorage.removeItem("contaLogada")
+})

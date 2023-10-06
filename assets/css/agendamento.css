@@ -121,6 +121,7 @@ nav{
 #login a{
     text-decoration: none;
     color: var(--light);
+    font-size: 1.2em;
 }
 #login:hover{
     transform: scale(1,1);
@@ -218,8 +219,32 @@ form {
     margin: 0 auto;
     padding: 20px;
     border: 1px solid var(--corPrincipal);
-    background-color: rgba(148, 131, 134, 0.144);
+    /* background-color: rgba(148, 131, 134, 0.144); */
     border-radius: 5px;
+    height: 500px;
+    overflow-y: scroll;
+    position: relative;
+}
+#esconde-form {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--light);
+    display: flex;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+
+    & > span {
+        font-size: 2.5em;
+        text-align: center;
+
+        & > a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
 }
 /* Estilo para os rótulos */
 label {

@@ -180,8 +180,10 @@ section + section{
 .entrada{
     
         background-image: url('../../imagens/entrada.png');
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center right;
         margin-top: 40px;
         margin-bottom: 40px;
         height: 700px;
@@ -230,9 +232,9 @@ section + section{
 .erro {
     border: 1px solid red;
 }
-.hide {
-    display: none;
-}
+/* .hide {
+    display: none !important;
+} */
 
 .whats {
     position: fixed;
@@ -240,9 +242,10 @@ section + section{
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
     background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo com transparência */
     z-index: 999; /* Ajuste o valor do z-index para que o modal fique acima de outros elementos */
 }
@@ -329,22 +332,6 @@ section + section{
     flex-direction: column;
     align-items: center;
     margin-top: 0;
-}
-.menu-list {
-    list-style-type: none; 
-    padding: 0;
-    margin: 0;
-}
-
-.menu-list li {
-    display: inline-block; /* Faz com que os itens fiquem um ao lado do outro */
-    margin-right: 10px;
-    margin-bottom: 10px; /* Espaçamento entre os itens (ajuste conforme necessário) */
-}
-
-.menu-list li a {
-    text-decoration: none; /* Remova sublinhado dos links */
-    color:var(--verde);
 }
 .carousel-container-2 {
     width: 100;
@@ -783,23 +770,7 @@ p{
     color: var(--mid);
     background-color:var(--footer);
 }
-/* Estilos para o menu quando a classe .menu-ativo é aplicada */
-.menu-ativo {
-    display: block!important;
-    background-color:var(--corPrincipal);
-    color: var(--light);
-    padding: 30px;
-    top:100%;
-    position: absolute;
-    z-index: 99;
-    width: 100%;
-}
-.menu-ativo ul:hover{
-    color: var(--footer)
-}
-.menu-ativo ul ul{
-    display: none !important;
-}
+
 
 #hamburguer{
     position: absolute;
@@ -809,14 +780,25 @@ p{
     cursor: pointer;
 }
 @media (max-width: 950px) {
-    body{
-        padding: 0;
-        margin: 0;
-        border: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-    }
+    /* Estilos para o menu quando a classe .menu-ativo é aplicada */
+.menu-ativo {
+    display: block!important;
+    background-color:var(--corPrincipal);
+    color: var(--light);
+    padding: 30px 0;
+    top:100%;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    box-sizing: border-box;
+}
+.menu-ativo ul:hover{
+    color: var(--footer)
+}
+.menu-ativo ul ul{
+    display: flex;
+    width: 100%;
+}
     main{
         display: flex;
         flex-direction: column;
@@ -855,9 +837,12 @@ p{
       
     }
     .dp-menu ul ul{
-        display:none!important;
+        display:NONE;
+        z-index: 2;
     }
-   
+    #login{
+        padding: 5px;
+    }
     #hamburguer{
         display: block!important;
     }

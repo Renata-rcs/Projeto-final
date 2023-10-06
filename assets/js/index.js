@@ -132,3 +132,10 @@ function toggleSections() {
 // Execute a função quando a página carregar e quando a janela for redimensionada
 window.addEventListener('load', toggleSections);
 window.addEventListener('resize', toggleSections);
+
+
+const feedback = document.querySelector("#feedback")
+
+if(!localStorage.getItem("contaLogada")) {
+  feedback.style.display = "none"
+}

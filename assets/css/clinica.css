@@ -334,7 +334,17 @@ footer {
     color: var(--mid);
     background-color:var(--footer);
 }
-/* Estilos para o menu quando a classe .menu-ativo é aplicada */
+
+
+#hamburguer{
+    position: absolute;
+    display: none;
+    color: var(--light);
+    right: 50px;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    /* Estilos para o menu quando a classe .menu-ativo é aplicada */
 .menu-ativo {
     display: block!important;
     background-color:var(--corPrincipal);
@@ -360,16 +370,6 @@ footer {
     right: 50px;
     cursor: pointer;
 }
-@media (max-width: 900px) {
-    body{
-        padding: 0;
-        margin: 0;
-        border: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        align-items: center;
-    }
     main{
         flex-direction: column;
         align-items: center;

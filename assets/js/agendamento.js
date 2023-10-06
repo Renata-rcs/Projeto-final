@@ -185,6 +185,14 @@ tratamentoSelect.addEventListener('change', () => {
         uf.value = '';
         tratamento.value = [0];
         ehorario.value = '';
+
+
+        opcoesEsteticaFacial.style.display = 'none';
+        opcoesEsteticaCorporal.style.display = 'none';
+        opcoesCentroCapilar.style.display = 'none';
+        opcoesPodologia.style.display = 'none';
+        opcoesDepilacao.style.display = 'none';
+        opcoesSPA.style.display = 'none';
     }
 });
 });
@@ -245,4 +253,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+const formulario = document.getElementById('agend2')
+if (!localStorage.getItem("contaLogada")) {
+    formulario.style.display = "none"
+}
+const escondeForm = document.querySelector("#esconde-form")
 
+if (localStorage.getItem("contaLogada")) {
+    escondeForm.style.display = "none"
+}

@@ -35,7 +35,8 @@
                         <li><a href="https://goo.gl/maps/spxzX4NMeBfw7o3H8" target="_blank">Localização</a></li>
                       </ul>
                     </li>
-                    <button type="submit" id="login" value="Login"><a href="./login.html">Login</a></button>            
+                    <button type="submit" id="login" value="Login"><a href="./login.html">Login</a></button>
+                    <a id="sair" href="" style="color: var(--light); text-decoration:none; display: none;">Sair</a>           
                 </ul>
             </nav>
         </header>
@@ -64,7 +65,10 @@
              </div>
                 <div id="agend2">
                 <form action="#" method="post" >
-                <img id="imgagendamento" src="imagens/Logo Emagreça.png">
+                    <div id="esconde-form">
+                        <span><a href="login.html">Esta função necessita de Login</a></span>
+
+                    </div>
                 <label for="enome">Nome Completo:</label>
                 <input type="text" id="enome" name="enome" autocomplete="enome">
 
@@ -126,6 +130,7 @@
                     <div id="opcoesEsteticaFacial" class="opcoes-tratamento" style="display: none;">
                     <label for="etratamentofacial">Facial</label>
                     <select id="etratamentoFacial" name="etratamentofacial">
+                        <option value=""></option>
                         <option value="limpezapele">Limpeza de Pele</option>
                         <option value="tratamentoAcne">Tratamento de Acne</option>
                         <option value="microdermoabrasão">Microdermoabrasão</option>
@@ -134,6 +139,7 @@
                     </select>
                         <label for="medicoFacial">Escolha o Médico:</label>
                         <select id="imedicoFacial" name="medicoFacial">
+                            <option value=""></option>
                             <option value="medico1">Dr. João</option>
                             <option value="medico2">Dra. Maria</option>
                             <option value="medico3">Dra. Ana</option>
@@ -143,6 +149,7 @@
                     <div id="opcoesEsteticaCorporal" class="opcoes-tratamento" style="display: none;" >
                     <label for="etratamentoCorporal">Corporal</label>
                     <select id="etratamentoCorporal" name="etratamentocorporal">
+                        <option value=""></option>
                         <option value="modelar">Massagem Modeladora</option>
                         <option value="esteticaCorporal">Drenagem Linfática</option>
                         <option value="centroCapilar">Lipoaspiração não Cirúrgica </option>
@@ -152,6 +159,7 @@
                     </select>
                     <label for="medicoCorporal">Escolha o Médico:</label>
                     <select id="medicoCorporal" name="medicoCorporal">
+                        <option value=""></option>
                         <option value="medico4">Dra. Carla</option>
                         <option value="medico5">Dr. André</option>
                         <option value="medico6">Dra. Sofia</option>
@@ -162,6 +170,7 @@
                     <div id="opcoesSPA" class="opcoes-tratamento" style="display: none;" >
                     <label for="etratamentoispa">SPA</label>
                     <select id="etratamentospa" name="ietratamentospa">
+                        <option value=""></option>
                         <option value="relaxante">Massagem Relaxante</option>
                         <option value="ofuro">Banho de Ofurô</option>
                         <option value="pele">Tratamento de Pele </option>
@@ -171,6 +180,7 @@
                     </select>
                     <label for="medicoSPA">Escolha o Terapeuta:</label>
                     <select id="medicoSPA" name="medicoSPA">
+                        <option value=""></option>
                         <option value="terapeuta1">Terapeuta Carla</option>
                         <option value="terapeuta2">Terapeuta Sofia</option>
                         <option value="terapeuta4">Terapeuta André</option>
@@ -182,6 +192,7 @@
                     <div id="opcoesPodologia" class="opcoes-tratamento" style="display: none;" >
                     <label for="etratamentoPodologia">Podologia</label>
                     <select id="etratamentoPodologia" name="etratamentoPodologia">
+                        <option value=""></option>
                         <option value="corteUnha">Corte e Tratamento de Unhas</option>
                         <option value="podal">Reflexologia Podal</option>
                         <option value="fungosUnha">Tratamento de Fungos nas Unhas</option>
@@ -190,6 +201,7 @@
                     </select>
                     <label for="podologo">Escolha o Podólogo(a):</label>
                     <select id="podologo" name="podologo" >
+                        <option value=""></option>
                         <option value="laura">Podóloga Laura</option>
                         <option value="sofia">Podóloga Sofia</option>
                         <option value="maria">Podóloga Maria</option>
@@ -201,6 +213,7 @@
                     <div id="opcoesCentroCapilar" class="opcoes-tratamento" style="display: none;">
                     <label for="eopcoescentrocapilar">Capilar</label>
                     <select id="eopcoescentrocapilar" name="eopcoescentrocapilar" >
+                        <option value=""></option>
                         <option value="trnasplante">Transplante Capilar</option>
                         <option value="calvecie">Tratamento de Calvície</option>
                         <option value="lasercapilar">Terapia a Laser</option>
@@ -210,6 +223,7 @@
                     </select>
                         <label for="medicoCapilar">Escolha o Médico:</label>
                         <select id="medicoCapilar" name="medicoCapilar" >
+                            <option value=""></option>
                             <option value="roberto">Dr. Roberto Souza</option>
                             <option value="marcos">Dr. Marcos</option>
                     </select>
@@ -218,6 +232,7 @@
                     <div id="opcoesDepilacao" class="opcoes-tratamento" style="display: none;" >
                     <label for="eopcoesDepilacao">Depilaçao</label>
                     <select id="eopcoesDepilacao" name="eopcoesDepilacao" >
+                        <option value=""></option>
                         <option value="trnasplante">Depilação a Laser de Diodo</option>
                         <option value="calvecie">Depilação a Laser Nd:YAG</option>
                         <option value="lasercapilar">>Depilação a Laser IPL</option>

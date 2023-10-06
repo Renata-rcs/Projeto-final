@@ -359,17 +359,20 @@ p{
    color: var(--mid);
    background-color:var(--footer);
 }
-/* Estilos para o menu quando a classe .menu-ativo é aplicada */
-.menu-ativo {
-    display: block!important;
-    background-color:var(--corPrincipal);
-    color: var(--mid);
-    padding: 30px;
-    top:100%;
-    position: absolute;
-    right: 0;
-    z-index: 99;
-    margin: 0;
+
+ 
+@media (max-width: 1000px) {
+    /* Estilos para o menu quando a classe .menu-ativo é aplicada */
+    .menu-ativo {
+        display: block!important;
+        background-color:var(--corPrincipal);
+        color: var(--mid);
+        padding: 30px;
+        top:100%;
+        position: absolute;
+        right: 0;
+        z-index: 99;
+        margin: 0;
  }
  .menu-ativo ul:hover{
     color: var(--light);
@@ -385,8 +388,6 @@ p{
     right: 50px;
     cursor: pointer;
  }
- 
-@media (max-width: 1000px) {
     nav{
         justify-content: space-between;
        
@@ -431,8 +432,8 @@ p{
         width:100%
      }
      #h1-principal{
-         font-size: 30px;
-         margin: 0;
+         font-size: 40px;
+        
      }
      section{
          min-height: 0;
