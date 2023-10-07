@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-/* font-family: 'Poppins', sans-serif;*/
+/* font-family: 'Poppins', sans-serif;
+*/
 :root{
-    --corPrincipal: #6d00a1;
-    --corSecundaria:#ebccdf;
-    --ligh:#ffffff;
+    --corPrincipal:#5e057e;
+    --corSecundaria:#c299d0;
+    --light:#ffffff;
+    --verde:#99e099;
     --footer:#c7c6c6;
     --mid:#64748B;
+    --darck:#000000;
     
 }
 *{
@@ -13,92 +16,62 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     width: 100vw;
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    height: 100vh; 
+    font-family: 'Poppins', sans-serif;
 }
 header{
     display: flex;
-    flex-direction: column;
+    background-color: var(--corPrincipal);
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100vw;
     position: fixed;
     z-index: 1;
 }
-.nav-1{
-  background-color:var(--corPrincipal);
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
+nav{
+    width:80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+#logo{
+    width: 200px;
 }
-.search-container {
-    position: relative;
-    width: 200px; /* Largura do campo de entrada e ícone */
-    right: 20px;
-}
-
-.search-input {
-    width: 100%;
-    height: 25px;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.search-icon {
-    position: absolute;
-    top: 50%; /* Centralize verticalmente o ícone */
-    right: 5px; /* Ajuste a posição do ícone à direita */
-    transform: translateY(-50%); /* Ajuste vertical para o centro */
-    cursor: pointer;
-}
-
 .dp-menu ul{
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
-
 }
 .dp-menu{
-    background-color:var(--ligh);
     width: 100%;
     border-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid rgb(230, 224, 224);
     margin: 0;
 }
 .dp-menu ul li{
-    margin-top: 20px;
+    margin-top: 5px;
+    font-size: 15px;
     display: inline;
     position: relative;
+    padding: 5px;
+    color: var(--light);
    
 }
 .dp-menu ul li a{
-    color: var(--mid);
-    font-weight: 600;
+    color: var(--light);
     text-decoration: none;
     display: inline-block;
-    padding: 10px;
-    
+    padding: 10px ;
 }
 .dp-menu ul li a:hover{
-    color: var(--ligh);
-    background-color:var(--corPrincipal);
+    color: var(--light);
+    background-color:var(--footer);
 }
 /*Sub menu*/
 .dp-menu ul ul{
@@ -117,26 +90,51 @@ header{
 }
 .dp-menu ul ul li a{
     display: block;
+    margin: 0 10px;
+    padding: 5px;
 }
 
 .dp-menu ul ul{
     width: 150px;
     
 }
-.dp-menu ul ul li a{
-    display: block;
+#login{
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: var(--corPrincipal);
+    color: var(--light);
+    cursor:pointer;
+    margin: 20px;
+    border: none;
+  
+
 }
-.dp-menu ul ul{
-    width: 150px;
-    
+#login a{
+    text-decoration: none;
+    padding: 20px;
+    color: var(--light);
 }
-.dp-menu ul ul li a{
-    display: block;
+#login:hover{
+    background-color: var(--light);
+    transition: transform 0.5s ease; 
+}
+#login > a:hover{
+    color: var(--corPrincipal);
+}
+/* Estilo para mensagens de erro */
+.erro {
+    border: 2px solid red;
+}
+#sair{
+    color: var(--light);
+    text-decoration:none; 
+    display: none; 
+    padding: 15px;
 }
 
 /* Main*/
 main {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0;
 }
@@ -146,6 +144,10 @@ main {
     background-color: rgba(148, 131, 134, 0.144);
     margin-bottom: 0;
     border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     
    
 }
@@ -155,8 +157,8 @@ section {
     min-height: 80vh;
     text-align: center;
     border-radius: 5px;
-    background-color:var(--ligh);
-    margin: 100px 30px; /* Isso define as margens superior e inferior como 200px e as margens esquerda e direita como 30px */
+    background-color:var(--light);
+    margin: 50px 30px; /* Isso define as margens superior e inferior como 200px e as margens esquerda e direita como 30px */
     border: 10px solid transparent; /* Adiciona uma borda transparente de 40px */
 }
 #div-h1{
@@ -190,7 +192,7 @@ h1{
     text-indent: 1em;
 }
 
-#textos-principais{
+.textos-principais{
     font-family: 'Poppins', sans-serif;
     color: var(--corPrincipal);
     font-weight:400;
@@ -202,14 +204,15 @@ h1{
     display: none;
 }
 .btn-saibaMais{
+    color: var(--verde);
     border: 0;
-    background-color: transparent;
+    background-color: var(--light);
     border-radius: 5px;
     padding: 10px;
     
 }
 .btn-saibaMais:hover{
-    transform: scale(1.2);
+    color: var(--corPrincipal);
 }
 .container{
     display: flex;
@@ -245,7 +248,7 @@ p{
 }
 #text2-2 h3{
     font-family: 'Poppins', sans-serif;
-    color:#ebccdf;
+    color:var(--corSecundaria);
     font-weight:400;
     margin: 20px 0;
 }
@@ -268,7 +271,7 @@ html {
 }
 
 .cadastro-whatsapp{
-    height:140px;
+    height:220px;
     background-color:var(--corPrincipal);
     text-align: left;
     margin: 50px 0;
@@ -278,9 +281,10 @@ html {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .cadastro-whatsapp h4{
-    margin: 10px;
+    margin-bottom: 20px;
     color: white;
     font-weight: bold;
+    padding: 18px;
 }
 
 input{
@@ -291,7 +295,7 @@ input{
     
 }
 #cadastrar{
-    width: 80px;
+    width: 120px;
     color: var(--corPrincipal);
     border-radius: 5px;
     padding: 5px;
@@ -341,7 +345,7 @@ input{
 
 }
 #span-text{
-    color: #ebccdf;
+    color: var(--corSecundaria);
 }
 .titulofooter{
    margin: 20px;
@@ -362,86 +366,97 @@ p{
    color: var(--mid);
    background-color:var(--footer);
 }
-/* Estilos para o menu quando a classe .menu-ativo é aplicada */
-.menu-ativo {
-   display: block!important;
-   background-color:var(--ligh);
-   color: var(--mid);
-   padding: 30px;
-   top:100%;
-   position: absolute;
-   right: 0;
-   z-index: 99;
-}
-.menu-ativo ul:hover{
-   color: var(--ligh);
-}
-.menu-ativo ul ul{
-   display: none !important;
-}
 
 #hamburguer{
    position: absolute;
    display: none;
-   color: black;
+   color: var(--light);
    right: 50px;
    cursor: pointer;
 }
 
  
-@media (max-width: 710px) {
-   body{
-       padding: 0;
-       margin: 0;
-       border: 0;
-       width: 100%;
-       height: 100%;
-       display: block;
-       align-items: center;
-       justify-content: center;
-   }
-   .nav-1{
-       display: flex;
-       align-items: center;
-       justify-content: center;
-   }
+@media (max-width: 900px) {
+    .menu-ativo {
+        display: block!important;
+        background-color:var(--corPrincipal);
+        color: var(--light);
+        padding: 30px 0;
+        top:100%;
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .menu-ativo ul:hover{
+        color: var(--footer)
+    }
+    .menu-ativo ul ul{
+        display: flex;
+        width: 100%;
+    }
+    nav{
+        justify-content: space-between;
+       
+    }
+    #logo{
+        margin: 0 10px;
+        width: 150px;
+    }
+    #hamburguer {
+        display: block;
+    }
+    .dp-menu{
+        display: none;
+    }
+    .dp-menu li {
+        display: block!important;
+    }
+    .dp-menu ul{
+        right: 0;
+        position: relative;
+        top: 100%;
+        background-color:var(--corPrincipal)
+    }
    
-   #pesquisar{
-      display: none;
-   }
-   #input-pesquisar{
-       display: none;
-   }
-
-   #hamburguer {
-       display: block;
-   }
-   .dp-menu{
-       display: none;
-   }
-   .dp-menu li {
-       display: block!important;
-   }
-   .dp-menu ul{
-       right: 0;
-       position: relative;
-       top: 100%;
-       background-color:white;
-   }
-  
-   .dp-menu ul ul{
-       display: none;
-   }
-  
-   main{
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-
-   }
-   html {
-       scroll-behavior: smooth;
-   }
+    .dp-menu ul ul{
+        display: none;
+        z-index: 2;
+    }
+    .dp-menu ul ul li a{
+        z-index: 2;
+        margin: 5px 0;
+    }
+    
+    
+    #login {
+        padding: 0;
+        font-size: 16px;
+        background-color: var(--light)!important;
+        & > a{
+            color: var(--corPrincipal);
+        }
+    }
+    .menu-ativo #login {
+        background-color: var(--light)!important; /* Restaure o fundo do botão de login no menu ativo */
+        position: absolute;
+        z-index: 1; /* Certifique-se de que o botão de login fique acima do menu ativo */
+        top: -30%;
+        right: 0; /* Ajuste este valor conforme necessário para controlar a distância entre o menu e o botão de login */
+      }
+    .menu-ativo #sair {
+        position: absolute;
+        z-index: 1;
+        top: -30%;
+        right: 10%; 
+      }
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+ 
+    }
    #img-principal{
     margin: 50px;
     width: 100%;
@@ -451,7 +466,7 @@ p{
    .principal{
        top: 100%;
       height: 100%;
-      width: 80%;
+      width: 100%!important;
    }
    section{
     min-height: 0;
@@ -459,7 +474,7 @@ p{
     align-items: center;
     flex-direction: column;
     margin: 0;
-    width: 80%;
+    width: 100%;
     
 }
    h1{
@@ -479,23 +494,35 @@ p{
         flex-direction: column;
    }
    input{
-        width: 150px;
-   }
-   .cadastro-whatsapp{
+    width: 220px;
+    }
+    .cadastro-whatsapp{
+        justify-content: center;
         align-items: center;
-        height: 350px;
-        padding: 30px;
-   }
-   #img-tratamentos{
-    display: none;
-   }
+        height: 80%;
+        padding: 40px;
+        margin: 20px 0;
+        }
+        #cadastrar{
+        padding: 5px;
+        margin: 4px;
+        font-size: 12px;
+    }
+
+    
+    #img2, #img3, #img4, #img5, #img6{
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+    }
     .footer{
         flex-direction: column;
-        display: block;
+         display: block;
         height: min-content;
         width: auto;
 
-    }
+        }
     .re{
         width: auto;
     }

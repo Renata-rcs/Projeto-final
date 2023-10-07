@@ -11,90 +11,38 @@
 </head>
 <body>
     <header>
-        <nav class="nav-1">
-            <img src="./imagens/Logo Emagreça.png" width="200px">
-            <div class="search-container">
-                <input id="input-pesquisar" type="text" class="search-input" placeholder="Pesquisar...">
-                <span id="pesquisar" class="material-symbols-outlined search-icon">search</span>
-            </div>            
+        <nav id="nav-logo">
+            <a href="index.html"><img id="logo" src="./imagens/Logo Emagreça.png" alt="Logo Emagreça"></a>
         </nav>
-        <span id="hamburguer" class="material-symbols-outlined">menu</span>
-        <nav class="dp-menu">
-            <ul>
-                <li><small><a href="./index.html">Inicio</a></small></li>
-                <li><small><a href="./clinca.html">Clinica</a></small>
-                    <ul>
-                        <li><small><a href="#"><small>Sobre nós</a></small></li>
-                        <li><small><a href="#">Colaboradores</a></small></li>
-                    </ul>
-                </li>
-                    <li><small><a href="./capilar.html">Capilar</a></small>
+            <span id="hamburguer" class="material-symbols-outlined">menu</span>
+            <nav class="dp-menu">
+                <ul>
+                    <li><a href="./clinca.html">Clinica</a>
+                    </li>
+                  </li>
+                  <li><a  href="#" id="tra">Tratamentos</a>
+                  <!-- <li><a  href="index.html#tratamentos">Tratamentos</a> -->
                         <ul>
-                            <li><small><a href="#">Transplante Capilar</a></small></li>
-                            <li><small><a href="#">Tratamento de Calvície</a></small></li>
-                            <li><small><a href="#">Terapia a Laser</a></small></li>
-                            <li><small><a href="#">Microagulhamento Capilar</a></small></li>
-                            <li><small><a href="#">Tratamento de Caspa</a></small></li>
-                            <li><small><a href="#">Massagem Capilar</a></small></li>
+                            <li><a href="capilar.html">Capilar</a></li>
+                            <li><a href="./estetica-facial.html">Facial</a></li>
+                            <li><a href="./estetica-corporal.html">Corporal</a></li>
+                            <li><a href="./depilacao-laser.html">Depilação a laser</a></li>
+                            <li><a href="./spa.html">SPA</a></li>
+                            <li><a href="./podologia.html">Podologia</a></li>
                         </ul>
                     </li>
-                    <li><small><a href="./estetica-facial.html">Estética Facial</a></small>
-                        <ul>
-                            <li><small><a class="nav-link active" aria-current="page" href="#limpeza-de-pele">Limpeza de Pele</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#acne">Tratamento de Acne</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#microdermoabrasao">Microdermoabrasão</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#preenchimentoFacial">Preenchimento Facial</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#botox">Botox</a></small></li>
-                            <li><small><a href="#">Fios de sustentação</a></small></li>
-                        </ul>
+                    <li><a href="#" id="con">Contato</a>
+                      <ul>
+                        <li><a href="tel:+5561980000000" target="_blank">Telefone</a></li>
+                        <li><a href="./agendamento.html">Agendamento</a></li>
+                        <li><a href="https://goo.gl/maps/spxzX4NMeBfw7o3H8" target="_blank">Localização</a></li>
+                      </ul>
                     </li>
-                    <li><a href="./estetica-corporal.html"><small>Estética Corporal</a></small>
-                        <ul>
-                            <li><small><a href="#">Massagem Modeladora</a></small></li>
-                            <li><small><a href="#">Drenagem Linfática</a></small></li>
-                            <li><small><a href="#">Lipoaspiração não Cirúrgica</a></small></li>
-                            <li><small><a href="#">Tratamento de Celulite</a></small></li>
-                            <li><small><a href="#">Endermologia</a></small></li>
-                            <li><small><a href="#">Criolipólise</a></small></li>
-                        </ul>
-                    </li>
-                    <li><a href="./depilacao-laser.html"><small>Depilação a laser</a></small>
-                        <ul>
-                            <li><small><a href="#">Depilação a Laser de Diodo</a></small></li>
-                            <li><small><a href="#">Depilação a Laser Alexandrite</a></small></li>
-                            <li><small><a href="#">Depilação a Laser Nd:YAG</a></small></li>
-                        </ul>
-                    </li>
-                    <li><a href="spa.html"><small>SPA</a></small>
-                        <ul>
-                            <li><small><a href="#">Massagem Relaxante</a></small></li>
-                            <li><small><a href="#">Banho de Ofurô</a></small></li>
-                            <li><small><a href="#">Tratamento de Pele</a></small></li>
-                            <li><small><a href="#">Aromaterapia</a></small></li>
-                            <li><small><a href="#">Yoga e Meditação</a></small></li>
-                            <li><small><a href="#">Aculpututa</a></small></li>
-                        </ul>
-                    </li>
-                    <li><small><a href="./podologia.html">Podologia</a></small>
-                        <ul>
-                            <li><small><a href="#">Corte e Tratamento de Unhas</a></small></li>
-                            <li><small><a href="#">Tratamento de Calos e Calosidades</a></small></li>
-                            <li><small><a href="#">Reflexologia Podal</a></small></li>
-                            <li><small><a href="#">Tratamento de Fungos nas Unhas</a></small></li>
-                            <li><small><a href="#">Avaliação Postural</a></small></li>
-                        </ul>
-                    </li>
-                <li><a href="./agendamento.html"><small>Contato</a></small>
-                    <ul>
-                        <li><small><a href="tel:+5561980000000" target="_blank">Telefone</a></small></li>
-                        <li><small><a href="./agendamento.html">Agendamento de consulta</a></small></li>
-                        <li><small><a href="https://goo.gl/maps/spxzX4NMeBfw7o3H8" target="_blank">Localização</a></small></li>
-                    </ul>
-                </li>
-                
-            </ul>
-        </nav>
-    </header>
+                    <button type="submit" id="login" value="Login"><a href="./login.html">Login</a></button> 
+                    <a id="sair" href="">Sair</a>            
+                </ul>
+            </nav>
+        </header>
     <main>
         <section class="principal">
             <section>
@@ -104,20 +52,23 @@
            </div>
           <div class="containe-text1">
             <div id="texto1" >
-                <h2 id="textos-principais">Cuidando dos Seus Passos com Precisão</h2>
+                <h2 class="textos-principais">Cuidando dos Seus Passos com Precisão</h2>
                 <p>A podologia é uma disciplina da área da saúde que se dedica ao estudo, diagnóstico e tratamento dos pés, membros tão essenciais do nosso corpo que nos levam a todas as direções da vida. Essa ciência e profissão têm como objetivo cuidar da saúde e bem-estar dos pés, garantindo que eles funcionem adequadamente e nos sustentem de forma confortável em nossa jornada diária.</p>
-                <h2  id="textos-principais">A Importância dos Pés na Nossa Vida</h2>
+                <h2  class="textos-principais">A Importância dos Pés na Nossa Vida</h2>
                 <p> Os pés desempenham um papel fundamental em nossa vida cotidiana, e muitas vezes não damos a devida atenção a eles até que problemas surjam. Eles nos carregam para onde queremos ir, nos permitem praticar esportes, dançar, caminhar e desempenhar uma série de atividades que tornam a vida gratificante. No entanto, devido à exposição constante, os pés podem sofrer diversos tipos de problemas, como calos, unhas encravadas, verrugas plantares, entre outros.</p>
             </div>
             <div id="texto2">
-                <h2 id="textos-principais">A Atuação do Podólogo</h2>
+                <h2 class="textos-principais">A Atuação do Podólogo</h2>
                 <p> O podólogo é o profissional de saúde especializado em tratar os pés. Com conhecimento aprofundado da anatomia e biomecânica dos pés, bem como das diversas condições que podem afetá-los, o podólogo desempenha um papel vital na prevenção e tratamento de problemas podológicos.
                 Os serviços de podologia incluem a avaliação minuciosa dos pés, o diagnóstico de condições como micose, calos, unhas encravadas e verrugas, bem como o tratamento dessas condições por meio de técnicas especializadas. Além disso, o podólogo é capaz de aconselhar sobre o uso adequado de calçados e palmilhas para garantir um melhor suporte e alívio de dores.</p>
-                <h2 id="textos-principais">Cuidando dos Seus Passos com Precisão e Carinho</h2>
+                <h2 class="textos-principais">Cuidando dos Seus Passos com Precisão e Carinho</h2>
                 <p> A busca por um podólogo qualificado e experiente é essencial para garantir a saúde e o conforto dos seus pés. Os profissionais de podologia são apaixonados por seu trabalho e dedicados a proporcionar cuidados precisos e atenciosos aos pés de seus pacientes.
                 Portanto, da próxima vez que sentir a necessidade de cuidar dos seus pés, lembre-se da importância da podologia e do papel vital que esses profissionais desempenham em manter seus passos firmes, saudáveis e confortáveis. Cuide dos seus pés, e eles cuidarão bem de você em todas as jornadas da vida.</p>
+              
             </div>
             </div>
+            <br>
+            <br>
             <div class="container">
                 <div id="text2"> 
                     <h2>Corte e Tratamento de Unhas: Cuidando da Saúde e Estética dos Pés e Mãos</h2>

@@ -257,8 +257,3 @@ const formulario = document.getElementById('agend2')
 if (!localStorage.getItem("contaLogada")) {
     formulario.style.display = "none"
 }
-const escondeForm = document.querySelector("#esconde-form")
-
-if (localStorage.getItem("contaLogada")) {
-    escondeForm.style.display = "none"
-}

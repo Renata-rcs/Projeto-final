@@ -11,87 +11,35 @@
 </head>
 <body>
     <header>
-        <nav class="nav-1">
-            <img src="./imagens/Logo Emagreça.png" width="200px">
-            <div class="search-container">
-                <input id="input-pesquisar" type="text" class="search-input" placeholder="Pesquisar...">
-                <span id="pesquisar" class="material-symbols-outlined search-icon">search</span>
-            </div>            
+        <nav id="nav-logo">
+            <a href="index.html"><img id="logo" src="./imagens/Logo Emagreça.png" alt="Logo Emagreça"></a>
         </nav>
         <span id="hamburguer" class="material-symbols-outlined">menu</span>
         <nav class="dp-menu">
             <ul>
-                <li><small><a href="./index.html"><b>Inicio</b></a></small></li>
-                <li><small><a href="./clinca.html"><b>Clinica</b></a></small>
+                <li><a href="./clinca.html">Clinica</a>
+                </li>
+              </li>
+              <li><a  href="#" id="tra">Tratamentos</a>
+              <!-- <li><a  href="index.html#tratamentos">Tratamentos</a> -->
                     <ul>
-                        <li><small><a href="#"><small>Sobre nós</a></small></li>
-                        <li><small><a href="#">Colaboradores</a></small></li>
+                        <li><a href="capilar.html">Capilar</a></li>
+                        <li><a href="./estetica-facial.html">Facial</a></li>
+                        <li><a href="./estetica-corporal.html">Corporal</a></li>
+                        <li><a href="./depilacao-laser.html">Depilação a laser</a></li>
+                        <li><a href="./spa.html">SPA</a></li>
+                        <li><a href="./podologia.html">Podologia</a></li>
                     </ul>
                 </li>
-                    <li><small><a href="./capilar.html"><b>Capilar</b></a></small>
-                        <ul>
-                            <li><small><a href="#">Transplante Capilar</a></small></li>
-                            <li><small><a href="#">Tratamento de Calvície</a></small></li>
-                            <li><small><a href="#">Terapia a Laser</a></small></li>
-                            <li><small><a href="#">Microagulhamento Capilar</a></small></li>
-                            <li><small><a href="#">Tratamento de Caspa</a></small></li>
-                            <li><small><a href="#">Massagem Capilar</a></small></li>
-                        </ul>
-                    </li>
-                    <li><small><a href="./estetica-facial.html"><b>Estética Facial</b></a></small>
-                        <ul>
-                            <li><small><a class="nav-link active" aria-current="page" href="#limpeza-de-pele">Limpeza de Pele</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#acne">Tratamento de Acne</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#microdermoabrasao">Microdermoabrasão</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#preenchimentoFacial">Preenchimento Facial</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#botox">Botox</a></small></li>
-                            <li><small><a href="#">Fios de sustentação</a></small></li>
-                        </ul>
-                    </li>
-                    <li><a href="./estetica-corporal.html"><small><b>Estética Corporal</b></a></small>
-                        <ul>
-                            <li><small><a href="#">Massagem Modeladora</a></small></li>
-                            <li><small><a href="#">Drenagem Linfática</a></small></li>
-                            <li><small><a href="#">Lipoaspiração não Cirúrgica</a></small></li>
-                            <li><small><a href="#">Tratamento de Celulite</a></small></li>
-                            <li><small><a href="#">Endermologia</a></small></li>
-                            <li><small><a href="#">Criolipólise</a></small></li>
-                        </ul>
-                    </li>
-                    <li><a href="./depilacao-laser.html"><small><b>Depilação a laser</b></a></small>
-                        <ul>
-                            <li><small><a href="#">Depilação a Laser de Diodo</a></small></li>
-                            <li><small><a href="#">Depilação a Laser Alexandrite</a></small></li>
-                            <li><small><a href="#">Depilação a Laser Nd:YAG</a></small></li>
-                        </ul>
-                    </li>
-                    <li><a href="./spa.html"><small><b>SPA</a></b></small>
-                        <ul>
-                            <li><small><a href="#">Massagem Relaxante</a></small></li>
-                            <li><small><a href="#">Banho de Ofurô</a></small></li>
-                            <li><small><a href="#">Tratamento de Pele</a></small></li>
-                            <li><small><a href="#">Aromaterapia</a></small></li>
-                            <li><small><a href="#">Yoga e Meditação</a></small></li>
-                            <li><small><a href="#">Aculpututa</a></small></li>
-                        </ul>
-                    </li>
-                    <li><small><a href="./podologia.html"><b>Podologia</b></a></small>
-                        <ul>
-                            <li><small><a href="#">Corte e Tratamento de Unhas</a></small></li>
-                            <li><small><a href="#">Tratamento de Calos e Calosidades</a></small></li>
-                            <li><small><a href="#">Reflexologia Podal</a></small></li>
-                            <li><small><a href="#">Tratamento de Fungos nas Unhas</a></small></li>
-                            <li><small><a href="#">Avaliação Postural</a></small></li>
-                        </ul>
-                    </li>
-                <li><a href="./agendamento.html"><small><b>Contato</b></a></small>
-                    <ul>
-                        <li><small><a href="tel:+5561980000000" target="_blank">Telefone</a></small></li>
-                        <li><small><a href="./agendamento.html">Agendamento de consulta</a></small></li>
-                        <li><small><a href="https://goo.gl/maps/spxzX4NMeBfw7o3H8" target="_blank">Localização</a></small></li>
-                    </ul>
+                <li><a href="#" id="con">Contato</a>
+                  <ul>
+                    <li><a href="tel:+5561980000000" target="_blank">Telefone</a></li>
+                    <li><a href="./agendamento.html">Agendamento</a></li>
+                    <li><a href="https://goo.gl/maps/spxzX4NMeBfw7o3H8" target="_blank">Localização</a></li>
+                  </ul>
                 </li>
-                
+                <button type="submit" id="login" value="Login"><a href="./login.html">Login</a></button> 
+                <a id="sair" href="">Sair</a>            
             </ul>
         </nav>
     </header>
@@ -117,51 +65,108 @@
 
                     
                    </div>
-                  <h2>Tratamentos</h2>
-                   <div class="card-container">
-                    <div class="card">
-                        <div class="card-front">
-                            <img id="img-card" src="./imagens/diodo.jpg" alt="Depilação a laser diodo">
-                            <h3>Diodo</h3>
-                        </div>
-                        <div class="card-back">
-                            <p>A depilação a laser com tecnologia de diodo é uma abordagem avançada e altamente eficaz para a remoção permanente ou de longa duração dos pelos indesejados. Esta técnica utiliza um laser de diodo, um dispositivo que emite luz altamente concentrada em um comprimento de onda específico, para direcionar a raiz do pelo, danificando-a e impedindo o crescimento futuro. </p>
-                        </div>
+                  <div class="container">
+                    <div id="text2"> 
+                        <h2>Depilação a Laser Diodo</h2>
+                        <p>A depilação a laser de diodo é uma técnica avançada e eficaz para a remoção de pelos indesejados. Este procedimento utiliza um laser de diodo para direcionar feixes de luz concentrada na melanina (pigmento que dá cor aos pelos) dos folículos capilares. A energia do laser é absorvida pela melanina, convertendo-se em calor e danificando o folículo piloso, impedindo assim o crescimento futuro do pelo.
+
+                        </p>
                     </div>
-                    <div class="card">
-                        <div class="card-front">
-                            <img id="img-card" src="./imagens/alexandrite.jpg" alt="Depelação a laser Alexandrite">
-                            <h3>Alexandrite</h3>
-                        </div>
-                        <div class="card-back">
-                            <p>A depilação a laser com tecnologia Alexandrite é uma das opções mais avançadas e eficazes para a remoção permanente ou de longa duração dos pelos indesejados. Utilizando um laser de Alexandrite, esta técnica direciona feixes de luz altamente concentrada para a raiz do pelo, danificando-a e impedindo o crescimento futuro. </p>
-                        </div>
+                    <div id="img-tratamentos" >
+                        <img id="img2" src="./imagens/diodo.jpg" alt="Laser Diodo">
+                    </div> 
                     </div>
-                    <div class="card">
-                        <div class="card-front">
-                            <img id="img-card" src="./imagens/depilrosto.png" alt="Lipo não cirurgica" >
-                            <h3>Nd:YAG</h3>
-                        </div>
-                        <div class="card-back">
-                            <p>A depilação com laser Nd:YAG é uma técnica avançada de remoção de pelos que utiliza a luz altamente concentrada do laser Nd:YAG para atingir a raiz dos pelos, danificando-as e interrompendo o seu crescimento. Essa tecnologia é reconhecida pela sua eficiência, versatilidade e capacidade de tratar uma variedade de tipos de pele, tornando-a uma opção popular para aqueles que buscam uma solução duradoura para a remoção de pelos indesejados.</p>
-                        </div>
+                    <div id="container-btm">
+                    <button class="btn-saibaMais" id="botao-saiba-mais1">Saiba Mais</button>
                     </div>
-                  </div>
-                 
+                     <div id="conteudo1" class="hidden-content">
+                     <div id="text2-2">
+                        <h3>Principais Benefícios</h3>
+                            <ul>
+                                <li>Eficácia comprovada na redução permanente dos pelos.</li>
+                                <li>Seguro e adequado para diferentes tons de pele.</li>
+                                <li>Confortável, com opções de resfriamento para minimizar o desconforto.</li>
+                                <li>Versátil, podendo ser usado em várias áreas do corpo.</li>
+                                <li>Resultados visíveis após algumas sessões.</li>
+                            </ul>
+
+                        <h2>Cuidados Antes e Depois do Tratamento</h2>
+                            <p>Antes de realizar o tratamento, é importante evitar a exposição solar e não fazer depilação com cera. Após o tratamento, siga as instruções do profissional para proteger a pele do sol e manter os resultados.</p>
+
+                            <p>Consulte um profissional qualificado para determinar se a depilação a laser de diodo é adequada para você e para obter informações detalhadas sobre o procedimento.</p>             
+                    </div>
+                    </div>
+                    </div>
+                    <div  class="container">
+                      <div id="text2">
+                        <h2>Depilação a Laser Alexandrite</h2>
+                             <p>A depilação a laser Alexandrite é uma técnica avançada e eficaz para a remoção permanente de pelos indesejados. Ela utiliza um laser de Alexandrite, que emite luz a um comprimento de onda específico, direcionando-a para os folículos capilares. Isso resulta na destruição seletiva das células germinativas do pelo, impedindo o crescimento futuro dos pelos.</p>
+                    </div>
+                      <div id="img-tratamentos" >            
+                        <img  id="img3" src="./imagens/alexandrite.jpg" alt="Laser Alexandrite">
+                    </div>
+                    </div>  
+                    <div id="container-btm">
+                    <button class="btn-saibaMais" id="botao-saiba-mais2">Saiba Mais</button>
+                    </div>
+                      <div id="conteudo2" class="hidden-content">         
+                      <div id="text2-2">
+                        <h3>Principais Benefícios</h3>
+                        <ul>
+                            <li>Elevada eficácia na redução permanente dos pelos.</li>
+                            <li>Segurança em diversos tipos de pele, incluindo peles mais claras.</li>
+                            <li>Procedimento rápido e com mínimo desconforto.</li>
+                            <li>Indicado para várias áreas do corpo, incluindo pernas, axilas, rosto e área do biquíni.</li>
+                            <li>Resultados visíveis após algumas sessões.</li>
+                        </ul>
+                    
+                        <h3>Cuidados Antes e Depois do Tratamento</h3>
+                        <p>Antes de realizar o tratamento de depilação a laser Alexandrite, evite a exposição solar e não faça depilação com cera. Após o tratamento, siga as orientações do profissional para proteger a pele do sol e garantir resultados duradouros.</p>
+                    
+                        <p>Consulte um profissional especializado para determinar se a depilação a laser Alexandrite é adequada para você e para obter informações detalhadas sobre o procedimento.</p>
+                    
+                    
+                      </div>
+                      </div>
+                      </div>
+                    <div  class="container">
+                      <div id="text2">
+                        <h2>Depilação a Laser ND:YAG</h2>
+                            <p>A depilação a laser ND:YAG é uma técnica altamente eficaz para a remoção permanente de pelos indesejados. Nesse procedimento, utiliza-se um laser de Nd:YAG, que emite luz em um comprimento de onda específico para direcionar o calor aos folículos capilares, danificando-os e impedindo o crescimento futuro dos pelos.</p>
+                    </div>
+                      <div id="img-tratamentos" >            
+                        <img  id="img3" src="./imagens/depilacao nd laser.png" alt="Reflexo Podal">
+                    </div>
+                    </div>  
+                    <div id="container-btm">
+                    <button class="btn-saibaMais" id="botao-saiba-mais3">Saiba Mais</button>
+                    </div>
+                      <div id="conteudo3" class="hidden-content">         
+                      <div id="text2-2">
+                        <h3>Principais Benefícios</h3>
+                        <ul>
+                            <li>Alta eficácia na redução permanente dos pelos.</li>
+                            <li>Seguro e adequado para uma variedade de tons de pele, incluindo peles mais escuras.</li>
+                            <li>Mínimo desconforto durante o procedimento.</li>
+                            <li>Pode ser aplicado em diferentes áreas do corpo, como pernas, axilas, rosto e área do biquíni.</li>
+                            <li>Resultados visíveis após algumas sessões.</li>
+                        </ul>
+                    
+                        <h2>Cuidados Antes e Depois do Tratamento</h2>
+                        <p>Antes de se submeter ao tratamento de depilação a laser ND:YAG, evite a exposição solar e não faça depilação com cera. Após o procedimento, siga as orientações do profissional para proteger a pele do sol e garantir resultados duradouros.</p>
+                    
+                        <p>É fundamental consultar um profissional especializado para determinar se a depilação a laser ND:YAG é adequada para você e para obter informações detalhadas sobre o procedimento.</p>
+                      </div>
+                      </div>
+                      </div>
             </section>
-
-              
-        
-        <div class="cadastro-whatsapp">
-            <h4>Receba informaçoes e ofertas pelo WhatsApp</h4>
-            <input type="text" id="nome" placeholder="Nome Completo" maxlength="50" >
-            <input type="email" id="email" placeholder="Email" maxlength="50" >
-            <input type="number" id="whatsapp" placeholder="WhatsApp" maxlength="11" >
-            <button id="cadastrar">Cadastrar</button>
-            <button id="cancelar">Cancelar</button>
-            
-        </div>
-
+                <div class="cadastro-whatsapp">
+                    <h4>Receba informaçoes e ofertas pelo WhatsApp</h4>
+                    <input type="text" id="nome" placeholder="Nome Completo" maxlength="50" >
+                    <input type="email" id="email" placeholder="Email" maxlength="50" >
+                    <input type="number" id="whatsapp" placeholder="WhatsApp" maxlength="11" >
+                    <button id="cadastrar">Cadastrar</button>
+                </div>
         </section>
         </main>
         <footer>
@@ -214,7 +219,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="script.js"></script>
+        <script src="./assets/js/menu.js"></script>
         <script src="./assets/js/login.js"></script>
+        <script src="./assets/js/cadWhatsapp.js"></script>
+        <script src="./assets/js/saibaMais.js"></script>
+
         </body>
         </html>

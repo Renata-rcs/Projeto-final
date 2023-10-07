@@ -132,10 +132,22 @@ nav{
 #login > a:hover{
     color: var(--corPrincipal);
 }
+#sair{
+    color: var(--light);
+    text-decoration:none; 
+    display: none; 
+    padding: 15px;
+}
 
 /* Estilo para mensagens de erro */
 .erro {
     border: 2px solid red;
+}
+#sair{
+    color: var(--light);
+    text-decoration:none; 
+    display: none; 
+    padding: 15px;
 }
 
 /* Main*/
@@ -150,10 +162,12 @@ main {
     background-color: rgba(148, 131, 134, 0.144);
     margin-bottom: 0;
     border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-html {
-    scroll-behavior: smooth;
-  }
+
 section {
    
     border-radius: 5px;
@@ -168,10 +182,7 @@ section {
     height: 400px;
     color: var(--light);
     border-radius: 5px;
-    display: flex;
-    
-   
-    
+    display: flex;    
 }
 .img-div1 {
     display: flex;
@@ -217,6 +228,9 @@ div{
 }
 p{
     color: var(--mid);
+}
+#texto-entrada{
+    border-bottom: 1px solid var(--corPrincipal);
 }
 #text1{
     text-align: justify;
@@ -298,20 +312,22 @@ p{
 /*cadastro whatsapp*/
 
 .cadastro-whatsapp{
-    height:100%;
+    height:220px;
     background-color: var(--corPrincipal);
     text-align: left;
     margin: 50px 0;
     border-radius: 5px;
+    width: 900px;
     padding: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .cadastro-whatsapp h4{
     font-family: 'Poppins', sans-serif;
-    margin: 10px;
+    margin-bottom: 20px;
     color: var(--light);
     font-weight: bold;
-    font-size: 20px;
+    padding: 20px;
+    font-size: 18px;
 }
 input{
     border-radius: 5px;
@@ -392,23 +408,6 @@ input{
     color: var(--mid);
     background-color:var(--footer);
 }
-/* Estilos para o menu quando a classe .menu-ativo é aplicada */
-.menu-ativo {
-    display: block!important;
-    background-color:var(--corPrincipal);
-    color:var(--mid);
-    padding: 30px;
-    top:100%;
-    position: absolute;
-    right: 0;
-    z-index: 99;
-}
-.menu-ativo ul:hover{
-    color: var(--light);
-}
-.menu-ativo ul ul{
-    display: none !important;
-}
 
 #hamburguer{
     position: absolute;
@@ -418,17 +417,44 @@ input{
     cursor: pointer;
 }
 @media (max-width: 1000px) {
+    .menu-ativo {
+        display: block!important;
+        background-color:var(--corPrincipal);
+        color: var(--light);
+        padding: 30px 0;
+        top:100%;
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .menu-ativo ul:hover{
+        color: var(--footer)
+    }
+    .menu-ativo ul ul{
+        display: flex;
+        width: 100%;
+    }
+   
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     nav{
         justify-content: space-between;
        
     }
-    #pesquisar{
-       display: none;
+    #login {
+        padding: 0;
+        margin: 10px;
+        font-size: 16px;
+        background-color: var(--light)!important;
+        & > a{
+            color: var(--corPrincipal);
+        }
     }
-    #input-pesquisar{
-        display: none;
-    }
- 
+    
     #hamburguer {
         display: block;
     }
@@ -442,16 +468,39 @@ input{
         right: 0;
         position: relative;
         top: 100%;
-        background-color:var(--corPrincipal);
+        background-color:var(--corPrincipal)
     }
    
     .dp-menu ul ul{
         display: none;
+        z-index: 2;
     }
-   #login{
-        margin: 0;
+    .dp-menu ul ul li a{
+        z-index: 2;
+        margin: 5px 0;
+    }
+    #login {
         padding: 0;
-   }
+        font-size: 16px;
+        background-color: var(--light)!important;
+        & > a{
+            color: var(--corPrincipal);
+        }
+    }
+    .menu-ativo #login {
+        background-color: var(--light)!important; /* Restaure o fundo do botão de login no menu ativo */
+        position: absolute;
+        z-index: 1; /* Certifique-se de que o botão de login fique acima do menu ativo */
+        top: -30%;
+        right: 0; /* Ajuste este valor conforme necessário para controlar a distância entre o menu e o botão de login */
+      }
+    .menu-ativo #sair {
+        position: absolute;
+        z-index: 1;
+        top: -30%;
+        right: 10%; 
+      }
+   
     main{
         display: flex;
         flex-direction: column;
@@ -459,10 +508,9 @@ input{
         width: 100%;
  
     }
-    html {
-        scroll-behavior: smooth;
+     h1, #tratamentos{
+        font-size: 3em!important;
     }
-    
    
     .principal{
         top: 100%;
@@ -470,17 +518,14 @@ input{
         width:100%;
         margin: 0;
      }
-     #h1-principal{
-         font-size: 30px;
-         margin: 0;
-     }
+   
      section{
          min-height: 0;
          display:flex;
          align-items: center;
          flex-direction: column;
          margin: 0;
-         width: 100%;
+         width: 99%;
          
      }
      #img-entrada{
@@ -489,8 +534,6 @@ input{
     }
 
     .card-container{
-        display: block;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-bottom: 0;
@@ -507,6 +550,7 @@ input{
     }
     .card{
         align-items: center;
+        max-width: 200px;
         margin: 5px;
         width: 100%;
     }
@@ -517,13 +561,10 @@ input{
          display: block;
          flex-direction: column;
     }
-     #h1-principal{
-        font-size: 30px;
-     } 
-    .principal{
-        margin: 0;
-        width: 80%;
-    }
+    .card-back p{
+        font-size: 10px;
+    } 
+    
     #preenchimentoFacial, #limpeza-de-pele, #botox, #acne{
         text-align: center;
         font-size: 18px;
@@ -552,6 +593,7 @@ input{
    }
    #cadastrar{
         padding: 5px;
+        margin: 4px;
         font-size: 12px;
    }
     #titulo-carrocel{
@@ -571,3 +613,9 @@ input{
         
     }
 }   
+@media (max-width: 500px){
+    h1, #tratamento{
+        font-size: 30px!important;
+    }
+
+}

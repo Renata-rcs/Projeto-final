@@ -11,90 +11,38 @@
 </head>
 <body>
     <header>
-        <nav class="nav-1">
-            <img src="./imagens/Logo Emagreça.png" width="200px">
-            <div class="search-container">
-                <input id="input-pesquisar" type="text" class="search-input" placeholder="Pesquisar...">
-                <span id="pesquisar" class="material-symbols-outlined search-icon">search</span>
-            </div>            
-        </nav>
-        <span id="hamburguer" class="material-symbols-outlined">menu</span>
-        <nav class="dp-menu">
-            <ul>
-                <li><small><a href="./index.html">Inicio</a></small></li>
-                <li><small><a href="./clinca.html">Clinica</a></small>
-                    <ul>
-                        <li><small><a href="#"><small>Sobre nós</a></small></li>
-                        <li><small><a href="#">Colaboradores</a></small></li>
-                    </ul>
-                </li>
-                    <li><small><a href="./capilar.html">Capilar</a></small>
-                        <ul>
-                            <li><small><a href="#">Transplante Capilar</a></small></li>
-                            <li><small><a href="#">Tratamento de Calvície</a></small></li>
-                            <li><small><a href="#">Terapia a Laser</a></small></li>
-                            <li><small><a href="#">Microagulhamento Capilar</a></small></li>
-                            <li><small><a href="#">Tratamento de Caspa</a></small></li>
-                            <li><small><a href="#">Massagem Capilar</a></small></li>
-                        </ul>
-                    </li>
-                    <li><small><a href="./estetica-facial.html">Estética Facial</a></small>
-                        <ul>
-                            <li><small><a class="nav-link active" aria-current="page" href="#limpeza-de-pele">Limpeza de Pele</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#acne">Tratamento de Acne</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#microdermoabrasao">Microdermoabrasão</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#preenchimentoFacial">Preenchimento Facial</a></small></li>
-                            <li><small><a class="nav-link active" aria-current="page" href="#botox">Botox</a></small></li>
-                            <li><small><a href="#">Fios de sustentação</a></small></li>
-                        </ul>
-                    </li>
-                    <li><a href="./estetica-corporal.html"><small>Estética Corporal</a></small>
-                        <ul>
-                            <li><small><a href="#">Massagem Modeladora</a></small></li>
-                            <li><small><a href="#">Drenagem Linfática</a></small></li>
-                            <li><small><a href="#">Lipoaspiração não Cirúrgica</a></small></li>
-                            <li><small><a href="#">Tratamento de Celulite</a></small></li>
-                            <li><small><a href="#">Endermologia</a></small></li>
-                            <li><small><a href="#">Criolipólise</a></small></li>
-                        </ul>
-                    </li>
-                    <li><a href="./depilacao-laser.html"><small>Depilação a laser</a></small>
-                        <ul>
-                            <li><small><a href="#">Depilação a Laser de Diodo</a></small></li>
-                            <li><small><a href="#">Depilação a Laser Alexandrite</a></small></li>
-                            <li><small><a href="#">Depilação a Laser Nd:YAG</a></small></li>
-                        </ul>
-                    </li>
-                    <li><a href="./spa.html"><small>SPA</a></small>
-                        <ul>
-                            <li><small><a href="#">Massagem Relaxante</a></small></li>
-                            <li><small><a href="#">Banho de Ofurô</a></small></li>
-                            <li><small><a href="#">Tratamento de Pele</a></small></li>
-                            <li><small><a href="#">Aromaterapia</a></small></li>
-                            <li><small><a href="#">Yoga e Meditação</a></small></li>
-                            <li><small><a href="#">Aculpututa</a></small></li>
-                        </ul>
-                    </li>
-                    <li><small><a href="./podologia.html">Podologia</a></small>
-                        <ul>
-                            <li><small><a href="#">Corte e Tratamento de Unhas</a></small></li>
-                            <li><small><a href="#">Tratamento de Calos e Calosidades</a></small></li>
-                            <li><small><a href="#">Reflexologia Podal</a></small></li>
-                            <li><small><a href="#">Tratamento de Fungos nas Unhas</a></small></li>
-                            <li><small><a href="#">Avaliação Postural</a></small></li>
-                        </ul>
-                    </li>
-                <li><a href="./agendamento.html"><small>Contato</a></small>
-                    <ul>
-                        <li><small><a href="tel:+5561980000000" target="_blank">Telefone</a></small></li>
-                        <li><small><a href="./agendamento.html">Agendamento de consulta</a></small></li>
-                        <li><small><a href="https://goo.gl/maps/spxzX4NMeBfw7o3H8" target="_blank">Localização</a></small></li>
-                    </ul>
-                </li>
-                
-            </ul>
-        </nav>
-    </header>
+    <nav id="nav-logo">
+        <a href="index.html"><img id="logo" src="./imagens/Logo Emagreça.png" alt="Logo Emagreça"></a>
+    </nav>
+    <span id="hamburguer" class="material-symbols-outlined">menu</span>
+    <nav class="dp-menu">
+        <ul>
+            <li><a href="./clinca.html">Clinica</a>
+            </li>
+          </li>
+          <li><a  href="#" id="tra">Tratamentos</a>
+          <!-- <li><a  href="index.html#tratamentos">Tratamentos</a> -->
+                <ul>
+                    <li><a href="capilar.html">Capilar</a></li>
+                    <li><a href="./estetica-facial.html">Facial</a></li>
+                    <li><a href="./estetica-corporal.html">Corporal</a></li>
+                    <li><a href="./depilacao-laser.html">Depilação a laser</a></li>
+                    <li><a href="./spa.html">SPA</a></li>
+                    <li><a href="./podologia.html">Podologia</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="con">Contato</a>
+              <ul>
+                <li><a href="tel:+5561980000000" target="_blank">Telefone</a></li>
+                <li><a href="./agendamento.html">Agendamento</a></li>
+                <li><a href="https://goo.gl/maps/spxzX4NMeBfw7o3H8" target="_blank">Localização</a></li>
+              </ul>
+            </li>
+            <button type="submit" id="login" value="Login"><a href="./login.html">Login</a></button> 
+            <a id="sair" href="">Sair</a>            
+        </ul>
+    </nav>
+</header>
     <main>
         <section class="principal">
             <section>
@@ -106,16 +54,16 @@
                    </div>
                    <div class="container-text1">
                     <div id="texto1" >
-                        <h2 id="textos-principais">Relaxamento e Renovação</h2>
+                        <h2>Relaxamento e Renovação</h2>
                         <p>Em um mundo cada vez mais agitado e exigente, encontrar momentos de tranquilidade e cuidado pessoal tornou-se essencial para a nossa saúde e equilíbrio. É nesse cenário que os spas desempenham um papel fundamental, proporcionando um refúgio de relaxamento e rejuvenescimento. Neste texto, convidamos você a fazer uma viagem ao mundo de bem-estar de nosso spa, onde o cuidado com o corpo e a mente se torna uma prioridade.</p>   
                     </div>
                     <div id="texto2">
-                        <h2 id="textos-principais">O Ambiente Sereno:</h2>
-                        <p>Ao entrar em nosso spa, você será imediatamente envolvido por uma atmosfera serena e acolhedora. A decoração foi cuidadosamente escolhida para criar um ambiente de tranquilidade, com cores suaves, iluminação ambiente e aromas suaves que despertam os sentidos. Cada detalhe foi projetado para proporcionar uma sensação de escape do mundo exterior e uma imersão na jornada de bem-estar que o aguarda.</p>
+                        <h2>O Ambiente Sereno:</h2>
+                        <p >Ao entrar em nosso spa, você será imediatamente envolvido por uma atmosfera serena e acolhedora. A decoração foi cuidadosamente escolhida para criar um ambiente de tranquilidade, com cores suaves, iluminação ambiente e aromas suaves que despertam os sentidos. Cada detalhe foi projetado para proporcionar uma sensação de escape do mundo exterior e uma imersão na jornada de bem-estar que o aguarda.</p>
+
                     </div>
                     </div>
-                
-                  <h2>Tratamentos</h2>
+                  <h2 id="tratamento">Tratamentos</h2>
                    <div class="card-container">
                     <div class="card">
                         <div class="card-front">
@@ -144,8 +92,6 @@
                             <p>A saúde e a beleza da pele são aspectos importantes da nossa vida diária, refletindo não apenas nossa estética, mas também nossa saúde e bem-estar em geral. O tratamento de pele é uma prática essencial que visa cuidar e melhorar a saúde da nossa maior barreira de proteção. Neste texto, vamos explorar a importância do tratamento de pele e como ele pode ajudar a revelar a sua beleza natural.</p>
                         </div>
                     </div>
-                  </div>
-                   <div class="card-container">
                     <div class="card">
                         <div class="card-front">
                             <img id="img-card" src="./imagens/aromaterapia.png" alt="Aromaterapia">
@@ -163,7 +109,7 @@
                         <div class="card-back">
                             <p>Em um mundo cada vez mais agitado e repleto de demandas, encontrar maneiras de alcançar a serenidade interior e o equilíbrio mental é fundamental para o nosso bem-estar. O yoga e a meditação são práticas ancestrais que oferecem um refúgio de tranquilidade e uma jornada para o autodescobrimento. Neste texto, convidamos você a explorar os benefícios do yoga e da meditação, que podem ser a chave para uma vida mais equilibrada e saudável.</p>
                         </div>
-                    </div>y
+                    </div>
                     <div class="card" >
                         <div class="card-front">
                             <img id="img-card" src="./imagens/acupuntura.jpg" alt="Acupuntura" >
@@ -237,7 +183,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="spa.js"></script>
+        <script src="./assets/js/menu.js"></script>
         <script src="./assets/js/login.js"></script>
+        <script src="./assets/js/cadWhatsapp.js"></script>
         </body>
         </html>

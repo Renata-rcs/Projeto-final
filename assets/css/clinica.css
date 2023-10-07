@@ -16,11 +16,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     width: 100vw;
-    height: 100vh;
+    height: 100vh; 
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
 }
 header{
     display: flex;
@@ -59,7 +59,7 @@ nav{
     font-size: 15px;
     display: inline;
     position: relative;
-    padding: 20px;
+    padding: 5px;
     color: var(--light);
    
 }
@@ -67,6 +67,7 @@ nav{
     color: var(--light);
     text-decoration: none;
     display: inline-block;
+    padding: 10px ;
 }
 .dp-menu ul li a:hover{
     color: var(--light);
@@ -90,33 +91,28 @@ nav{
 .dp-menu ul ul li a{
     display: block;
     margin: 0 10px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .dp-menu ul ul{
     width: 150px;
     
 }
-.dp-menu ul ul li a{
-    display: block;
-    margin: 0;
-}
+
 .dp-menu ul ul{
     width: 150px;
     
 }
-.dp-menu ul ul li a{
-    display: block;
-}
 #login{
-    border-color: 2px var(--light);
     border-radius: 5px;
     padding: 8px 12px;
     background-color: var(--corPrincipal);
     color: var(--light);
     cursor:pointer;
     margin: 20px;
-    border: var(--light);
+    border: none;
+  
+
 }
 #login a{
     text-decoration: none;
@@ -124,14 +120,21 @@ nav{
     color: var(--light);
 }
 #login:hover{
-    transform: scale(1,1);
-}
-#login:hover{
     background-color: var(--light);
-    transform: scale(1,1);
+    transition: transform 0.5s ease; 
 }
 #login > a:hover{
     color: var(--corPrincipal);
+}
+/* Estilo para mensagens de erro */
+.erro {
+    border: 2px solid red;
+}
+#sair{
+    color: var(--light);
+    text-decoration:none; 
+    display: none; 
+    padding: 15px;
 }
 .car{
     width: 80%;
@@ -334,8 +337,6 @@ footer {
     color: var(--mid);
     background-color:var(--footer);
 }
-
-
 #hamburguer{
     position: absolute;
     display: none;
@@ -344,36 +345,29 @@ footer {
     cursor: pointer;
 }
 @media (max-width: 900px) {
-    /* Estilos para o menu quando a classe .menu-ativo é aplicada */
-.menu-ativo {
-    display: block!important;
-    background-color:var(--corPrincipal);
-    color: var(--mid);
-    padding: 30px;
-    top:100%;
-    position: absolute;
-    right: 0;
-    z-index: 99;
-    width: 100%;
-}
-.menu-ativo ul:hover{
-    color: var(--ligh);
-}
-.menu-ativo ul ul{
-    display: none !important;
-}
-
-#hamburguer{
-    position: absolute;
-    display: none;
-    color: var(--light);
-    right: 50px;
-    cursor: pointer;
-}
+    .menu-ativo {
+        display: block!important;
+        background-color:var(--corPrincipal);
+        color: var(--light);
+        padding: 30px 0;
+        top:100%;
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .menu-ativo ul:hover{
+        color: var(--footer)
+    }
+    .menu-ativo ul ul{
+        display: flex;
+        width: 100%;
+    }
+   
     main{
+        display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
     }
     nav{
         justify-content: space-between;
@@ -381,12 +375,10 @@ footer {
     }
     #logo{
         margin: 0 10px;
-        width: 150;
+        width: 150px;
     }
-    section{
+    #hamburguer {
         display: block;
-        align-items: center;
-        margin: 0;
     }
     .dp-menu{
         display: none;
@@ -400,24 +392,40 @@ footer {
         top: 100%;
         background-color:var(--corPrincipal)
     }
-    #login{
-        padding: 0;
-        margin: 0;
-    }
    
     .dp-menu ul ul{
-        display: none!important;
+        display: none;
+        z-index: 2;
+    }
+    .dp-menu ul ul li a{
+        z-index: 2;
+        margin: 5px 0;
+    }
+    #login {
+        padding: 0;
+        font-size: 16px;
+        background-color: var(--light)!important;
+        & > a{
+            color: var(--corPrincipal);
+        }
+    }
+    .menu-ativo #login {
+        background-color: var(--light)!important; /* Restaure o fundo do botão de login no menu ativo */
+        position: absolute;
+        z-index: 1; /* Certifique-se de que o botão de login fique acima do menu ativo */
+        top: -30%;
+        right: 0; /* Ajuste este valor conforme necessário para controlar a distância entre o menu e o botão de login */
+      }
+    .menu-ativo #sair {
+        position: absolute;
+        z-index: 1;
+        top: -30%;
+        right: 10%; 
+      }
+    #hamburguer{
+        display: block!important;
     }
    
-    #pesquisar{
-        display: none;
-     }
-     #input-pesquisar{
-         display: none;
-     }
-     #hamburguer{
-        display: block;
-     }
      .container-instalacoes{
         display: flex;
         flex-direction: column;
