@@ -237,7 +237,7 @@ section {
     width: 100%;
     display: flex;
     justify-content:space-around;
-    margin: 20px;
+
 }
 #colabroradores{
     margin: 0 15%;
@@ -246,7 +246,7 @@ section {
 #text-equipe p{
     width: 50%;
     margin: 20px;
-    color: #333;
+    color:var(--mid);
 }
 
 #h3-text-equipe{
@@ -269,7 +269,7 @@ section {
     font-weight: bold;
     margin: 20px;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     
 }
 
