@@ -116,22 +116,22 @@ function submitRating() {
 }
 
 
-function toggleSections() {
-  const entradaSection = document.querySelector('entrada');
-  const caroucelSection = document.querySelector('caroucel-1');
+// function toggleSections() {
+//   const entradaSection = document.querySelector('entrada');
+//   const caroucelSection = document.querySelector('caroucel-1');
 
-  if (window.innerWidth < 750) {
-      entradaSection.style.display = 'none';
-      caroucelSection.style.display = 'block';
-  } else {
-      entradaSection.style.display = 'block';
-      caroucelSection.style.display = 'none';
-  }
-}
+//   if (window.innerWidth < 750) {
+//       entradaSection.style.display = 'none';
+//       caroucelSection.style.display = 'block';
+//   } else {
+//       entradaSection.style.display = 'block';
+//       caroucelSection.style.display = 'none';
+//   }
+// }
 
-// Execute a função quando a página carregar e quando a janela for redimensionada
-window.addEventListener('load', toggleSections);
-window.addEventListener('resize', toggleSections);
+// // Execute a função quando a página carregar e quando a janela for redimensionada
+// window.addEventListener('load', toggleSections);
+// window.addEventListener('resize', toggleSections);
 
 
 const feedback = document.querySelector("#feedback")
@@ -139,3 +139,38 @@ const feedback = document.querySelector("#feedback")
 if(!localStorage.getItem("contaLogada")) {
   feedback.style.display = "none"
 }
+
+const textElement = document.getElementById('welcome-text');
+const lines = ['Sejam', 'Bem-Vindos'];
+let lineIndex = 0;
+let charIndex = 0;
+
+function animateText() {
+    if (lineIndex < lines.length) {
+        const currentLine = lines[lineIndex];
+        if (charIndex < currentLine.length) {
+            textElement.innerHTML += currentLine.charAt(charIndex);
+            charIndex++;
+        } else {
+            lineIndex++;
+            charIndex = 0;
+            textElement.innerHTML += '<br>';
+        }
+        setTimeout(animateText, 50); // Ajuste o tempo conforme necessário
+    } else {
+        // Reiniciar a animação após a exibição completa do texto
+        setTimeout(resetText, 2000); // Espera 2 segundos e, em seguida, reinicia
+    }
+}
+
+function resetText() {
+    textElement.innerHTML = '';
+    lineIndex = 0;
+    charIndex = 0;
+    setTimeout(animateText, 50);
+}
+
+animateText();
+
+
+

@@ -317,36 +317,39 @@ p{
     text-align: left;
     margin: 50px 0;
     border-radius: 5px;
-    width: 900px;
     padding: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .cadastro-whatsapp h4{
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
+    margin: 10px;
     color: var(--light);
     font-weight: bold;
-    padding: 20px;
-    font-size: 18px;
+    font-size: 20px;
 }
+
 input{
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
     width: 220px;
+    
 }
 #cadastrar{
-    width: 120px;
+    width: 100px;
     color: var(--corPrincipal);
     border-radius: 5px;
     padding: 5px;
 }
-
+.erro{
+    border: 2px solid red;
+}
 #cadastrar:hover{
     background-color: var(--corPrincipal);
-    color: var(--ligh);
+    color: var(--light);
     transform: scale(1.2);
 }
+
 
 .titulofooter{
     margin: 20px;
@@ -492,7 +495,7 @@ input{
         position: absolute;
         z-index: 1; /* Certifique-se de que o botão de login fique acima do menu ativo */
         top: -30%;
-        right: 0; /* Ajuste este valor conforme necessário para controlar a distância entre o menu e o botão de login */
+        right: 20px; /* Ajuste este valor conforme necessário para controlar a distância entre o menu e o botão de login */
       }
     .menu-ativo #sair {
         position: absolute;
@@ -582,20 +585,20 @@ input{
         margin: 10px 0;
     }
     input{
-        width: 180px;
-   }
-   .cadastro-whatsapp{
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding: 40px;
-        margin: 0;
-   }
-   #cadastrar{
-        padding: 5px;
-        margin: 4px;
-        font-size: 12px;
-   }
+        width: 90%;
+    }
+    .cadastro-whatsapp{
+       justify-content: center;
+       align-items: center;
+       height: 80%;
+       padding: 20px;
+       margin: 20px;
+    }
+    #cadastrar{
+       padding: 5px;
+       margin: 4px;
+       font-size: 12px;
+    }
     #titulo-carrocel{
         font-size: 20px;
     }

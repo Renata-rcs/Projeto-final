@@ -267,9 +267,8 @@ h2{
 }
 
 .cadastro-whatsapp{
-    align-items: center;
     height:220px;
-    background-color:var(--corPrincipal);
+    background-color: var(--corPrincipal);
     text-align: left;
     margin: 50px 0;
     border-radius: 5px;
@@ -278,11 +277,10 @@ h2{
 }
 .cadastro-whatsapp h4{
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
+    margin: 10px;
     color: var(--light);
     font-weight: bold;
     font-size: 20px;
-    padding: 18px;
 }
 
 input{
@@ -293,14 +291,19 @@ input{
     
 }
 #cadastrar{
-    color:var(--corPrincipal);
+    width: 100px;
+    color: var(--corPrincipal);
     border-radius: 5px;
     padding: 5px;
 }
 .erro{
     border: 2px solid red;
 }
-
+#cadastrar:hover{
+    background-color: var(--corPrincipal);
+    color: var(--light);
+    transform: scale(1.2);
+}
 
  footer {
     display: flex;
@@ -309,7 +312,7 @@ input{
     font-size: 12px;
     margin-bottom: 0;
    
- }
+}
 .footer{
     display: flex;
     justify-content: space-between;
@@ -436,15 +439,15 @@ p{
         background-color: var(--light)!important; /* Restaure o fundo do botão de login no menu ativo */
         position: absolute;
         z-index: 1; /* Certifique-se de que o botão de login fique acima do menu ativo */
-        top: -30%;
+        top: -35%;
         right: 0; /* Ajuste este valor conforme necessário para controlar a distância entre o menu e o botão de login */
-      }
+    }
     .menu-ativo #sair {
         position: absolute;
         z-index: 1;
-        top: -0%;
+        top: -35%;
         right: 10%; 
-      }
+    }
     main{
         display: flex;
         flex-direction: column;
@@ -511,34 +514,29 @@ p{
          flex-direction: column;
     }
     input{
-        width: 220px;
-   }
-    .cadastro-whatsapp{
-        justify-content: center;
-        align-items: center;
-        height: 80%;
-        padding: 40px;
         width: 90%;
-        margin: 0;
+    }
+    .cadastro-whatsapp{
+       justify-content: center;
+       align-items: center;
+       height: 80%;
+       padding: 20px;
+       margin: 20px;
     }
     #cadastrar{
-        padding: 5px;
-        margin: 4px;
-        font-size: 12px;
+       padding: 5px;
+       margin: 4px;
+       font-size: 12px;
     }
-     .footer{
+    .footer{
          flex-direction: column;
          display: block;
          height: min-content;
          width: auto;
  
-     }
-     .re{
+    }
+    .re{
          width: auto;
-     }
-     }
-     @media (max-width: 300px) {
-    input{
-        width: 100%;
-   }
+    }
 }
+ 

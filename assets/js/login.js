@@ -114,29 +114,30 @@ function isValidEmail(oemail) {
 function fazerLogin() {
     const emailLogin = document.getElementById('rlogin').value;
     const senhaLogin = document.getElementById('rsenha').value;
-    let userDataJSON = []
+    let userDataJSON = [];
 
     if (localStorage.getItem('userData')) {
         userDataJSON = [...JSON.parse(localStorage.getItem("userData"))];
         if (emailLogin != "" && senhaLogin != "") {
-            const index = userDataJSON.findIndex( coiso => {
-                return coiso.email == emailLogin
-            })
-            
-            if (userDataJSON[index].senha == senhaLogin && index != -1) {
-                console.log(userDataJSON.nome)
+            const index = userDataJSON.findIndex(coiso => {
+                return coiso.email == emailLogin;
+            });
+
+            if (index != -1 && userDataJSON[index].senha == senhaLogin) {
                 alert('Login bem-sucedido! Bem-vindo, ' + userDataJSON[index].nome);
-                localStorage.setItem("contaLogada", JSON.stringify(userDataJSON[index]))
+                localStorage.setItem("contaLogada", JSON.stringify(userDataJSON[index]));
                 window.location.href = 'index.html';
+            } else {
+                alert('Credenciais de login inválidas. Por favor, tente novamente.');
             }
-            
         } else {
-            alert('Credenciais de login inválidas. Por favor, tente novamente.');
+            alert('Por favor, preencha todos os campos de login.');
         }
     } else {
         alert('Nenhum usuário cadastrado. Por favor, faça o cadastro primeiro.');
     }
 }
+
 
 
 const loginButton = document.getElementById('submit');

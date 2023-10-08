@@ -299,11 +299,10 @@ h2{
 }
 .cadastro-whatsapp h4{
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
+    margin: 10px;
     color: var(--light);
     font-weight: bold;
     font-size: 20px;
-    padding: 18px;
 }
 
 input{
@@ -314,11 +313,10 @@ input{
     
 }
 #cadastrar{
-    width: 120px;
+    width: 100px;
     color: var(--corPrincipal);
     border-radius: 5px;
     padding: 5px;
-    margin: 5px;
 }
 .erro{
     border: 2px solid red;
@@ -328,6 +326,7 @@ input{
     color: var(--light);
     transform: scale(1.2);
 }
+
 
  footer {
     display: flex;
@@ -549,28 +548,28 @@ p{
         font-size: 10px;
     } 
     input{
-         width: 180px;
+        width: 90%;
     }
     .cadastro-whatsapp{
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding: 40px;
-        margin: 0;
-   }
-   #cadastrar{
-        padding: 5px;
-        margin: 4px;
-        font-size: 12px;
-   }
-     .footer{
+       justify-content: center;
+       align-items: center;
+       height: 80%;
+       padding: 20px;
+       margin: 20px;
+    }
+    #cadastrar{
+       padding: 5px;
+       margin: 4px;
+       font-size: 12px;
+    }
+    .footer{
          flex-direction: column;
          display: block;
          height: min-content;
          width: auto;
  
-     }
-     .re{
+    }
+    .re{
          width: auto;
-     }
-     }
+    }
+}

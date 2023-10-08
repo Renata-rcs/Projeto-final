@@ -180,8 +180,7 @@ h1{
 }
 
 #img-entrada{
-    height: 500px;
-    margin-bottom: 50px;
+   width:100% ;
 }
 #text-entrada{
     text-align: left;
@@ -297,11 +296,10 @@ p{
 }
 .cadastro-whatsapp h4{
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
+    margin: 10px;
     color: var(--light);
     font-weight: bold;
     font-size: 20px;
-    padding: 18px;
 }
 
 input{
@@ -317,11 +315,15 @@ input{
     border-radius: 5px;
     padding: 5px;
 }
+.erro{
+    border: 2px solid red;
+}
 #cadastrar:hover{
     background-color: var(--corPrincipal);
     color: var(--light);
     transform: scale(1.2);
 }
+
 
  footer {
     display: flex;
@@ -473,8 +475,7 @@ p{
  
     }
     #img-entrada{
-        width: 200px;
-        margin: 30px;
+        margin-top: 50px;
     }
    
     #text-entrada{
@@ -537,29 +538,28 @@ p{
          flex-direction: column;
     }
     input{
-        width: 220px;
+        width: 90%;
     }
     .cadastro-whatsapp{
-        justify-content: center;
-        align-items: center;
-        height: 80%;
-        padding: 40px;
-        margin: 20px 0;
+       justify-content: center;
+       align-items: center;
+       height: 80%;
+       padding: 20px;
+       margin: 20px;
     }
     #cadastrar{
-        padding: 5px;
-        margin: 4px;
-        font-size: 12px;
+       padding: 5px;
+       margin: 4px;
+       font-size: 12px;
     }
-
-     .footer{
+    .footer{
          flex-direction: column;
          display: block;
          height: min-content;
          width: auto;
  
-     }
-     .re{
+    }
+    .re{
          width: auto;
-     }
-     }
+    }
+}

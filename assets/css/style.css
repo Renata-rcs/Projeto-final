@@ -876,6 +876,7 @@ p{
     #hamburguer{
         display: block!important;
     }
+   
     section{
         display: block;
         justify-content: center;
@@ -1157,6 +1158,23 @@ p{
          margin: 40px 0;
 
     }
+    .animation {
+        text-align: left!important; 
+    }
+    .line {
+        margin-bottom: 20px!important; /* Margem de 20 pixels entre as linhas */
+    }
+    
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        color: var(--corPrincipal);
+        top: 25%;
+        left: 10%;
+        position: absolute;
+       
+    }
     .caroucel-1{
         display: flex!important;
         flex-direction: column;
@@ -1195,7 +1213,17 @@ p{
     
     
 }
+@media (max-width: 550px) {
+    h1{
+        font-size:25px;
+        top: 20%;
+    }
+}
 @media (max-width: 480px) {
+        h1{
+            font-size: 90%;
+            top: 18%;
+        }
         #titulo-tratamentos{
             font-size: 25px;
             margin: 20px 0;

@@ -225,27 +225,7 @@ form {
     overflow-y: scroll;
     position: relative;
 }
-#esconde-form {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: var(--light);
-    display: flex;
-    left: 0;
-    top: 0;
-    justify-content: center;
-    align-items: center;
 
-    & > span {
-        font-size: 2.5em;
-        text-align: center;
-
-        & > a {
-            color: inherit;
-            text-decoration: none;
-        }
-    }
-}
 /* Estilo para os rótulos */
 label {
     display: block;
@@ -300,32 +280,28 @@ input[type="submit"] {
     height:220px;
     background-color: var(--corPrincipal);
     text-align: left;
-    color: var(--ligh);
     margin: 50px 0;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
-
-.cadastro-whatsapp input{
-    border-radius: 5px;
-    width: 20%;
-    padding: 5px;
-    margin: 5px;
-    color: var(--light);
-    
-}
 .cadastro-whatsapp h4{
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
+    margin: 10px;
     color: var(--light);
     font-weight: bold;
     font-size: 20px;
-    padding: 18px;
 }
 
+input{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 220px;
+    
+}
 #cadastrar{
-    width: 80px;
+    width: 100px;
     color: var(--corPrincipal);
     border-radius: 5px;
     padding: 5px;
@@ -334,10 +310,11 @@ input[type="submit"] {
     border: 2px solid red;
 }
 #cadastrar:hover{
-    background-color:var(--corPrincipal);
-    color: var(--ligh);
+    background-color: var(--corPrincipal);
+    color: var(--light);
     transform: scale(1.2);
 }
+
 .icone-footer{
     width: 25px;
     height: 25px;
