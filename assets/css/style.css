@@ -948,10 +948,6 @@ p{
    }
    .carousel-container-2{
     margin-bottom: 0;
-   }
-   #tratamentos{
-    height:200px;
-    margin-bottom: 0;
    } 
    
    #cadastro-whatsapp{
@@ -1236,28 +1232,13 @@ p{
             font-weight: 500;
             color: var(--corPrincipal);
         }
-        
-        #tratamentos{
-            display: flex;
-            max-height: 200px;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 0;
-
-        }
-        .menu-list {
-            list-style-type: none; 
-            padding: 0;
-            margin: 0;
-        }
-
         .carousel-item-2 {
             max-width: 100%; /* Define a largura máxima */
             max-height: 100%; /* Define a altura máxima */
             margin-right: 10px;
             border-radius: 5px;
-            height:200px;
+            height:100px!important;
+            width: 200px;
             margin-bottom: 0;
         }
         #feed{
@@ -1347,24 +1328,6 @@ p{
 }
 @media (max-width: 300px){
 
-    #tratamentos{
-        max-height: 100px;
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        margin:0;
-        height: 100px!important;
-    }
-    .carousel-item-2 {
-        max-width: 100%; /* Define a largura máxima */
-        max-height: 100%; /* Define a altura máxima */
-        margin-right: 10px;
-        border-radius: 5px;
-        height:100px!important;
-        width: 200px;
-        margin-bottom: 0;
-    }
+    
   
 }
