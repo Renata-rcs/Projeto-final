@@ -275,79 +275,47 @@ input[type="submit"] {
     display: block;
     margin: 40px 0;
 }
-/*cadastro whatsapp*/
-.cadastro-whatsapp{
-    height:220px;
-    background-color: var(--corPrincipal);
-    text-align: left;
-    margin: 50px 0;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-.cadastro-whatsapp h4{
-    font-family: 'Poppins', sans-serif;
-    margin: 10px;
-    color: var(--light);
-    font-weight: bold;
-    font-size: 20px;
-}
-
-input{
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-    width: 220px;
-    
-}
-#cadastrar{
-    width: 100px;
-    color: var(--corPrincipal);
-    border-radius: 5px;
-    padding: 5px;
-}
-.erro{
-    border: 2px solid red;
-}
-#cadastrar:hover{
-    background-color: var(--corPrincipal);
-    color: var(--light);
-    transform: scale(1.2);
-}
 
 .icone-footer{
     width: 25px;
     height: 25px;
-    margin-bottom: 10px;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
-#titulofooter{
-    margin: 25px;
-    font-weight: 500;
+.titulofooter{
+    margin: 20px;
+    font-weight: 700;
     color-scheme: var(--mid);
 }
+
  
-footer {
-    width: 100%;
-    background-color: var(--footer);
+ footer {
     display: flex;
     justify-content: center;
     height: auto;
     font-size: 12px;
     margin-bottom: 0;
+    width: 100%;
+    color: var(--footer);
+    background-color: var(--footer);
    
  }
  .footer{
      display: flex;
      justify-content: space-between;
+     align-items: center;
      background-color:var(--footer);
      padding: 0;
      margin-bottom: 0;
      margin-top:0;
+     height: 400px;
      flex-wrap: wrap;
      bottom: 0;
      font: normal;
  }
+.footer P{
+    margin: 0;
+}
 
 .contato, .sobre, .servicos, .horario{
     margin-top: 20px solid var(--mid);
@@ -366,13 +334,13 @@ footer {
   
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content:center;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    color:var(--mid);
+    color: var(--mid);
     background-color:var(--footer);
 }
 
@@ -526,31 +494,12 @@ footer {
         height: 30px;
     }
    
-    .cadastro-whatsapp{
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        height: 100%;
-        padding: 30px;
-   }
-   .cadastro-whatsapp input{
-        border-radius: 5px;
-        width: 100%;
-        padding: 5px;
-        margin: 5px;
-    
-    }
-    #cadastrar{
-        width: 100%;
-        color: var(--corPrincipal);
-        border-radius: 5px;
-        padding: 5px;
-    }
     footer{
         display: block;
         flex-direction: column;
         align-items: center;
         height: auto;
+        padding: 50px;
     }
     .footer{
         flex-direction: column;
@@ -558,8 +507,8 @@ footer {
         height: min-content;
     }
     .icone-footer{
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
         margin-bottom: 10px;
         margin-right: 20px;
     }

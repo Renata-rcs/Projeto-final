@@ -350,6 +350,12 @@ input{
 p{
    margin-bottom: 0;
 }
+.icone-footer{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
 .re{
    width: 100%;
    margin-top: 40px;
@@ -527,6 +533,12 @@ p{
        padding: 5px;
        margin: 4px;
        font-size: 12px;
+    }
+    .icone-footer{
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
     }
     .footer{
          flex-direction: column;

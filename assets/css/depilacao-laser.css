@@ -325,66 +325,73 @@ input{
 }
 
 
- footer {
+.titulofooter{
+    margin: 20px;
+    font-weight: 700;
+    color-scheme: var(--mid);
+}
+
+ 
+footer {
     display: flex;
     justify-content: center;
     height: auto;
     font-size: 12px;
     margin-bottom: 0;
     width: 100%;
+    color: var(--footer);
     background-color: var(--footer);
    
- }
+}
+.icone-footer{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
 .footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:var(--footer);
-    padding: 50px;
-    margin-bottom: 0;
-    margin-top:0;
-    height: 400px;
-    flex-wrap: wrap;
-    bottom: 0;
-    font: normal;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color:var(--footer);
+     padding: 0;
+     margin-bottom: 0;
+     margin-top:0;
+     height: 400px;
+     flex-wrap: wrap;
+     bottom: 0;
+     font: normal;
+ }
+.footer P{
+    margin: 0;
 }
 
 .contato, .sobre, .servicos, .horario{
-   margin: 0;
-   text-align: center;
-   align-items: center;
-   justify-content: center;
-   padding: 10px;
-   flex-basis: calc(25% - 20px); /* Define a largura das seções, descontando o espaço entre elas */
-   box-sizing: border-box;
-   color: var(--mid);
-   font-size: 12px;
-  
+    margin-top: 20px solid var(--mid);
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-basis: calc(25% - 20px); /* Define a largura das seções, descontando o espaço entre elas */
+    box-sizing: border-box;
+    color: var(--mid);
+   
 
-}
-#span-text{
-    color: var(--corSecundaria);
-}
-.titulofooter{
-   margin: 20px;
-   font-weight: 700;
-}
-p{
-   margin-bottom: 0;
 }
 .re{
-   width: 100%;
-   margin-top: 40px;
-   margin-bottom: 10px;
-   display: flex;
-   justify-content:center;
-   flex-direction: column;
-   text-align: center;
-   align-items: center;
-   color: var(--mid);
-   background-color:var(--footer);
+  
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: var(--mid);
+    background-color:var(--footer);
 }
-
  #hamburguer{
     position: absolute;
     display: none;
@@ -552,12 +559,21 @@ p{
        margin: 4px;
        font-size: 12px;
     }
+    footer{
+        padding: 50px;
+    }
     .footer{
          flex-direction: column;
          display: block;
          height: min-content;
          width: auto;
  
+    }
+    .icone-footer{
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
     }
     .re{
          width: auto;
