@@ -326,7 +326,7 @@ input{
 
 
 .titulofooter{
-    margin: 20px;
+    margin: 20px!important;
     font-weight: 700;
     color-scheme: var(--mid);
 }

@@ -357,7 +357,7 @@ input{
     margin-bottom: 10px;
 }
 .titulofooter{
-    margin: 20px;
+    margin: 20px!important;
     font-weight: 700;
     color-scheme: var(--mid);
 }
@@ -613,6 +613,10 @@ input{
         height: 20px;
         margin-right: 20px;
         margin-bottom: 10px;
+    }
+    .titulofooter{
+        font-weight: 700;
+        margin: 20px;
     }
     footer{
         display: block;

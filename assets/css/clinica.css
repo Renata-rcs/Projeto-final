@@ -189,9 +189,9 @@ section {
 .container-instalacoes {
     width: 100%;
     margin: 50px 0 ;
-    display: flex; /* Torna os elementos filhos em linha */
+    display: flex; 
     justify-content: space-around;
-    flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
+    flex-wrap: wrap;
     border-bottom: 2px solid var(--corPrincipal);
     
 }
@@ -205,12 +205,11 @@ section {
     color: var(--corSecundaria);
 }
 #text-local{
-    width: 45%;
-    margin-left: 20px;
+    width: 50%;
     margin-bottom: 70px;
 }
 #img-local{
-    max-width: 45%;
+    max-width: 100%;
     width: 300px;
     margin-bottom: 40px;
 
@@ -222,7 +221,7 @@ section {
 .local{
     flex: 1;
     margin: 5px; /* Adiciona margem entre as imagens */
-    width: 40%;
+    width: 50%;
     height: 150px;
     margin: 5px;
     border: 2px solid var(--corSecundaria);
@@ -261,6 +260,7 @@ section {
 }
 #texto-equipe{
     width: 80%;
+    text-align: left;
     padding: 20px;
     margin: 0 20px;
 }
@@ -284,8 +284,9 @@ footer {
     margin-bottom: 0;
    
  }
-.titulofooter{
+ .titulofooter{
     font-weight: 700;
+    margin: 20px;
 }
 .footer  p{
     margin: 0;
@@ -428,17 +429,17 @@ footer {
    
      .container-instalacoes{
         display: flex;
+        justify-content: center ;
         flex-direction: column;
         align-items: center;
     }
     #text-local{
-        width: 70%;
+        width: 100%;
         margin-bottom: 30px;
     }
     #img-local{
-        max-width: 90%;
-        width: 90%;
-        margin-bottom: 40px;
+        max-width: 100%;
+        width: 80%;
     
     }
     .container-equipe{
@@ -454,6 +455,7 @@ footer {
     #texto-equipe{
         width: 100%;
         height: 100%;
+        text-align: left;
         padding: 0;
         margin: 0;
     }
@@ -497,7 +499,6 @@ footer {
         margin: 0;
     }
      #text-local h2{
-        text-align: center;
         font-size: 20px;
         margin:20px 0;
         padding: 0;
@@ -574,10 +575,10 @@ footer {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin: 0;
             
         }
         #text-local{
-            width: 100%;
             font-size: 12px;
         }
         .text-p{
@@ -590,7 +591,7 @@ footer {
             margin: 0;
         }
         #texto-equipe{
-            width: 90%;
+            text-align: center;
             padding: 10px;
             font-size: 12px;
         }
@@ -608,10 +609,3 @@ footer {
         }
         
  }      
- @media (max-width: 300px) {
-    
-    #logo{
-        margin: 0 10px;
-        width: 100px;
-    }
-}

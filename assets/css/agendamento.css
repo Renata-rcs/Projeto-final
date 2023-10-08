@@ -141,7 +141,7 @@ html {
   }
 
 section {
-    width: 90%;
+    width: 100%;
     margin:0;
     background-color: var(--light);
     border-radius: 0;
@@ -188,7 +188,7 @@ section {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     text-align: center;
-    margin: 20px;
+    margin: 20px 0;
     color: var(--corSecundaria);
 }
 #botConsulta{
@@ -202,7 +202,7 @@ section {
 }
 #agend1,
 #agend2 {
-    margin: 40px;
+    margin: 40px 20px;
     height: auto;
     width: 45%;
 }
@@ -283,7 +283,7 @@ input[type="submit"] {
     margin-bottom: 10px;
 }
 .titulofooter{
-    margin: 20px;
+    margin: 20px!important;
     font-weight: 700;
     color-scheme: var(--mid);
 }
@@ -456,8 +456,8 @@ input[type="submit"] {
         border-radius: 0;
     }
     #agend1{
-        margin: 0;
-        width: 40%;
+        margin: 30px;
+        width: 80%;
         font-size: 10px;
         
     }
