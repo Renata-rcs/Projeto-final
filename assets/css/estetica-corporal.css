@@ -290,7 +290,7 @@ h2{
 /*cadastro whatsapp*/
 .cadastro-whatsapp{
     height:220px;
-    background-color: var(--corPrincipal);
+    background-color: var(--corSecundaria);
     text-align: left;
     margin: 50px 0;
     border-radius: 5px;
@@ -553,9 +553,7 @@ input{
     .card-back p{
         font-size: 10px;
     } 
-    input{
-        width: 90%;
-    }
+    
     .cadastro-whatsapp{
        justify-content: center;
        align-items: center;
@@ -587,4 +585,17 @@ input{
     .re{
          width: auto;
     }
+}
+@media (max-width: 600px){
+    .cadastro-whatsapp{
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 60%;
+        padding: 20px;
+        margin: 20px;
+     }
+     input{
+        width: 100%;
+     }
 }

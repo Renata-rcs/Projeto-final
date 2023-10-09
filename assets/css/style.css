@@ -335,6 +335,9 @@ section + section{
     align-items: center;
     margin-top: 0;
 }
+#carouselExampleIndicators{
+    display: none!important;
+}
 .carousel-container-2 {
     width: 100;
     overflow: hidden;
@@ -360,7 +363,7 @@ section + section{
     margin-right: 10px;
     border-radius: 5px;
     height:300px;
-    margin-bottom: 40px;
+    margin-bottom: 0!important;
 }
 
 @keyframes slide {
@@ -371,19 +374,13 @@ section + section{
         transform: translateX(-100%); /* Desloca 100% para a esquerda */
     }
 }
-#promo-outubro{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color:var(--light);
-    gap: 5px;
-    width: 60%;
-    height: 80%;
-}
-#promo-titulo{
-    font-size: 3em;
-    margin: 30px 0;
+/*Promocão*/
+#titulo-promo{
+    font-size: 40px;
+    color: var(--corPrincipal);
+    margin-bottom: 40px;
     font-weight: 500;
+    top: 0;
 }
 .card-outubro{
     padding: 20px;
@@ -404,32 +401,29 @@ section + section{
 .card-promocao:hover{
     transform: scale(1.1);
 }
-.img-promocao{
-    margin-bottom: 10px;
-    width: 80%;
-    height: 80%;
-}
-/*Promocão*/
+
+
 #fiel{
     background-color: var(--light);
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
+
 .fidelidade{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color:var(--corSecundaria);
+    background-color:var(--light);
     border-radius: 10px;
     gap: 5px;
     width: 80%;
-    height: 80%;
+    height: 100%;
 }
 .card-promocao{
-    background-color:var(--corPrincipal);
+    background-color:var(--corSecundaria);
     padding: 20px;
-    margin: 50px 0;
     text-align: center;
     border-radius: 5px;
     width: 25%;
@@ -442,25 +436,25 @@ section + section{
 .card-promocao:hover{
     transform: scale(1.1);
 }
-.img-promocao{
-    width: 80%;
-    height: 80%;
-}
  /*texto*/
 #texts2{
     background-color:var(--light);
+    margin: 70px 30px 0 30px 0!important; /* valor-superior valor-direita valor-inferior valor-esquerda;*/
+    border-radius: 10px;
+    padding: 20px;
 }
 #container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column; 
-  
+   
 }
 #texts-container {
     display: flex;
     justify-content: space-between; /* Alinha as divs lado a lado */
     color: var(--mid);
-    margin: 70px 20px;
-    border-radius: 10px;
+   
 }
 
 #text1,
@@ -487,6 +481,7 @@ section + section{
     align-items: center;
     justify-content: center;
     background-color: var(--light);
+    margin-bottom: 20px;
 
 }
 #pesquisa{
@@ -894,10 +889,6 @@ p{
         flex-wrap: wrap;
 
     }
-    #fiel{
-        background-color: var(--corSecundaria);
-        height: 100%;
-    }
     #entrada{
         height: 500px;
     }
@@ -960,7 +951,7 @@ p{
        border-color: var(--corPrincipal);
    }
     .fidelidade{
-        background-color:var(--corSecundaria);
+       
         gap: 5px;
         display: flex;
         align-items: center;
@@ -969,15 +960,13 @@ p{
         gap: 5px;
         margin-top: 50px;
     }
-    #fidelidade-titulo{
-        font-size: 3em;
-        margin: 40px;
-        font-weight: 700;
+    #titulo-promo{
+        font-size: 30px;
+        flex-wrap: wrap;
     }
     .card-promocao{
-        background-color:var(--corPrincipal);
+        
         padding: 10px;
-        margin: 20px 0;
         text-align: center;
         border-radius: 5px;
         width: 29%;
@@ -1215,10 +1204,25 @@ p{
     
     
 }
-@media (max-width: 550px) {
+@media (max-width: 650px) {
+   
     h1{
         font-size:25px;
         top: 20%;
+    }
+    #titulo-promo{
+        font-size: 20px;
+        flex-wrap: wrap;
+    }
+    #tratamentos{
+        width: 100%;
+        margin: 0;
+    }
+    .carousel-container-2 {
+        display: none;
+    }
+    #carouselExampleIndicators{
+        display: block!important;
     }
 }
 @media (max-width: 480px) {
@@ -1325,9 +1329,4 @@ p{
             transition: 10ms;
         }
         
-}
-@media (max-width: 300px){
-
-    
-  
 }

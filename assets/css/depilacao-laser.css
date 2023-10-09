@@ -287,7 +287,7 @@ p{
 
 .cadastro-whatsapp{
     height:220px;
-    background-color: var(--corPrincipal);
+    background-color: var(--corSecundaria);
     text-align: left;
     margin: 50px 0;
     border-radius: 5px;
@@ -544,9 +544,7 @@ footer {
          display: block;
          flex-direction: column;
     }
-    input{
-        width: 90%;
-    }
+    
     .cadastro-whatsapp{
        justify-content: center;
        align-items: center;
@@ -577,5 +575,24 @@ footer {
     }
     .re{
          width: auto;
+    }
+}
+@media (max-width: 660px){
+    .cadastro-whatsapp{
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 60%;
+        padding: 20px;
+        margin: 20px;
+     }
+     input{
+        width: 100%;
+     }
+
+}
+@media (max-width: 500px){
+    #img-entrada {
+        margin-top: 65px;
     }
 }

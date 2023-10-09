@@ -313,7 +313,7 @@ p{
 
 .cadastro-whatsapp{
     height:220px;
-    background-color: var(--corPrincipal);
+    background-color: var(--corSecundaria);
     text-align: left;
     margin: 50px 0;
     border-radius: 5px;
@@ -539,7 +539,7 @@ input{
      }
      #img-entrada{
         width: 100%;
-        margin-bottom: 30px;
+        margin: 30px 0;
     }
 
     .card-container{
@@ -590,9 +590,6 @@ input{
         font-size: 20px;
         margin: 10px 0;
     }
-    input{
-        width: 90%;
-    }
     .cadastro-whatsapp{
        justify-content: center;
        align-items: center;
@@ -632,9 +629,24 @@ input{
         
     }
 }   
+@media (max-width: 600px){
+    .cadastro-whatsapp{
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 60%;
+        padding: 20px;
+        margin: 20px;
+     }
+     input{
+        width: 100%;
+     }
+}
 @media (max-width: 500px){
     h1, #tratamento{
         font-size: 30px!important;
     }
-
+    #img-entrada {
+        margin-top: 55px;
+    }
 }

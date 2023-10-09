@@ -116,24 +116,6 @@ function submitRating() {
 }
 
 
-// function toggleSections() {
-//   const entradaSection = document.querySelector('entrada');
-//   const caroucelSection = document.querySelector('caroucel-1');
-
-//   if (window.innerWidth < 750) {
-//       entradaSection.style.display = 'none';
-//       caroucelSection.style.display = 'block';
-//   } else {
-//       entradaSection.style.display = 'block';
-//       caroucelSection.style.display = 'none';
-//   }
-// }
-
-// // Execute a função quando a página carregar e quando a janela for redimensionada
-// window.addEventListener('load', toggleSections);
-// window.addEventListener('resize', toggleSections);
-
-
 const feedback = document.querySelector("#feedback")
 
 if(!localStorage.getItem("contaLogada")) {
@@ -172,5 +154,12 @@ function resetText() {
 
 animateText();
 
+
+$(document).ready(function () {
+    $('#carouselExampleIndicators').carousel({
+      interval: 3000,
+      pause: false 
+    });
+  });
 
 
