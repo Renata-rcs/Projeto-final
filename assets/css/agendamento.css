@@ -194,6 +194,7 @@ section {
 #botConsulta{
     align-items: center;
     width: 100%;
+    padding: 10px;
 }
 #botConsulta:hover{
     background-color: var(--corPrincipal);
@@ -489,9 +490,9 @@ input[type="submit"] {
         align-items: center;
         width: 100%;
         text-align: center;
-        font-size: 8px;
-        padding: 0;
-        height: 30px;
+        font-size: 12px;
+        padding: 10px;
+        text-align: center;
     }
    
     footer{
