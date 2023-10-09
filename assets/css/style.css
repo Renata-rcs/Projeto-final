@@ -378,7 +378,7 @@ section + section{
 #titulo-promo{
     font-size: 40px;
     color: var(--corPrincipal);
-    margin-bottom: 40px;
+    margin: 50px 0;
     font-weight: 500;
     top: 0;
 }
@@ -428,7 +428,7 @@ section + section{
     border-radius: 5px;
     width: 25%;
     min-height: 200px;
-    gap:5px;
+    gap:2px;
     margin: 20px 10x;
     color: var(--light);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
@@ -438,6 +438,9 @@ section + section{
 }
  /*texto*/
 #texts2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color:var(--light);
     margin: 70px 30px 0 30px 0!important; /* valor-superior valor-direita valor-inferior valor-esquerda;*/
     border-radius: 10px;
@@ -1268,6 +1271,13 @@ p{
             align-items: center;
             text-align: center;
         
+        }
+        .card-promocao{
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+        #texts-container{
+            margin-top:0;
         }
         
         h5 {
